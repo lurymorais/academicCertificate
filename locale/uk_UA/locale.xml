@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Ukrainian
+  * NOTE: This translation should be reviewed by a native Ukrainian speaker before production use.
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Сертифікат рецензента</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Сертифікат експертної оцінки</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Ваш сертифікат готовий!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Дякуємо за завершення рецензування. Тепер ви можете завантажити свій сертифікат визнання.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">Ваш сертифікат буде згенеровано автоматично при натисканні кнопки завантаження.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Завантажити сертифікат</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Налаштування сертифікатів</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Налаштування шаблону сертифіката</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Фонове зображення</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Завантажте фонове зображення для сертифіката (JPG або PNG, рекомендований розмір: 2100x2970 пікселів для A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Поточне фонове зображення</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Текст заголовка</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Основний заголовок, що відображається у верхній частині сертифіката</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Текст заголовка є обов'язковим</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Шаблон тіла сертифіката</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Основний вміст сертифіката. Використовуйте змінні шаблону для вставки динамічного вмісту.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Шаблон тіла сертифіката є обов'язковим</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Текст нижнього колонтитула</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Необов'язковий текст, що відображається у нижній частині сертифіката</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Доступні змінні шаблону</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Використовуйте ці змінні у своїх шаблонах для вставки динамічного вмісту:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Типовий шаблон</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Використовувати типовий шаблон</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Налаштування вигляду</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Сімейство шрифтів</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Розмір шрифту</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Колір тексту (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Вкажіть колір тексту, використовуючи значення RGB (0-255 для кожного компонента)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Критерії прийнятності</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Мінімальна кількість завершених рецензій</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Мінімальна кількість завершених рецензій, необхідна перед тим, як рецензент може отримати сертифікат</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Мінімальна кількість рецензій має бути числом, більшим або рівним 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Параметри перевірки</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Включити QR-код для перевірки сертифіката</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Переглянути сертифікат</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Недійсний тип зображення. Будь ласка, завантажте файл JPG або PNG.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Помилка завантаження файлу. Будь ласка, спробуйте ще раз.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Це рецензування ще не завершено. Сертифікати доступні лише для завершених рецензій.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Код сертифіката не надано</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Недійсний код сертифіката. Цей сертифікат не може бути перевірений.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Не вибрано жодного рецензента для пакетного генерування сертифікатів</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Доступ заборонено. У вас немає дозволу на завантаження цього сертифіката.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Контекст журналу недоступний. Переконайтеся, що ви отримуєте доступ з дійсного журналу.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">Доступ до бази даних наразі недоступний. Зверніться до системного адміністратора.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Перевірити сертифікат</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Введіть код сертифіката для перевірки його автентичності</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Код сертифіката</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Перевірити сертифікат</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Сертифікат дійсний</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Сертифікат недійсний</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Введений вами код сертифіката недійсний або не існує в нашій системі.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Код сертифіката</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Ім'я рецензента</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Назва журналу</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Дата видачі</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Пакетне генерування сертифікатів</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Генеруйте сертифікати для кількох рецензентів одночасно. Виберіть рецензентів зі списку нижче, які завершили рецензування, але ще не мають сертифікатів.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Виберіть рецензентів</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">завершених рецензій</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Прийнятних рецензентів не знайдено. Усі рецензенти мають сертифікати для своїх завершених рецензій.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Утримуйте Ctrl (Windows/Linux) або Cmd (Mac) для вибору кількох рецензентів</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Генерувати сертифікати</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Генерування сертифікатів...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Будь ласка, виберіть принаймні одного рецензента</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">сертифікат(и/ів) успішно згенеровано</message>
+	<message key="plugins.generic.academicCertificate.batch.error">Виникла помилка під час генерування сертифікатів. Будь ласка, спробуйте ще раз.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} сертифікат(и/ів) успішно згенеровано</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Статистика сертифікатів</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Огляд генерування та використання сертифікатів у вашому журналі</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Всього видано сертифікатів</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Всього завантажень</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Унікальних рецензентів із сертифікатами</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Всього видано сертифікатів</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Всього завантажень</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Середня кількість завантажень на сертифікат</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Примітка: шрифти Helvetica, Times New Roman та Courier підтримують лише латинські символи. Якщо ваш журнал використовує кириличні, арабські, китайські або інші нелатинські символи, плагін автоматично використає шрифт DejaVu Sans для цих текстових елементів.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Мої сертифікати</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">Нижче наведено список усіх ваших рецензентських сертифікатів для цього журналу.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Дата видачі</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Назва подання</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Код сертифіката</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Дії</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">У вас ще немає сертифікатів. Сертифікати генеруються після завершення рецензування.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Переглянути всі мої сертифікати</message>
+</locale>

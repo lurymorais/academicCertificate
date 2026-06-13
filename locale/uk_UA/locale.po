@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Сертифікат рецензента"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Сертифікат експертної оцінки"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Ваш сертифікат готовий!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Дякуємо за завершення рецензування. Тепер ви можете завантажити свій сертифікат визнання."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Ваш сертифікат буде згенеровано автоматично при натисканні кнопки завантаження."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Завантажити сертифікат"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Налаштування шаблону сертифіката"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Фонове зображення"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Завантажте фонове зображення для сертифіката (JPG або PNG, рекомендований розмір: 2100x2970 пікселів для A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Поточне фонове зображення"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Текст заголовка"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Основний заголовок, що відображається у верхній частині сертифіката"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Текст заголовка є обов'язковим"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Шаблон тіла сертифіката"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Основний вміст сертифіката. Використовуйте змінні шаблону для вставки динамічного вмісту."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Шаблон тіла сертифіката є обов'язковим"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Текст нижнього колонтитула"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Необов'язковий текст, що відображається у нижній частині сертифіката"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Доступні змінні шаблону"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Використовуйте ці змінні у своїх шаблонах для вставки динамічного вмісту:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Типовий шаблон"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Використовувати типовий шаблон"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Налаштування вигляду"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Сімейство шрифтів"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Розмір шрифту"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Колір тексту (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Вкажіть колір тексту, використовуючи значення RGB (0-255 для кожного компонента)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Критерії прийнятності"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Мінімальна кількість завершених рецензій"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Мінімальна кількість завершених рецензій, необхідна перед тим, як рецензент може отримати сертифікат"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Мінімальна кількість рецензій має бути числом, більшим або рівним 1"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Параметри перевірки"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "Включити QR-код для перевірки сертифіката"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Переглянути сертифікат"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Недійсний тип зображення. Будь ласка, завантажте файл JPG або PNG."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Помилка завантаження файлу. Будь ласка, спробуйте ще раз."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Примітка: шрифти Helvetica, Times New Roman та Courier підтримують лише латинські символи. Якщо ваш журнал використовує кириличні, арабські, китайські або інші нелатинські символи, плагін автоматично використає шрифт DejaVu Sans для цих текстових елементів."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Це рецензування ще не завершено. Сертифікати доступні лише для завершених рецензій."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Код сертифіката не надано"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Недійсний код сертифіката. Цей сертифікат не може бути перевірений."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Не вибрано жодного рецензента для пакетного генерування сертифікатів"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Доступ заборонено. У вас немає дозволу на завантаження цього сертифіката."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Контекст журналу недоступний. Переконайтеся, що ви отримуєте доступ з дійсного журналу."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Доступ до бази даних наразі недоступний. Зверніться до системного адміністратора."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Перевірити сертифікат"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Введіть код сертифіката для перевірки його автентичності"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Код сертифіката"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Перевірити сертифікат"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Сертифікат дійсний"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Сертифікат недійсний"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Введений вами код сертифіката недійсний або не існує в нашій системі."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Код сертифіката"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Ім'я рецензента"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Назва журналу"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Дата видачі"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Пакетне генерування сертифікатів"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Генеруйте сертифікати для кількох рецензентів одночасно. Виберіть рецензентів зі списку нижче, які завершили рецензування, але ще не мають сертифікатів."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Виберіть рецензентів"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "завершених рецензій"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Прийнятних рецензентів не знайдено. Усі рецензенти мають сертифікати для своїх завершених рецензій."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Утримуйте Ctrl (Windows/Linux) або Cmd (Mac) для вибору кількох рецензентів"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Генерувати сертифікати"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Генерування сертифікатів..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Будь ласка, виберіть принаймні одного рецензента"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "сертифікат(и/ів) успішно згенеровано"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Виникла помилка під час генерування сертифікатів. Будь ласка, спробуйте ще раз."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} сертифікат(и/ів) успішно згенеровано"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Статистика сертифікатів"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Огляд генерування та використання сертифікатів у вашому журналі"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Всього видано сертифікатів"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Всього завантажень"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Унікальних рецензентів із сертифікатами"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Всього видано сертифікатів"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Всього завантажень"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Середня кількість завантажень на сертифікат"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Налаштування сертифікатів"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Мої сертифікати"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Нижче наведено список усіх ваших рецензентських сертифікатів для цього журналу."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Дата видачі"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Назва подання"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Код сертифіката"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Дії"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "У вас ще немає сертифікатів. Сертифікати генеруються після завершення рецензування."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Переглянути всі мої сертифікати"
+

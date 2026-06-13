@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Сертификат рецензента"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Сертификат экспертной оценки"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Ваш сертификат готов!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Благодарим за завершение рецензирования. Теперь вы можете загрузить свой сертификат признания."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Ваш сертификат будет сгенерирован автоматически при нажатии кнопки загрузки."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Загрузить сертификат"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Настройки шаблона сертификата"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Фоновое изображение"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Загрузите фоновое изображение для сертификата (JPG или PNG, рекомендуемый размер: 2100x2970 пикселей для A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Текущее фоновое изображение"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Текст заголовка"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Основной заголовок, отображаемый в верхней части сертификата"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Текст заголовка обязателен"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Шаблон тела сертификата"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Основное содержимое сертификата. Используйте переменные шаблона для вставки динамического содержимого."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Шаблон тела сертификата обязателен"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Текст нижнего колонтитула"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Необязательный текст, отображаемый в нижней части сертификата"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Доступные переменные шаблона"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Используйте эти переменные в своих шаблонах для вставки динамического содержимого:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Стандартный шаблон"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Использовать стандартный шаблон"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Настройки внешнего вида"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Семейство шрифтов"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Размер шрифта"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Цвет текста (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Укажите цвет текста, используя значения RGB (0-255 для каждого компонента)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Критерии приемлемости"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Минимальное количество завершенных рецензий"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Минимальное количество завершенных рецензий, необходимое перед тем, как рецензент сможет получить сертификат"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Минимальное количество рецензий должно быть числом, большим или равным 1"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Параметры проверки"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "Включить QR-код для проверки сертификата"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Предварительный просмотр сертификата"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Недопустимый тип изображения. Пожалуйста, загрузите файл JPG или PNG."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Ошибка загрузки файла. Пожалуйста, попробуйте еще раз."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Примечание: шрифты Helvetica, Times New Roman и Courier поддерживают только латинские символы. Если ваш журнал использует кириллические, арабские, китайские или другие нелатинские символы, плагин автоматически использует шрифт DejaVu Sans для этих текстовых элементов."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Это рецензирование еще не завершено. Сертификаты доступны только для завершенных рецензий."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Код сертификата не предоставлен"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Недействительный код сертификата. Этот сертификат не может быть проверен."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Не выбрано ни одного рецензента для пакетной генерации сертификатов"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Доступ запрещен. У вас нет разрешения на загрузку этого сертификата."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Контекст журнала недоступен. Убедитесь, что вы получаете доступ из действительного журнала."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Доступ к базе данных в настоящее время недоступен. Обратитесь к системному администратору."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Проверить сертификат"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Введите код сертификата для проверки его подлинности"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Код сертификата"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Проверить сертификат"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Сертификат действителен"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Сертификат недействителен"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Введенный вами код сертификата недействителен или не существует в нашей системе."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Код сертификата"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Имя рецензента"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Название журнала"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Дата выдачи"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Пакетная генерация сертификатов"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Генерируйте сертификаты для нескольких рецензентов одновременно. Выберите рецензентов из списка ниже, которые завершили рецензирование, но еще не имеют сертификатов."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Выберите рецензентов"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "завершенных рецензий"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Приемлемых рецензентов не найдено. Все рецензенты имеют сертификаты для своих завершенных рецензий."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Удерживайте Ctrl (Windows/Linux) или Cmd (Mac) для выбора нескольких рецензентов"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Генерировать сертификаты"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Генерация сертификатов..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Пожалуйста, выберите хотя бы одного рецензента"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "сертификат(ов) успешно сгенерировано"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Произошла ошибка при генерации сертификатов. Пожалуйста, попробуйте еще раз."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} сертификат(ов) успешно сгенерировано"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Статистика сертификатов"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Обзор генерации и использования сертификатов в вашем журнале"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Всего выдано сертификатов"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Всего загрузок"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Уникальных рецензентов с сертификатами"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Всего выдано сертификатов"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Всего загрузок"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Среднее количество загрузок на сертификат"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Настройки сертификатов"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Мои сертификаты"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Ниже приведён список всех ваших рецензентских сертификатов для этого журнала."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Дата выдачи"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Название статьи"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Код сертификата"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Действия"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "У вас ещё нет сертификатов. Сертификаты генерируются после завершения рецензирования."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Просмотреть все мои сертификаты"
+

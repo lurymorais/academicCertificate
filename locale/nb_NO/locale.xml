@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Norwegian Bokmål
+  * NOTE: This translation uses formal Norwegian Bokmål appropriate for academic publishing.
+  * Norwegian-specific characters: æ, ø, å
+  -->
+
+<locale name="nb_NO" full_name="Norsk Bokmål (Norge)">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Fagfellevurderingssertifikat</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Sertifikat for Fagfellevurdering</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Sertifikatet ditt er klart!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Takk for at du fullførte denne vurderingen. Du kan nå laste ned sertifikatet ditt for anerkjennelse.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">Sertifikatet ditt vil bli generert automatisk når du klikker på nedlastingsknappen.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Last ned Sertifikat</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Sertifikatinnstillinger</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Innstillinger for Sertifikatmal</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Bakgrunnsbilde</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Last opp et bakgrunnsbilde for sertifikatet (JPG eller PNG, anbefalt størrelse: 2100x2970 piksler for A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Gjeldende bakgrunnsbilde</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Overskriftstekst</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Hovedtittelen som vises øverst på sertifikatet</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Overskriftstekst er påkrevd</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Mal for Sertifikatinnhold</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Hovedinnholdet i sertifikatet. Bruk malvariabler for å sette inn dynamisk innhold.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Mal for sertifikatinnhold er påkrevd</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Bunntekst</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Valgfri tekst som vises nederst på sertifikatet</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Tilgjengelige Malvariabler</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Bruk disse variablene i malene dine for å sette inn dynamisk innhold:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Standardmal</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Bruk standardmal</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Utseendeinnstillinger</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Skriftfamilie</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Skriftstørrelse</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Tekstfarge (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Spesifiser tekstfargen ved hjelp av RGB-verdier (0-255 for hver komponent)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Kvalifikasjonskriterier</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Minimum Fullførte Vurderinger</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Minimumsantall fullførte vurderinger som kreves før en fagfelle kan motta et sertifikat</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Minimumsantall vurderinger må være et tall større enn eller lik 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Verifikasjonsalternativer</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Inkluder QR-kode for sertifikatverifisering</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Forhåndsvis Sertifikat</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Ugyldig bildetype. Vennligst last opp en JPG- eller PNG-fil.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Filopplasting mislyktes. Vennligst prøv igjen.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Denne vurderingen er ikke fullført ennå. Sertifikater er kun tilgjengelige for fullførte vurderinger.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Ingen sertifikatkode oppgitt</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Ugyldig sertifikatkode. Dette sertifikatet kunne ikke verifiseres.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Ingen fagfeller valgt for massegenerering av sertifikater</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Tilgang nektet. Du har ikke tillatelse til å laste ned dette sertifikatet.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Ingen tidsskriftkontekst tilgjengelig. Vennligst sørg for at du får tilgang fra et gyldig tidsskrift.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">Databasetilgang er for øyeblikket utilgjengelig. Vennligst kontakt systemadministratoren.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Verifiser Sertifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Skriv inn en sertifikatkode for å verifisere ekthet</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Sertifikatkode</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Verifiser Sertifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Gyldig Sertifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Ugyldig Sertifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Sertifikatkoden du skrev inn er ugyldig eller finnes ikke i vårt system.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Sertifikatkode</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Navn på Fagfelle</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Tidsskriftnavn</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Utstedelsesdato</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Massegenerering av Sertifikater</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Generer sertifikater for flere fagfeller samtidig. Velg fagfeller fra listen nedenfor som har fullført vurderinger, men som ennå ikke har sertifikater.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Velg Fagfeller</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">fullførte vurderinger</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Ingen kvalifiserte fagfeller funnet. Alle fagfeller har sertifikater for sine fullførte vurderinger.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Hold Ctrl (Windows/Linux) eller Cmd (Mac) inne for å velge flere fagfeller</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Generer Sertifikater</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Genererer sertifikater...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Vennligst velg minst én fagfelle</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">sertifikat/sertifikater generert</message>
+	<message key="plugins.generic.academicCertificate.batch.error">En feil oppstod under generering av sertifikater. Vennligst prøv igjen.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} sertifikat/sertifikater generert</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Sertifikatstatistikk</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Oversikt over sertifikatgenerering og -bruk i tidsskriftet ditt</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Totalt Utstedte Sertifikater</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Totale Nedlastinger</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Unike Fagfeller med Sertifikater</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Totalt Utstedte Sertifikater</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Totale Nedlastinger</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Gjennomsnittlige Nedlastinger per Sertifikat</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Merk: Helvetica, Times New Roman og Courier støtter kun latinske tegn. Hvis tidsskriftet bruker ikke-latinske tegn, vil tillegget automatisk bruke DejaVu Sans.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Mine sertifikater</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">Nedenfor finner du en liste over alle dine fagfelle-sertifikater for dette tidsskriftet.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Utstedelsesdato</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Innsendingens tittel</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Sertifikatkode</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Handlinger</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Du har ingen sertifikater ennå. Sertifikater genereres etter at du har fullført en vurdering.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Vis alle mine sertifikater</message>
+</locale>

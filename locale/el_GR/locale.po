@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-04 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Greek\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Πιστοποιητικό Κριτικής"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Πιστοποιητικό Αξιολόγησης από Ομότιμους"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Το Πιστοποιητικό σας είναι Έτοιμο!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Σας ευχαριστούμε για την ολοκλήρωση αυτής της κριτικής. Μπορείτε τώρα να κατεβάσετε το πιστοποιητικό αναγνώρισής σας."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Το πιστοποιητικό σας θα δημιουργηθεί αυτόματα όταν κάνετε κλικ στο κουμπί λήψης."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Λήψη Πιστοποιητικού"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Ρυθμίσεις Προτύπου Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Εικόνα Φόντου"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Ανεβάστε μια εικόνα φόντου για το πιστοποιητικό (JPG ή PNG, προτεινόμενο μέγεθος: 2100x2970 pixels για A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Τρέχουσα εικόνα φόντου"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Κείμενο Επικεφαλίδας"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Η κύρια επικεφαλίδα που εμφανίζεται στην κορυφή του πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Το κείμενο επικεφαλίδας είναι υποχρεωτικό"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Πρότυπο Κυρίως Κειμένου Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Το κύριο περιεχόμενο του πιστοποιητικού. Χρησιμοποιήστε μεταβλητές προτύπου για εισαγωγή δυναμικού περιεχομένου."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Το πρότυπο κυρίως κειμένου πιστοποιητικού είναι υποχρεωτικό"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Κείμενο Υποσέλιδου"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Προαιρετικό κείμενο που εμφανίζεται στο κάτω μέρος του πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Διαθέσιμες Μεταβλητές Προτύπου"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Χρησιμοποιήστε αυτές τις μεταβλητές στα πρότυπά σας για εισαγωγή δυναμικού περιεχομένου:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Προεπιλεγμένο πρότυπο"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Χρήση προεπιλεγμένου προτύπου"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Ρυθμίσεις Εμφάνισης"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Οικογένεια Γραμματοσειράς"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Μέγεθος Γραμματοσειράς"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Χρώμα Κειμένου (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Καθορίστε το χρώμα κειμένου χρησιμοποιώντας τιμές RGB (0-255 για κάθε συνιστώσα)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Κριτήρια Επιλεξιμότητας"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Ελάχιστες Ολοκληρωμένες Κριτικές"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Ο ελάχιστος αριθμός ολοκληρωμένων κριτικών που απαιτούνται πριν ένας κριτής μπορεί να λάβει πιστοποιητικό"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Οι ελάχιστες κριτικές πρέπει να είναι αριθμός μεγαλύτερος ή ίσος με 1"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Επιλογές Επαλήθευσης"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "Συμπερίληψη κωδικού QR για επαλήθευση πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Προεπισκόπηση Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Μη έγκυρος τύπος εικόνας. Παρακαλώ ανεβάστε αρχείο JPG ή PNG."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Η μεταφόρτωση αρχείου απέτυχε. Παρακαλώ δοκιμάστε ξανά."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Σημείωση: Οι γραμματοσειρές Helvetica, Times New Roman και Courier υποστηρίζουν μόνο λατινικούς χαρακτήρες. Εάν το περιοδικό σας χρησιμοποιεί μη λατινικούς χαρακτήρες, το πρόσθετο θα χρησιμοποιήσει αυτόματα τη γραμματοσειρά DejaVu Sans."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Αυτή η κριτική δεν έχει ολοκληρωθεί ακόμα. Τα πιστοποιητικά είναι διαθέσιμα μόνο για ολοκληρωμένες κριτικές."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Δεν παρέχεται κωδικός πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Μη έγκυρος κωδικός πιστοποιητικού. Αυτό το πιστοποιητικό δεν μπόρεσε να επαληθευτεί."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Δεν επιλέχθηκαν κριτές για μαζική δημιουργία πιστοποιητικών"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Πρόσβαση απορρίφθηκε. Δεν έχετε άδεια να κατεβάσετε αυτό το πιστοποιητικό."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Δεν υπάρχει διαθέσιμο περιβάλλον περιοδικού. Βεβαιωθείτε ότι έχετε πρόσβαση από έγκυρο περιοδικό."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Η πρόσβαση στη βάση δεδομένων δεν είναι διαθέσιμη αυτή τη στιγμή. Επικοινωνήστε με το διαχειριστή συστήματος."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Επαλήθευση Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Εισάγετε έναν κωδικό πιστοποιητικού για να επαληθεύσετε την αυθεντικότητά του"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Κωδικός Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Επαλήθευση Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Έγκυρο Πιστοποιητικό"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Μη Έγκυρο Πιστοποιητικό"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Ο κωδικός πιστοποιητικού που εισάγατε δεν είναι έγκυρος ή δεν υπάρχει στο σύστημά μας."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Κωδικός Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Όνομα Κριτή"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Όνομα Περιοδικού"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Ημερομηνία Έκδοσης"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Μαζική Δημιουργία Πιστοποιητικών"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Δημιουργήστε πιστοποιητικά για πολλαπλούς κριτές ταυτόχρονα. Επιλέξτε κριτές από την παρακάτω λίστα που έχουν ολοκληρώσει κριτικές αλλά δεν έχουν ακόμη πιστοποιητικά."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Επιλογή Κριτών"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "ολοκληρωμένες κριτικές"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Δεν βρέθηκαν επιλέξιμοι κριτές. Όλοι οι κριτές έχουν πιστοποιητικά για τις ολοκληρωμένες κριτικές τους."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Κρατήστε πατημένο Ctrl (Windows/Linux) ή Cmd (Mac) για να επιλέξετε πολλαπλούς κριτές"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Δημιουργία Πιστοποιητικών"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Δημιουργία πιστοποιητικών..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Παρακαλώ επιλέξτε τουλάχιστον έναν κριτή"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "πιστοποιητικό(ά) δημιουργήθηκαν επιτυχώς"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Προέκυψε σφάλμα κατά τη δημιουργία πιστοποιητικών. Παρακαλώ δοκιμάστε ξανά."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} πιστοποιητικό(ά) δημιουργήθηκαν επιτυχώς"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Στατιστικά Πιστοποιητικών"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Επισκόπηση της δημιουργίας και χρήσης πιστοποιητικών στο περιοδικό σας"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Συνολικά Εκδοθέντα Πιστοποιητικά"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Συνολικές Λήψεις"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Μοναδικοί Κριτές με Πιστοποιητικά"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Συνολικά Εκδοθέντα Πιστοποιητικά"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Συνολικές Λήψεις"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Μέσος Όρος Λήψεων ανά Πιστοποιητικό"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Ρυθμίσεις Πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Τα πιστοποιητικά μου"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Παρακάτω βρίσκεται η λίστα όλων των πιστοποιητικών αξιολόγησής σας για αυτό το περιοδικό."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Ημερομηνία έκδοσης"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Τίτλος υποβολής"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Κωδικός πιστοποιητικού"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Ενέργειες"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "Δεν έχετε ακόμα πιστοποιητικά. Τα πιστοποιητικά δημιουργούνται μετά την ολοκλήρωση μιας αξιολόγησης."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Προβολή όλων των πιστοποιητικών μου"
+

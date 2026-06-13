@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/version.xml
+  *
+  * Academic Certificate Manager (Reviewer Certificate Plugin)
+  *
+  * Publisher: Holistence Publication — https://holistence.com/
+  * Developers: Cumali Yaşar, Mehmet Sahin
+  * Contact: contact@holistence.com
+  *
+  * Distributed under the GNU GPL v3.
+  -->
+<version>
+	<application>academicCertificate</application>
+	<type>plugins.generic</type>
+	<release>1.8.0.0</release>
+	<date>2026-06-11</date>
+	<lazy-load>1</lazy-load>
+	<class>AcademicCertificatePlugin</class>
+	<sitewide>0</sitewide>
+
+	<!-- OJS version compatibility -->
+	<compatibility>
+		<application>ojs2</application>
+		<version>3.3.0.0</version>
+		<version>3.4.0.0</version>
+		<version>3.5.0.0</version>
+	</compatibility>
+</version>

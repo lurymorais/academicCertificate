@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/ko_KR/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Korean
+  -->
+
+<locale name="ko_KR" full_name="한국어">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">심사 인증서</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">동료 심사 인증서</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">인증서가 준비되었습니다!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">심사를 완료해 주셔서 감사합니다. 이제 인증서를 다운로드할 수 있습니다.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">다운로드 버튼을 클릭하면 인증서가 자동으로 생성됩니다.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">인증서 다운로드</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">인증서 설정</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">인증서 템플릿 설정</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">배경 이미지</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">인증서 배경 이미지 업로드 (JPG 또는 PNG, A4 권장 크기: 2100x2970 픽셀)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">현재 배경 이미지</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">헤더 텍스트</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">인증서 상단에 표시되는 주요 제목</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">헤더 텍스트는 필수입니다</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">인증서 본문 템플릿</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">인증서의 주요 내용입니다. 템플릿 변수를 사용하여 동적 콘텐츠를 삽입할 수 있습니다.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">인증서 본문 템플릿은 필수입니다</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">푸터 텍스트</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">인증서 하단에 표시되는 선택적 텍스트</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">사용 가능한 템플릿 변수</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">템플릿에서 이러한 변수를 사용하여 동적 콘텐츠를 삽입합니다:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">기본 템플릿</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">기본 템플릿 사용</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">외관 설정</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">글꼴</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">글꼴 크기</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">텍스트 색상 (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">RGB 값으로 텍스트 색상 지정 (각 구성요소 0-255)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">자격 기준</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">최소 완료 심사 수</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">심사자가 인증서를 받기 위해 필요한 최소 완료 심사 수</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">최소 심사 수는 1 이상의 숫자여야 합니다</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">검증 옵션</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">인증서 검증용 QR 코드 포함</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">인증서 미리보기</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">이미지 유형이 잘못되었습니다. JPG 또는 PNG 파일을 업로드하세요.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">파일 업로드에 실패했습니다. 다시 시도하세요.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">이 심사는 아직 완료되지 않았습니다. 인증서는 완료된 심사에만 제공됩니다.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">인증서 코드가 제공되지 않았습니다</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">인증서 코드가 잘못되었습니다. 이 인증서를 확인할 수 없습니다.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">일괄 인증서 생성을 위한 심사자가 선택되지 않았습니다</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">액세스가 거부되었습니다. 이 인증서를 다운로드할 권한이 없습니다.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">저널 컨텍스트를 사용할 수 없습니다. 유효한 저널에서 액세스하고 있는지 확인하세요.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">데이터베이스 액세스를 현재 사용할 수 없습니다. 시스템 관리자에게 문의하세요.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">인증서 검증</message>
+	<message key="plugins.generic.academicCertificate.verify.description">인증서 코드를 입력하여 진위 여부를 확인합니다</message>
+	<message key="plugins.generic.academicCertificate.verify.code">인증서 코드</message>
+	<message key="plugins.generic.academicCertificate.verify.button">인증서 검증</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">인증서 유효</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">인증서 무효</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">입력한 인증서 코드가 잘못되었거나 시스템에 존재하지 않습니다.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">인증서 코드</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">심사자 이름</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">저널명</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">발급일</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">일괄 인증서 생성</message>
+	<message key="plugins.generic.academicCertificate.batch.description">여러 심사자의 인증서를 한 번에 생성합니다. 아래 목록에서 심사를 완료했지만 아직 인증서가 없는 심사자를 선택하세요.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">심사자 선택</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">완료된 심사</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">자격이 있는 심사자가 없습니다. 모든 심사자가 완료된 심사에 대한 인증서를 가지고 있습니다.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Ctrl(Windows/Linux) 또는 Cmd(Mac)를 누른 상태에서 클릭하여 여러 명 선택</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">인증서 생성</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">인증서 생성 중...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">심사자를 한 명 이상 선택하세요</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">인증서가 성공적으로 생성되었습니다</message>
+	<message key="plugins.generic.academicCertificate.batch.error">인증서 생성 중 오류가 발생했습니다. 다시 시도하세요.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count}개의 인증서가 성공적으로 생성되었습니다</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">인증서 통계</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">저널의 인증서 생성 및 사용 현황 개요</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">발급된 총 인증서 수</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">총 다운로드 수</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">인증서를 보유한 심사자 수</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">발급된 총 인증서 수</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">총 다운로드 수</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">인증서당 평균 다운로드 수</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">참고: Helvetica, Times New Roman, Courier는 라틴 문자만 지원합니다. 저널에서 키릴 문자, 아랍어, 중국어 또는 기타 비라틴 문자를 사용하는 경우 플러그인은 해당 텍스트 요소에 자동으로 DejaVu Sans를 사용합니다.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">내 인증서</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">아래는 이 저널에 대한 모든 심사 인증서 목록입니다.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">발급일</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">제출 제목</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">인증서 코드</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">작업</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">아직 인증서가 없습니다. 인증서는 심사를 완료한 후 생성됩니다.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">모든 인증서 보기</message>
+</locale>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/lt_LT/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Lithuanian
+  -->
+
+<locale name="lt_LT" full_name="Lietuvių">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Recenzijos Sertifikatas</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Ekspertinio Vertinimo Sertifikatas</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Jūsų Sertifikatas Paruoštas!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Dėkojame už šios recenzijos užbaigimą. Dabar galite atsisiųsti savo pripažinimo sertifikatą.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">Jūsų sertifikatas bus automatiškai sugeneruotas paspaudus atsisiuntimo mygtuką.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Atsisiųsti Sertifikatą</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Sertifikato Nustatymai</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Sertifikato Šablono Nustatymai</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Fono Paveikslėlis</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Įkelkite fono paveikslėlį sertifikatui (JPG arba PNG, rekomenduojamas dydis: 2100x2970 pikselių A4 formatui)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Dabartinis fono paveikslėlis</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Antraštės Tekstas</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Pagrindinis pavadinimas, rodomas sertifikato viršuje</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Antraštės tekstas yra privalomas</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Sertifikato Turinio Šablonas</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Pagrindinis sertifikato turinys. Naudokite šablono kintamuosius dinaminio turinio įterpimui.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Sertifikato turinio šablonas yra privalomas</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Poraštės Tekstas</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Neprivalomas tekstas, rodomas sertifikato apačioje</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Galimi Šablono Kintamieji</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Naudokite šiuos kintamuosius savo šablonuose dinaminio turinio įterpimui:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Numatytasis šablonas</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Naudoti numatytąjį šabloną</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Išvaizdos Nustatymai</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Šrifto Šeima</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Šrifto Dydis</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Teksto Spalva (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Nurodykite teksto spalvą naudodami RGB reikšmes (0-255 kiekvienam komponentui)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Tinkamumo Kriterijai</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Mažiausias Užbaigtų Recenzijų Skaičius</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Mažiausias užbaigtų recenzijų skaičius, reikalingas prieš recenzentui gaunant sertifikatą</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Mažiausias recenzijų skaičius turi būti didesnis arba lygus 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Patikrinimo Parinktys</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Įtraukti QR kodą sertifikato patikrinimui</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Sertifikato Peržiūra</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Netinkamas paveikslėlio tipas. Prašome įkelti JPG arba PNG failą.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Failo įkėlimas nepavyko. Prašome bandyti dar kartą.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Ši recenzija dar nėra užbaigta. Sertifikatai galimi tik užbaigtoms recenzijoms.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Nepateiktas sertifikato kodas</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Neteisingas sertifikato kodas. Šio sertifikato nepavyko patikrinti.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Nepasirinkti recenzentai masiniam sertifikatų generavimui</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Prieiga uždrausta. Neturite leidimo atsisiųsti šio sertifikato.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Nėra žurnalo konteksto. Įsitikinkite, kad prieinate iš galiojančio žurnalo.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">Duomenų bazės prieiga šiuo metu negalima. Prašome susisiekti su sistemos administratoriumi.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Sertifikato Patikrinimas</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Įveskite sertifikato kodą, kad patikrintumėte jo autentiškumą</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Sertifikato Kodas</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Patikrinti Sertifikatą</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Sertifikatas Galioja</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Sertifikatas Negalioja</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Jūsų įvestas sertifikato kodas negalioja arba neegzistuoja mūsų sistemoje.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Sertifikato Kodas</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Recenzento Vardas</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Žurnalo Pavadinimas</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Išdavimo Data</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Masinis Sertifikatų Generavimas</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Generuokite sertifikatus keliems recenzentams vienu metu. Pasirinkite recenzentus iš žemiau esančio sąrašo, kurie užbaigė recenzijas, bet dar neturi sertifikatų.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Pasirinkti Recenzentus</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">užbaigtos recenzijos</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Nerasta tinkamų recenzentų. Visi recenzentai turi sertifikatus savo užbaigtoms recenzijoms.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Laikykite Ctrl (Windows/Linux) arba Cmd (Mac), kad pasirinktumėte kelis recenzentus</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Generuoti Sertifikatus</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Generuojami sertifikatai...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Prašome pasirinkti bent vieną recenzentą</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">sertifikatas(-ai) sėkmingai sugeneruotas(-i)</message>
+	<message key="plugins.generic.academicCertificate.batch.error">Generuojant sertifikatus įvyko klaida. Prašome bandyti dar kartą.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} sertifikatas(-ai) sėkmingai sugeneruotas(-i)</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Sertifikatų Statistika</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Sertifikatų generavimo ir naudojimo apžvalga jūsų žurnale</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Iš Viso Išduotų Sertifikatų</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Iš Viso Atsisiuntimų</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Unikalūs Recenzentai su Sertifikatais</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Iš Viso Išduotų Sertifikatų</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Iš Viso Atsisiuntimų</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Vidutinis Atsisiuntimų Skaičius Sertifikatui</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Pastaba: Helvetica, Times New Roman ir Courier šriftai palaiko tik lotyniškus simbolius. Jei jūsų žurnalas naudoja nelotyniškus simbolius, įskiepis automatiškai naudos DejaVu Sans šriftą.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Mano sertifikatai</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">Žemiau pateiktas visų jūsų recenzento sertifikatų šiam žurnalui sąrašas.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Išdavimo data</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Straipsnio pavadinimas</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Sertifikato kodas</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Veiksmai</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Dar neturite sertifikatų. Sertifikatai generuojami atlikus recenziją.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Peržiūrėti visus mano sertifikatus</message>
+</locale>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/he_IL/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Hebrew (RTL)
+  -->
+
+<locale name="he_IL" full_name="עברית">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">תעודת שיפוט</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">תעודת ביקורת עמיתים</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">התעודה שלך מוכנה!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">תודה על השלמת הביקורת. כעת תוכל להוריד את תעודת ההוקרה שלך.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">התעודה שלך תיווצר אוטומטית כשתלחץ על כפתור ההורדה.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">הורד תעודה</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">הגדרות תעודה</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">הגדרות תבנית תעודה</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">תמונת רקע</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">העלה תמונת רקע לתעודה (JPG או PNG, גודל מומלץ: 2100x2970 פיקסלים עבור A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">תמונת רקע נוכחית</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">טקסט כותרת</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">הכותרת הראשית המוצגת בראש התעודה</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">טקסט כותרת נדרש</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">תבנית גוף התעודה</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">התוכן העיקרי של התעודה. השתמש במשתני תבנית להכנסת תוכן דינמי.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">תבנית גוף התעודה נדרשת</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">טקסט תחתית</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">טקסט אופציונלי המוצג בתחתית התעודה</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">משתני תבנית זמינים</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">השתמש במשתנים אלה בתבניות שלך להכנסת תוכן דינמי:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">תבנית ברירת מחדל</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">השתמש בתבנית ברירת מחדל</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">הגדרות מראה</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">משפחת גופן</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">גודל גופן</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">צבע טקסט (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">ציין את צבע הטקסט באמצעות ערכי RGB (0-255 לכל רכיב)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">קריטריוני זכאות</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">מינימום ביקורות שהושלמו</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">מספר הביקורות המינימלי שנדרש לפני שהשופט יכול לקבל תעודה</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">מינימום ביקורות חייב להיות מספר גדול או שווה ל-1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">אפשרויות אימות</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">כלול קוד QR לאימות תעודה</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">תצוגה מקדימה של תעודה</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">סוג תמונה לא חוקי. אנא העלה קובץ JPG או PNG.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">העלאת הקובץ נכשלה. אנא נסה שוב.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">ביקורת זו טרם הושלמה. תעודות זמינות רק לביקורות שהושלמו.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">לא סופק קוד תעודה</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">קוד תעודה לא חוקי. לא ניתן לאמת תעודה זו.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">לא נבחרו שופטים ליצירת תעודות מרובות</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">הגישה נדחתה. אין לך הרשאה להוריד תעודה זו.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">אין הקשר כתב עת זמין. אנא ודא שאתה ניגש מכתב עת תקף.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">הגישה למסד הנתונים אינה זמינה כרגע. אנא פנה למנהל המערכת.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">אימות תעודה</message>
+	<message key="plugins.generic.academicCertificate.verify.description">הכנס קוד תעודה לאימות האותנטיות שלה</message>
+	<message key="plugins.generic.academicCertificate.verify.code">קוד תעודה</message>
+	<message key="plugins.generic.academicCertificate.verify.button">אמת תעודה</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">תעודה תקפה</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">תעודה לא תקפה</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">קוד התעודה שהזנת אינו תקף או אינו קיים במערכת שלנו.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">קוד תעודה</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">שם השופט</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">שם כתב העת</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">תאריך הנפקה</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">יצירת תעודות מרובות</message>
+	<message key="plugins.generic.academicCertificate.batch.description">צור תעודות למספר שופטים בו-זמנית. בחר שופטים מהרשימה למטה שהשלימו ביקורות אך אין להם עדיין תעודות.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">בחר שופטים</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">ביקורות שהושלמו</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">לא נמצאו שופטים זכאים. לכל השופטים יש תעודות עבור הביקורות שהשלימו.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">החזק Ctrl (Windows/Linux) או Cmd (Mac) כדי לבחור מספר שופטים</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">צור תעודות</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">יוצר תעודות...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">אנא בחר שופט אחד לפחות</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">תעודה/ות נוצרה/ו בהצלחה</message>
+	<message key="plugins.generic.academicCertificate.batch.error">אירעה שגיאה ביצירת התעודות. אנא נסה שוב.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} תעודה/ות נוצרה/ו בהצלחה</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">סטטיסטיקת תעודות</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">סקירה כללית של יצירת תעודות ושימוש בכתב העת שלך</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">סה"כ תעודות שהונפקו</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">סה"כ הורדות</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">שופטים ייחודיים עם תעודות</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">סה"כ תעודות שהונפקו</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">סה"כ הורדות</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">ממוצע הורדות לתעודה</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">הערה: גופני Helvetica, Times New Roman ו-Courier תומכים רק בתווים לטיניים. אם כתב העת שלך משתמש בתווים לא-לטיניים, התוסף ישתמש אוטומטית בגופן DejaVu Sans.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">התעודות שלי</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">להלן רשימת כל תעודות הסוקר שלך עבור כתב עת זה.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">תאריך הנפקה</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">כותרת ההגשה</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">קוד תעודה</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">פעולות</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">אין לך עדיין תעודות. תעודות נוצרות לאחר השלמת סקירה.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">הצג את כל התעודות שלי</message>
+</locale>

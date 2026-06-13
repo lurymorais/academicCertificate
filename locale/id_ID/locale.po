@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Sertifikat Tinjauan"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Sertifikat Tinjauan Sejawat"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Sertifikat Anda sudah siap!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Terima kasih telah menyelesaikan tinjauan ini. Anda sekarang dapat mengunduh sertifikat penghargaan Anda."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Sertifikat Anda akan dibuat secara otomatis saat Anda mengklik tombol unduh."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Unduh Sertifikat"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Pengaturan Templat Sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Gambar Latar Belakang"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Unggah gambar latar belakang untuk sertifikat (JPG atau PNG, ukuran yang disarankan: 2100x2970 piksel untuk A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Gambar latar belakang saat ini"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Teks Judul"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Judul utama yang ditampilkan di bagian atas sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Teks judul wajib diisi"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Templat Isi Sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Konten utama sertifikat. Gunakan variabel templat untuk menyisipkan konten dinamis."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Templat isi sertifikat wajib diisi"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Teks Footer"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Teks opsional yang ditampilkan di bagian bawah sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Variabel Templat yang Tersedia"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Gunakan variabel-variabel ini dalam templat Anda untuk menyisipkan konten dinamis:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Templat bawaan"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Gunakan templat bawaan"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Pengaturan Tampilan"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Jenis Huruf"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Ukuran Huruf"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Warna Teks (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Tentukan warna teks menggunakan nilai RGB (0-255 untuk setiap komponen)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Kriteria Kelayakan"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Tinjauan Selesai Minimum"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Jumlah minimum tinjauan yang diselesaikan yang diperlukan sebelum mitra bestari dapat menerima sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Jumlah minimum tinjauan harus berupa angka yang lebih besar atau sama dengan 1"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Opsi Verifikasi"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "Sertakan kode QR untuk verifikasi sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Pratinjau Sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Jenis gambar tidak valid. Harap unggah file JPG atau PNG."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Pengunggahan file gagal. Harap coba lagi."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Catatan: Helvetica, Times New Roman, dan Courier hanya mendukung karakter Latin. Jika jurnal Anda menggunakan karakter non-Latin, plugin akan secara otomatis menggunakan font DejaVu Sans."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Tinjauan ini belum diselesaikan. Sertifikat hanya tersedia untuk tinjauan yang sudah selesai."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Tidak ada kode sertifikat yang diberikan"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Kode sertifikat tidak valid. Sertifikat ini tidak dapat diverifikasi."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Tidak ada mitra bestari yang dipilih untuk pembuatan sertifikat batch"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Akses ditolak. Anda tidak memiliki izin untuk mengunduh sertifikat ini."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Tidak ada konteks jurnal yang tersedia. Pastikan Anda mengakses dari jurnal yang valid."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Akses basis data saat ini tidak tersedia. Harap hubungi administrator sistem."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Verifikasi Sertifikat"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Masukkan kode sertifikat untuk memverifikasi keasliannya"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Kode Sertifikat"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Verifikasi Sertifikat"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Sertifikat Valid"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Sertifikat Tidak Valid"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Kode sertifikat yang Anda masukkan tidak valid atau tidak ada dalam sistem kami."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Kode Sertifikat"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Nama Mitra Bestari"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Nama Jurnal"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Tanggal Penerbitan"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Pembuatan Sertifikat Batch"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Buat sertifikat untuk beberapa mitra bestari sekaligus. Pilih mitra bestari dari daftar di bawah ini yang telah menyelesaikan tinjauan tetapi belum memiliki sertifikat."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Pilih Mitra Bestari"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "tinjauan selesai"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Tidak ada mitra bestari yang memenuhi syarat. Semua mitra bestari memiliki sertifikat untuk tinjauan mereka yang sudah selesai."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Tahan Ctrl (Windows/Linux) atau Cmd (Mac) untuk memilih beberapa mitra bestari"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Buat Sertifikat"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Membuat sertifikat..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Harap pilih setidaknya satu mitra bestari"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "sertifikat berhasil dibuat"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Terjadi kesalahan saat membuat sertifikat. Harap coba lagi."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} sertifikat berhasil dibuat"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Statistik Sertifikat"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Ikhtisar pembuatan dan penggunaan sertifikat di jurnal Anda"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Total Sertifikat yang Diterbitkan"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Total Unduhan"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Mitra Bestari Unik dengan Sertifikat"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Total Sertifikat yang Diterbitkan"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Total Unduhan"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Rata-rata Unduhan per Sertifikat"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Pengaturan Sertifikat"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Sertifikat Saya"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Berikut adalah daftar semua sertifikat reviewer Anda untuk jurnal ini."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Tanggal Diterbitkan"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Judul Naskah"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Kode Sertifikat"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Tindakan"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "Anda belum memiliki sertifikat. Sertifikat dibuat setelah Anda menyelesaikan review."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Lihat Semua Sertifikat Saya"
+

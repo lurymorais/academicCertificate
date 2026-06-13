@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Swedish\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Granskningscertifikat"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Certifikat för Kollegial Granskning"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Ditt certifikat är klart!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Tack för att du slutförde denna granskning. Du kan nu ladda ner ditt certifikat för erkännande."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Ditt certifikat kommer att genereras automatiskt när du klickar på nedladdningsknappen."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Ladda ner Certifikat"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Inställningar för Certifikatmall"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Bakgrundsbild"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Ladda upp en bakgrundsbild för certifikatet (JPG eller PNG, rekommenderad storlek: 2100x2970 pixlar för A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Nuvarande bakgrundsbild"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Rubriktext"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Huvudrubriken som visas högst upp på certifikatet"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Rubriktext krävs"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Mall för Certifikatinnehåll"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Huvudinnehållet i certifikatet. Använd mallvariabler för att infoga dynamiskt innehåll."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Mall för certifikatinnehåll krävs"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Sidfotstext"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Valfri text som visas längst ner på certifikatet"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Tillgängliga Mallvariabler"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Använd dessa variabler i dina mallar för att infoga dynamiskt innehåll:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Standardmall"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Använd standardmall"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Utseendeinställningar"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Typsnittsfamilj"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Teckenstorlek"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Textfärg (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Ange textfärg med RGB-värden (0-255 för varje komponent)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Behörighetskriterier"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Minsta Antal Slutförda Granskningar"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Minsta antal slutförda granskningar som krävs innan en granskare kan få ett certifikat"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Minsta antal granskningar måste vara ett tal större än eller lika med 1"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Verifieringsalternativ"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "Inkludera QR-kod för certifikatverifiering"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Förhandsgranska Certifikat"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Ogiltig bildtyp. Vänligen ladda upp en JPG- eller PNG-fil."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Filuppladdning misslyckades. Vänligen försök igen."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Observera: Helvetica, Times New Roman och Courier stöder bara latinska tecken. Om din tidskrift använder icke-latinska tecken kommer tillägget automatiskt att använda DejaVu Sans."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Denna granskning är inte slutförd ännu. Certifikat är endast tillgängliga för slutförda granskningar."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Ingen certifikatkod angiven"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Ogiltig certifikatkod. Detta certifikat kunde inte verifieras."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Inga granskare valda för batchgenerering av certifikat"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Åtkomst nekad. Du har inte behörighet att ladda ner detta certifikat."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Ingen tidskriftskontext tillgänglig. Vänligen se till att du kommer åt från en giltig tidskrift."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Databasåtkomst är för närvarande otillgänglig. Vänligen kontakta systemadministratören."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Verifiera Certifikat"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Ange en certifikatkod för att verifiera äktheten"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Certifikatkod"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Verifiera Certifikat"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Giltigt Certifikat"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Ogiltigt Certifikat"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Certifikatkoden du angav är ogiltig eller finns inte i vårt system."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Certifikatkod"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Granskarens Namn"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Tidskriftens Namn"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Utfärdandedatum"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Batchgenerering av Certifikat"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Generera certifikat för flera granskare samtidigt. Välj granskare från listan nedan som har slutfört granskningar men ännu inte har certifikat."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Välj Granskare"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "slutförda granskningar"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Inga behöriga granskare hittades. Alla granskare har certifikat för sina slutförda granskningar."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Håll Ctrl (Windows/Linux) eller Cmd (Mac) nedtryckt för att välja flera granskare"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Generera Certifikat"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Genererar certifikat..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Vänligen välj minst en granskare"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "certifikat genererade framgångsrikt"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Ett fel uppstod vid generering av certifikat. Vänligen försök igen."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} certifikat genererade framgångsrikt"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Certifikatstatistik"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Översikt över certifikatgenerering och användning i din tidskrift"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Totalt Utfärdade Certifikat"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Totalt Antal Nedladdningar"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Unika Granskare med Certifikat"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Totalt Utfärdade Certifikat"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Totalt Antal Nedladdningar"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Genomsnittligt Antal Nedladdningar per Certifikat"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Certifikatinställningar"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Mina certifikat"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Nedan finns en lista över alla dina granskarcertifikat för denna tidskrift."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Utfärdandedatum"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Bidragets titel"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Certifikatkod"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Åtgärder"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "Du har inga certifikat ännu. Certifikat genereras efter att du har slutfört en granskning."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Visa alla mina certifikat"
+

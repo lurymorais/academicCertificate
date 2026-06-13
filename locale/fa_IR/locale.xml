@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Persian/Farsi (RTL)
+  -->
+
+<locale name="fa_IR" full_name="فارسی">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">گواهی داوری</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">گواهی داوری همتا</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">گواهی شما آماده است!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">از تکمیل این داوری سپاسگزاریم. اکنون می‌توانید گواهی تقدیر خود را دانلود کنید.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">با کلیک روی دکمه دانلود، گواهی شما به صورت خودکار ایجاد می‌شود.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">دانلود گواهی</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">تنظیمات گواهی</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">تنظیمات قالب گواهی</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">تصویر پس‌زمینه</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">بارگذاری تصویر پس‌زمینه برای گواهی (JPG یا PNG، اندازه پیشنهادی: 2100×2970 پیکسل برای A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">تصویر پس‌زمینه فعلی</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">متن سربرگ</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">عنوان اصلی که در بالای گواهی نمایش داده می‌شود</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">متن سربرگ الزامی است</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">قالب متن اصلی گواهی</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">محتوای اصلی گواهی. از متغیرهای قالب برای درج محتوای پویا استفاده کنید.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">قالب متن اصلی گواهی الزامی است</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">متن پاورقی</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">متن اختیاری که در پایین گواهی نمایش داده می‌شود</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">متغیرهای قالب موجود</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">از این متغیرها در قالب‌های خود برای درج محتوای پویا استفاده کنید:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">قالب پیش‌فرض</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">استفاده از قالب پیش‌فرض</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">تنظیمات ظاهری</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">خانواده فونت</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">اندازه فونت</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">رنگ متن (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">رنگ متن را با مقادیر RGB مشخص کنید (0-255 برای هر مؤلفه)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">معیارهای واجد شرایط بودن</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">حداقل داوری‌های تکمیل شده</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">حداقل تعداد داوری‌های تکمیل شده مورد نیاز قبل از دریافت گواهی توسط داور</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">حداقل داوری‌ها باید عددی بزرگتر یا مساوی 1 باشد</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">گزینه‌های تأیید</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">شامل کد QR برای تأیید گواهی</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">پیش‌نمایش گواهی</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">نوع تصویر نامعتبر است. لطفاً فایل JPG یا PNG بارگذاری کنید.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">بارگذاری فایل ناموفق بود. لطفاً دوباره تلاش کنید.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">این داوری هنوز تکمیل نشده است. گواهی‌ها فقط برای داوری‌های تکمیل شده موجود است.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">کد گواهی ارائه نشده است</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">کد گواهی نامعتبر است. این گواهی قابل تأیید نیست.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">هیچ داوری برای تولید گروهی گواهی انتخاب نشده است</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">دسترسی رد شد. شما مجوز دانلود این گواهی را ندارید.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">زمینه مجله موجود نیست. لطفاً مطمئن شوید که از یک مجله معتبر دسترسی دارید.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">دسترسی به پایگاه داده در حال حاضر موجود نیست. لطفاً با مدیر سیستم تماس بگیرید.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">تأیید گواهی</message>
+	<message key="plugins.generic.academicCertificate.verify.description">کد گواهی را برای تأیید اصالت آن وارد کنید</message>
+	<message key="plugins.generic.academicCertificate.verify.code">کد گواهی</message>
+	<message key="plugins.generic.academicCertificate.verify.button">تأیید گواهی</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">گواهی معتبر</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">گواهی نامعتبر</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">کد گواهی وارد شده نامعتبر است یا در سیستم ما وجود ندارد.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">کد گواهی</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">نام داور</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">نام مجله</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">تاریخ صدور</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">تولید گروهی گواهی</message>
+	<message key="plugins.generic.academicCertificate.batch.description">گواهی‌ها را برای چندین داور به صورت یکجا تولید کنید. داورانی را از لیست زیر انتخاب کنید که داوری‌های خود را تکمیل کرده‌اند اما هنوز گواهی ندارند.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">انتخاب داوران</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">داوری‌های تکمیل شده</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">هیچ داور واجد شرایطی یافت نشد. همه داوران گواهی‌های داوری‌های تکمیل شده خود را دارند.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">کلید Ctrl (ویندوز/لینوکس) یا Cmd (مک) را نگه دارید تا چندین داور انتخاب کنید</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">تولید گواهی‌ها</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">در حال تولید گواهی‌ها...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">لطفاً حداقل یک داور انتخاب کنید</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">گواهی(ها) با موفقیت تولید شد</message>
+	<message key="plugins.generic.academicCertificate.batch.error">در تولید گواهی‌ها خطایی رخ داد. لطفاً دوباره تلاش کنید.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} گواهی با موفقیت تولید شد</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">آمار گواهی‌ها</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">نمای کلی تولید و استفاده از گواهی در مجله شما</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">کل گواهی‌های صادر شده</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">کل دانلودها</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">داوران منحصر به فرد دارای گواهی</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">کل گواهی‌های صادر شده</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">کل دانلودها</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">میانگین دانلود به ازای هر گواهی</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">توجه: فونت‌های Helvetica، Times New Roman و Courier فقط از حروف لاتین پشتیبانی می‌کنند. اگر مجله شما از حروف غیرلاتین استفاده می‌کند، افزونه به طور خودکار از فونت DejaVu Sans استفاده خواهد کرد.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">گواهی‌نامه‌های من</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">در زیر لیست تمام گواهی‌نامه‌های داوری شما برای این مجله آمده است.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">تاریخ صدور</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">عنوان مقاله</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">کد گواهی‌نامه</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">عملیات</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">شما هنوز گواهی‌نامه‌ای ندارید. گواهی‌نامه‌ها پس از تکمیل داوری صادر می‌شوند.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">مشاهده همه گواهی‌نامه‌های من</message>
+</locale>

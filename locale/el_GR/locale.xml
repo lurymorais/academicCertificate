@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/el_GR/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Greek
+  -->
+
+<locale name="el_GR" full_name="Ελληνικά">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Πιστοποιητικό Κριτικής</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Πιστοποιητικό Αξιολόγησης από Ομότιμους</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Το Πιστοποιητικό σας είναι Έτοιμο!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Σας ευχαριστούμε για την ολοκλήρωση αυτής της κριτικής. Μπορείτε τώρα να κατεβάσετε το πιστοποιητικό αναγνώρισής σας.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">Το πιστοποιητικό σας θα δημιουργηθεί αυτόματα όταν κάνετε κλικ στο κουμπί λήψης.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Λήψη Πιστοποιητικού</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Ρυθμίσεις Πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Ρυθμίσεις Προτύπου Πιστοποιητικού</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Εικόνα Φόντου</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Ανεβάστε μια εικόνα φόντου για το πιστοποιητικό (JPG ή PNG, προτεινόμενο μέγεθος: 2100x2970 pixels για A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Τρέχουσα εικόνα φόντου</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Κείμενο Επικεφαλίδας</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Η κύρια επικεφαλίδα που εμφανίζεται στην κορυφή του πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Το κείμενο επικεφαλίδας είναι υποχρεωτικό</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Πρότυπο Κυρίως Κειμένου Πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Το κύριο περιεχόμενο του πιστοποιητικού. Χρησιμοποιήστε μεταβλητές προτύπου για εισαγωγή δυναμικού περιεχομένου.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Το πρότυπο κυρίως κειμένου πιστοποιητικού είναι υποχρεωτικό</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Κείμενο Υποσέλιδου</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Προαιρετικό κείμενο που εμφανίζεται στο κάτω μέρος του πιστοποιητικού</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Διαθέσιμες Μεταβλητές Προτύπου</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Χρησιμοποιήστε αυτές τις μεταβλητές στα πρότυπά σας για εισαγωγή δυναμικού περιεχομένου:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Προεπιλεγμένο πρότυπο</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Χρήση προεπιλεγμένου προτύπου</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Ρυθμίσεις Εμφάνισης</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Οικογένεια Γραμματοσειράς</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Μέγεθος Γραμματοσειράς</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Χρώμα Κειμένου (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Καθορίστε το χρώμα κειμένου χρησιμοποιώντας τιμές RGB (0-255 για κάθε συνιστώσα)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Κριτήρια Επιλεξιμότητας</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Ελάχιστες Ολοκληρωμένες Κριτικές</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Ο ελάχιστος αριθμός ολοκληρωμένων κριτικών που απαιτούνται πριν ένας κριτής μπορεί να λάβει πιστοποιητικό</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Οι ελάχιστες κριτικές πρέπει να είναι αριθμός μεγαλύτερος ή ίσος με 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Επιλογές Επαλήθευσης</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Συμπερίληψη κωδικού QR για επαλήθευση πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Προεπισκόπηση Πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Μη έγκυρος τύπος εικόνας. Παρακαλώ ανεβάστε αρχείο JPG ή PNG.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Η μεταφόρτωση αρχείου απέτυχε. Παρακαλώ δοκιμάστε ξανά.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Αυτή η κριτική δεν έχει ολοκληρωθεί ακόμα. Τα πιστοποιητικά είναι διαθέσιμα μόνο για ολοκληρωμένες κριτικές.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Δεν παρέχεται κωδικός πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Μη έγκυρος κωδικός πιστοποιητικού. Αυτό το πιστοποιητικό δεν μπόρεσε να επαληθευτεί.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Δεν επιλέχθηκαν κριτές για μαζική δημιουργία πιστοποιητικών</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Πρόσβαση απορρίφθηκε. Δεν έχετε άδεια να κατεβάσετε αυτό το πιστοποιητικό.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Δεν υπάρχει διαθέσιμο περιβάλλον περιοδικού. Βεβαιωθείτε ότι έχετε πρόσβαση από έγκυρο περιοδικό.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">Η πρόσβαση στη βάση δεδομένων δεν είναι διαθέσιμη αυτή τη στιγμή. Επικοινωνήστε με το διαχειριστή συστήματος.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Επαλήθευση Πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Εισάγετε έναν κωδικό πιστοποιητικού για να επαληθεύσετε την αυθεντικότητά του</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Κωδικός Πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Επαλήθευση Πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Έγκυρο Πιστοποιητικό</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Μη Έγκυρο Πιστοποιητικό</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Ο κωδικός πιστοποιητικού που εισάγατε δεν είναι έγκυρος ή δεν υπάρχει στο σύστημά μας.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Κωδικός Πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Όνομα Κριτή</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Όνομα Περιοδικού</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Ημερομηνία Έκδοσης</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Μαζική Δημιουργία Πιστοποιητικών</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Δημιουργήστε πιστοποιητικά για πολλαπλούς κριτές ταυτόχρονα. Επιλέξτε κριτές από την παρακάτω λίστα που έχουν ολοκληρώσει κριτικές αλλά δεν έχουν ακόμη πιστοποιητικά.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Επιλογή Κριτών</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">ολοκληρωμένες κριτικές</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Δεν βρέθηκαν επιλέξιμοι κριτές. Όλοι οι κριτές έχουν πιστοποιητικά για τις ολοκληρωμένες κριτικές τους.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Κρατήστε πατημένο Ctrl (Windows/Linux) ή Cmd (Mac) για να επιλέξετε πολλαπλούς κριτές</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Δημιουργία Πιστοποιητικών</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Δημιουργία πιστοποιητικών...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Παρακαλώ επιλέξτε τουλάχιστον έναν κριτή</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">πιστοποιητικό(ά) δημιουργήθηκαν επιτυχώς</message>
+	<message key="plugins.generic.academicCertificate.batch.error">Προέκυψε σφάλμα κατά τη δημιουργία πιστοποιητικών. Παρακαλώ δοκιμάστε ξανά.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} πιστοποιητικό(ά) δημιουργήθηκαν επιτυχώς</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Στατιστικά Πιστοποιητικών</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Επισκόπηση της δημιουργίας και χρήσης πιστοποιητικών στο περιοδικό σας</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Συνολικά Εκδοθέντα Πιστοποιητικά</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Συνολικές Λήψεις</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Μοναδικοί Κριτές με Πιστοποιητικά</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Συνολικά Εκδοθέντα Πιστοποιητικά</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Συνολικές Λήψεις</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Μέσος Όρος Λήψεων ανά Πιστοποιητικό</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Σημείωση: Οι γραμματοσειρές Helvetica, Times New Roman και Courier υποστηρίζουν μόνο λατινικούς χαρακτήρες. Εάν το περιοδικό σας χρησιμοποιεί μη λατινικούς χαρακτήρες, το πρόσθετο θα χρησιμοποιήσει αυτόματα τη γραμματοσειρά DejaVu Sans.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Τα πιστοποιητικά μου</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">Παρακάτω βρίσκεται η λίστα όλων των πιστοποιητικών αξιολόγησής σας για αυτό το περιοδικό.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Ημερομηνία έκδοσης</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Τίτλος υποβολής</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Κωδικός πιστοποιητικού</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Ενέργειες</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Δεν έχετε ακόμα πιστοποιητικά. Τα πιστοποιητικά δημιουργούνται μετά την ολοκλήρωση μιας αξιολόγησης.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Προβολή όλων των πιστοποιητικών μου</message>
+</locale>

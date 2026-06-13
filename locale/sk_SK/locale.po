@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-04 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Slovak\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Certifikát Recenzie"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Certifikát Odborného Posúdenia"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Váš Certifikát je Pripravený!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Ďakujeme za dokončenie tejto recenzie. Teraz si môžete stiahnuť svoj certifikát uznania."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Váš certifikát bude automaticky vygenerovaný po kliknutí na tlačidlo sťahovania."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Stiahnuť Certifikát"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Nastavenia Šablóny Certifikátu"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Obrázok Pozadia"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Nahrajte obrázok pozadia pre certifikát (JPG alebo PNG, odporúčaná veľkosť: 2100x2970 pixelov pre A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Aktuálny obrázok pozadia"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Text Hlavičky"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Hlavný názov zobrazený v hornej časti certifikátu"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Text hlavičky je povinný"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Šablóna Tela Certifikátu"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Hlavný obsah certifikátu. Použite premenné šablóny na vloženie dynamického obsahu."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Šablóna tela certifikátu je povinná"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Text Päty"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Voliteľný text zobrazený v dolnej časti certifikátu"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Dostupné Premenné Šablóny"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Použite tieto premenné vo svojich šablónach na vloženie dynamického obsahu:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Predvolená šablóna"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Použiť predvolenú šablónu"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Nastavenia Vzhľadu"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Rodina Písma"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Veľkosť Písma"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Farba Textu (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Zadajte farbu textu pomocou hodnôt RGB (0-255 pre každú zložku)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Kritériá Oprávnenosti"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Minimálny Počet Dokončených Recenzií"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Minimálny počet dokončených recenzií potrebných pred získaním certifikátu"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Minimálny počet recenzií musí byť číslo väčšie alebo rovné 1"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Možnosti Overenia"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "Zahrnúť QR kód pre overenie certifikátu"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Náhľad Certifikátu"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Neplatný typ obrázka. Prosím, nahrajte súbor JPG alebo PNG."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Nahrávanie súboru zlyhalo. Prosím, skúste to znova."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Poznámka: Helvetica, Times New Roman a Courier podporujú iba latinské znaky. Ak váš časopis používa nelatinské znaky, modul automaticky použije písmo DejaVu Sans."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Táto recenzia ešte nebola dokončená. Certifikáty sú dostupné len pre dokončené recenzie."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Nebol poskytnutý kód certifikátu"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Neplatný kód certifikátu. Tento certifikát nie je možné overiť."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Neboli vybraní recenzenti pre hromadné generovanie certifikátov"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Prístup zamietnutý. Nemáte oprávnenie na stiahnutie tohto certifikátu."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Nie je k dispozícii kontext časopisu. Uistite sa, že pristupujete z platného časopisu."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Prístup k databáze je momentálne nedostupný. Prosím, kontaktujte správcu systému."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Overenie Certifikátu"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Zadajte kód certifikátu na overenie jeho pravosti"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Kód Certifikátu"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Overiť Certifikát"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Platný Certifikát"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Neplatný Certifikát"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Zadaný kód certifikátu je neplatný alebo neexistuje v našom systéme."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Kód Certifikátu"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Meno Recenzenta"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Názov Časopisu"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Dátum Vydania"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Hromadné Generovanie Certifikátov"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Generujte certifikáty pre viacerých recenzentov naraz. Vyberte recenzentov zo zoznamu nižšie, ktorí dokončili recenzie, ale ešte nemajú certifikáty."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Vybrať Recenzentov"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "dokončené recenzie"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Nenašli sa žiadni oprávnení recenzenti. Všetci recenzenti majú certifikáty za svoje dokončené recenzie."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Podržte Ctrl (Windows/Linux) alebo Cmd (Mac) pre výber viacerých recenzentov"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Generovať Certifikáty"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Generujem certifikáty..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Prosím, vyberte aspoň jedného recenzenta"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "certifikát(y) úspešne vygenerovaný(é)"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Pri generovaní certifikátov sa vyskytla chyba. Prosím, skúste to znova."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} certifikát(y) úspešne vygenerovaný(é)"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Štatistika Certifikátov"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Prehľad generovania a používania certifikátov vo vašom časopise"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Celkový Počet Vydaných Certifikátov"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Celkový Počet Stiahnutí"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Unikátni Recenzenti s Certifikátmi"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Celkový Počet Vydaných Certifikátov"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Celkový Počet Stiahnutí"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Priemerný Počet Stiahnutí na Certifikát"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Nastavenia Certifikátu"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Moje certifikáty"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Nižšie je zoznam všetkých vašich recenzentských certifikátov pre tento časopis."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Dátum vydania"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Názov príspevku"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Kód certifikátu"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Akcie"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "Zatiaľ nemáte žiadne certifikáty. Certifikáty sa generujú po dokončení recenzie."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Zobraziť všetky moje certifikáty"
+

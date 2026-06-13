@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: German (Germany)\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Gutachter-Zertifikat"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Peer-Review-Zertifikat"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Ihr Zertifikat ist fertig!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Vielen Dank für den Abschluss dieser Begutachtung. Sie können jetzt Ihr Anerkennungszertifikat herunterladen."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Ihr Zertifikat wird automatisch erstellt, wenn Sie auf die Download-Schaltfläche klicken."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Zertifikat Herunterladen"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Einstellungen der Zertifikatvorlage"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Hintergrundbild"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Laden Sie ein Hintergrundbild für das Zertifikat hoch (JPG oder PNG, empfohlene Größe: 2100x2970 Pixel für A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Aktuelles Hintergrundbild"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Kopfzeilentext"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Die Hauptüberschrift, die oben auf dem Zertifikat angezeigt wird"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Der Kopfzeilentext ist erforderlich"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Haupttext-Vorlage des Zertifikats"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Der Hauptinhalt des Zertifikats. Verwenden Sie Vorlagenvariablen, um dynamische Inhalte einzufügen."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Die Haupttext-Vorlage des Zertifikats ist erforderlich"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Fußzeilentext"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Optionaler Text, der am unteren Rand des Zertifikats angezeigt wird"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Verfügbare Vorlagenvariablen"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Verwenden Sie diese Variablen in Ihren Vorlagen, um dynamische Inhalte einzufügen:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Standardvorlage"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Standardvorlage verwenden"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Darstellungseinstellungen"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Schriftfamilie"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Schriftgröße"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Textfarbe (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Geben Sie die Textfarbe mit RGB-Werten an (0-255 für jede Komponente)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Zulassungskriterien"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Mindestanzahl Abgeschlossener Begutachtungen"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Die Mindestanzahl abgeschlossener Begutachtungen, die erforderlich ist, bevor ein Gutachter ein Zertifikat erhalten kann"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Die Mindestanzahl der Begutachtungen muss eine Zahl größer oder gleich 1 sein"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Verifizierungsoptionen"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "QR-Code zur Zertifikatsverifizierung einschließen"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Zertifikat-Vorschau"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Ungültiger Bildtyp. Bitte laden Sie eine JPG- oder PNG-Datei hoch."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Datei-Upload fehlgeschlagen. Bitte versuchen Sie es erneut."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Hinweis: Helvetica, Times New Roman und Courier unterstützen nur lateinische Zeichen. Wenn Ihre Zeitschrift kyrillische, arabische, chinesische oder andere nicht-lateinische Zeichen verwendet, wird das Plugin automatisch DejaVu Sans für diese Textelemente verwenden."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Diese Begutachtung wurde noch nicht abgeschlossen. Zertifikate sind nur für abgeschlossene Begutachtungen verfügbar."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Kein Zertifikatscode angegeben"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Ungültiger Zertifikatscode. Dieses Zertifikat konnte nicht verifiziert werden."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Keine Gutachter für die Stapelgenerierung von Zertifikaten ausgewählt"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Zugriff verweigert. Sie haben keine Berechtigung, dieses Zertifikat herunterzuladen."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Kein Zeitschriftenkontext verfügbar. Stellen Sie sicher, dass Sie von einer gültigen Zeitschrift aus zugreifen."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Der Datenbankzugriff ist derzeit nicht verfügbar. Bitte kontaktieren Sie den Systemadministrator."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Zertifikat Verifizieren"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Geben Sie einen Zertifikatscode ein, um dessen Echtheit zu überprüfen"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Zertifikatscode"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Zertifikat Verifizieren"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Zertifikat Gültig"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Zertifikat Ungültig"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Der von Ihnen eingegebene Zertifikatscode ist ungültig oder existiert nicht in unserem System."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Zertifikatscode"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Name des Gutachters"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Name der Zeitschrift"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Ausstellungsdatum"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Stapelgenerierung von Zertifikaten"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Erstellen Sie Zertifikate für mehrere Gutachter gleichzeitig. Wählen Sie Gutachter aus der unten stehenden Liste aus, die Begutachtungen abgeschlossen haben, aber noch keine Zertifikate besitzen."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Gutachter Auswählen"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "abgeschlossene Begutachtungen"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Keine qualifizierten Gutachter gefunden. Alle Gutachter haben Zertifikate für ihre abgeschlossenen Begutachtungen."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Halten Sie Strg (Windows/Linux) oder Cmd (Mac) gedrückt, um mehrere Gutachter auszuwählen"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Zertifikate Erstellen"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Zertifikate werden erstellt..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Bitte wählen Sie mindestens einen Gutachter aus"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "Zertifikat(e) erfolgreich erstellt"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Beim Erstellen der Zertifikate ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} Zertifikat(e) erfolgreich erstellt"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Zertifikat-Statistiken"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Übersicht über die Generierung und Nutzung von Zertifikaten in Ihrer Zeitschrift"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Gesamt Ausgestellte Zertifikate"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Gesamt Downloads"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Eindeutige Gutachter mit Zertifikaten"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Gesamt Ausgestellte Zertifikate"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Gesamt Downloads"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Durchschnittliche Downloads pro Zertifikat"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Zertifikat-Einstellungen"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Meine Zertifikate"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Nachfolgend finden Sie eine Liste aller Ihrer Gutachterzertifikate für diese Zeitschrift."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Ausstellungsdatum"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Titel der Einreichung"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Zertifikatscode"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Aktionen"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "Sie haben noch keine Zertifikate. Zertifikate werden nach Abschluss einer Begutachtung erstellt."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Alle meine Zertifikate anzeigen"
+

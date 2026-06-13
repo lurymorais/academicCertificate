@@ -1,0 +1,1095 @@
+<?php
+/**
+ * @file plugins/generic/academicCertificate/classes/CertificateGenerator.php
+ *
+ * Copyright (c) 2024
+ * Distributed under the GNU GPL v3.
+ *
+ * @class CertificateGenerator
+ * @ingroup plugins_generic_academicCertificate
+ *
+ * @brief Generates PDF certificates for reviewers
+ */
+
+namespace APP\plugins\generic\academicCertificate\classes;
+
+use PKP\core\Core;
+use PKP\db\DAORegistry;
+use APP\facades\Repo;
+use APP\core\Application;
+use Exception;
+
+class CertificateGenerator {
+
+    /** @var bool Whether TCPDF has been loaded */
+    private static $tcpdfLoaded = false;
+
+    /**
+     * Lazy-load TCPDF library on first use
+     */
+    private static function ensureTCPDF() {
+        if (self::$tcpdfLoaded) {
+            return;
+        }
+
+        // OJS 3.4+/3.3 compatibility: Get base directory
+        if (class_exists('PKP\core\Core')) {
+            $ojsBaseDir = Core::getBaseDir();
+        } elseif (class_exists('Core')) {
+            $ojsBaseDir = \Core::getBaseDir();
+        } else {
+            $ojsBaseDir = dirname(__FILE__, 6);
+        }
+
+        $tcpdfLocations = array(
+            dirname(__FILE__, 2) . '/vendor/tecnickcom/tcpdf/tcpdf.php',
+            $ojsBaseDir . '/lib/pkp/lib/vendor/tecnickcom/tcpdf/tcpdf.php',
+            $ojsBaseDir . '/lib/pkp/lib/tcpdf/tcpdf.php',
+        );
+
+        foreach ($tcpdfLocations as $tcpdfPath) {
+            if (file_exists($tcpdfPath)) {
+                require_once($tcpdfPath);
+                self::$tcpdfLoaded = true;
+                return;
+            }
+        }
+
+        throw new Exception(
+            'TCPDF library not found. Please run "composer install" in the plugin directory, ' .
+            'or ensure TCPDF is available in the OJS vendor directory.'
+        );
+    }
+
+    /** @var ReviewAssignment */
+    private $reviewAssignment;
+
+    /** @var User */
+    private $reviewer;
+
+    /** @var Submission */
+    private $submission;
+
+    /** @var Context */
+    private $context;
+
+    /** @var Certificate */
+    private $certificate;
+
+    /** @var array */
+    private $templateSettings;
+
+    /** @var bool */
+    private $previewMode = false;
+
+    /** @var string|null Effective font for current PDF generation (may auto-switch to dejavusans for non-Latin text) */
+    private $effectiveFont = null;
+
+    /** @var string|null Current locale for localized data retrieval */
+    private $locale = null;
+
+    /** @var string Certificate type: reviewer, acceptance, editor */
+    private $certificateType = Certificate::TYPE_REVIEWER;
+
+    /** @var string|null Acceptance decision date for acceptance certificates */
+    private $acceptanceDate = null;
+
+    /** @var string|null Publication date for author certificates */
+    private $publicationDate = null;
+
+    /**
+     * Constructor
+     */
+    public function __construct() {
+        $this->templateSettings = array();
+    }
+
+    /**
+     * Set review assignment
+     * @param $reviewAssignment ReviewAssignment
+     */
+    public function setReviewAssignment($reviewAssignment) {
+        $this->reviewAssignment = $reviewAssignment;
+
+        // Load related objects - OJS 3.3 compatibility
+        if (class_exists('APP\facades\Repo')) {
+            $this->reviewer = \APP\facades\Repo::user()->get($reviewAssignment->getReviewerId());
+            $this->submission = \APP\facades\Repo::submission()->get($reviewAssignment->getSubmissionId());
+        } else {
+            // OJS 3.3 fallback using DAOs
+            $userDao = DAORegistry::getDAO('UserDAO');
+            $this->reviewer = $userDao->getById($reviewAssignment->getReviewerId());
+            $submissionDao = DAORegistry::getDAO('SubmissionDAO');
+            $this->submission = $submissionDao->getById($reviewAssignment->getSubmissionId());
+        }
+    }
+
+    /**
+     * Set certificate
+     * @param $certificate Certificate
+     */
+    public function setCertificate($certificate) {
+        $this->certificate = $certificate;
+        if ($certificate && method_exists($certificate, 'getCertificateType')) {
+            $type = $certificate->getCertificateType();
+            if ($type) {
+                $this->certificateType = $type;
+            }
+        }
+    }
+
+    /**
+     * Set context
+     * @param $context Context
+     */
+    public function setContext($context) {
+        $this->context = $context;
+    }
+
+    /**
+     * Set template settings
+     * @param $settings array
+     */
+    public function setTemplateSettings($settings) {
+        $this->templateSettings = $settings;
+    }
+
+    /**
+     * Set preview mode
+     * @param $previewMode bool
+     */
+    public function setPreviewMode($previewMode) {
+        $this->previewMode = $previewMode;
+    }
+
+    /**
+     * Set locale for localized data retrieval.
+     * When set, the generator prefers this locale for reviewer names,
+     * submission titles, and journal names instead of relying on OJS's
+     * internal locale detection (which may not reflect the user's session
+     * locale, e.g. when OJS 3.5 URL-based routing has no locale prefix).
+     * @param string|null $locale
+     */
+    public function setLocale($locale) {
+        $this->locale = $locale;
+    }
+
+    /**
+     * @param string $certificateType Certificate::TYPE_*
+     */
+    public function setCertificateType($certificateType) {
+        $this->certificateType = $certificateType;
+    }
+
+    /**
+     * @param string|null $acceptanceDate
+     */
+    public function setAcceptanceDate($acceptanceDate) {
+        $this->acceptanceDate = $acceptanceDate;
+    }
+
+    /**
+     * @param string|null $publicationDate
+     */
+    public function setPublicationDate($publicationDate) {
+        $this->publicationDate = $publicationDate;
+    }
+
+    /**
+     * Load submission by id (acceptance / editor certificates).
+     * @param int $submissionId
+     */
+    public function setSubmissionById($submissionId) {
+        if (class_exists('APP\facades\Repo')) {
+            $this->submission = \APP\facades\Repo::submission()->get((int) $submissionId);
+        } else {
+            $submissionDao = DAORegistry::getDAO('SubmissionDAO');
+            $this->submission = $submissionDao->getById((int) $submissionId);
+        }
+    }
+
+    /**
+     * Get the effective locale: explicit locale if set, else OJS detected locale.
+     * @return string
+     */
+    private function getEffectiveLocale() {
+        if ($this->locale) {
+            return $this->locale;
+        }
+        // OJS 3.4+/3.5: PKP\facades\Locale (Laravel facade)
+        if (class_exists('PKP\facades\Locale')) {
+            try {
+                $locale = \PKP\facades\Locale::getLocale();
+                if ($locale) return $locale;
+            } catch (\Throwable $e) {
+                // ignore — facade not yet bootstrapped
+            }
+        }
+        // OJS 3.3: AppLocale (global class)
+        if (class_exists('AppLocale', false)) {
+            $locale = \AppLocale::getLocale();
+            if ($locale) return $locale;
+        }
+        try {
+            $request = Application::get()->getRequest();
+            if (method_exists($request, 'getLocale')) {
+                $locale = $request->getLocale();
+                if ($locale) return $locale;
+            }
+        } catch (\Throwable $e) {
+            // ignore
+        }
+        return 'en_US';
+    }
+
+    /**
+     * Generate PDF certificate
+     * @return string PDF content
+     */
+    public function generatePDF() {
+        self::ensureTCPDF();
+
+        // Create new PDF document (TCPDF is in global namespace)
+        $orientation = $this->getTemplateSetting('pageOrientation', 'P');
+        if (!in_array($orientation, array('P', 'L'))) {
+            $orientation = 'P';
+        }
+        $pdf = new \TCPDF($orientation, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+        // Set document information
+        $pdf->SetCreator('OJS Reviewer Certificate Plugin');
+        $pdf->SetAuthor($this->getContextName($this->context));
+        $pdf->SetTitle(__('plugins.generic.academicCertificate.certificateTitle'));
+        $pdf->SetSubject(__('plugins.generic.academicCertificate.certificateSubject'));
+
+        // Remove default header/footer
+        $pdf->setPrintHeader(false);
+        $pdf->setPrintFooter(false);
+
+        // Set default monospaced font
+        $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+
+        // Set margins
+        $pdf->SetMargins(15, 15, 15);
+        $pdf->SetAutoPageBreak(false); // Disable auto page break to keep everything on one page
+
+        // Add a page
+        $pdf->AddPage();
+
+        // Apply background image if set
+        $this->applyBackground($pdf);
+
+        // Apply template settings
+        $this->applyTemplateSettings($pdf);
+
+        // Generate certificate content
+        $this->addCertificateContent($pdf);
+
+        // Add QR code if enabled
+        if ($this->getTemplateSetting('includeQRCode', false)) {
+            $this->addQRCode($pdf);
+        }
+
+        // Output PDF as string
+        return $pdf->Output('certificate.pdf', 'S');
+    }
+
+    /**
+     * Apply background image to PDF
+     * @param $pdf TCPDF
+     */
+    private function applyBackground($pdf) {
+        $backgroundImage = $this->resolveBackgroundImagePath();
+
+        if (!$backgroundImage) {
+            return;
+        }
+
+        // Path traversal protection: validate the image is within allowed directory
+        if (class_exists('PKP\core\Core')) {
+            $baseDir = \PKP\core\Core::getBaseDir();
+        } elseif (class_exists('Core')) {
+            $baseDir = \Core::getBaseDir();
+        } else {
+            $baseDir = dirname(__FILE__, 6);
+        }
+
+        $allowedDir = realpath($baseDir . '/files/journals/');
+        $realPath = realpath($backgroundImage);
+
+        if ($realPath === false || $allowedDir === false || strpos($realPath, $allowedDir) !== 0) {
+            error_log("AcademicCertificate: Background image path outside allowed directory");
+            return;
+        }
+
+        if (file_exists($realPath)) {
+            // Get page dimensions
+            $pageWidth = $pdf->getPageWidth();
+            $pageHeight = $pdf->getPageHeight();
+
+            // Add background image
+            try {
+                $pdf->Image($realPath, 0, 0, $pageWidth, $pageHeight, '', '', '', false, 150, '', false, false, 0);
+            } catch (\Throwable $e) {
+                error_log("AcademicCertificate: Error adding background image: " . $e->getMessage());
+            }
+        }
+    }
+
+    /**
+     * Resolve background image: type-specific override, then default for all types.
+     *
+     * @return string|null
+     */
+    private function resolveBackgroundImagePath() {
+        $overrideKey = null;
+        switch ($this->certificateType) {
+            case Certificate::TYPE_ACCEPTANCE:
+                $overrideKey = 'acceptanceBackgroundImage';
+                break;
+            case Certificate::TYPE_AUTHOR:
+                $overrideKey = 'authorBackgroundImage';
+                break;
+            case Certificate::TYPE_EDITOR:
+                $overrideKey = 'editorBackgroundImage';
+                break;
+            case Certificate::TYPE_REVIEWER:
+            default:
+                $overrideKey = 'reviewerBackgroundImage';
+                break;
+        }
+
+        if ($overrideKey) {
+            $override = $this->getTemplateSetting($overrideKey);
+            if ($override) {
+                return $override;
+            }
+        }
+
+        return $this->getTemplateSetting('backgroundImage');
+    }
+
+    /**
+     * Apply template settings to PDF
+     * @param $pdf TCPDF
+     */
+    private function applyTemplateSettings($pdf) {
+        // Set font — validate against whitelist, clamp size
+        $allowedFonts = array('helvetica', 'times', 'courier', 'dejavusans');
+        $fontFamily = $this->getTemplateSetting('fontFamily', 'dejavusans');
+        if (!in_array($fontFamily, $allowedFonts)) {
+            $fontFamily = 'dejavusans';
+        }
+        $fontSize = max(6, min(72, (int) $this->getTemplateSetting('fontSize', 12)));
+        $pdf->SetFont($fontFamily, '', $fontSize);
+
+        // Set text color — clamp to valid RGB range
+        $colorR = max(0, min(255, (int) $this->getTemplateSetting('textColorR', 0)));
+        $colorG = max(0, min(255, (int) $this->getTemplateSetting('textColorG', 0)));
+        $colorB = max(0, min(255, (int) $this->getTemplateSetting('textColorB', 0)));
+        $pdf->SetTextColor($colorR, $colorG, $colorB);
+    }
+
+    /**
+     * Add certificate content to PDF
+     * @param $pdf TCPDF
+     */
+    private function addCertificateContent($pdf) {
+        // Get template variables
+        $variables = $this->getTemplateVariables();
+
+        // Auto-detect non-Latin characters (Cyrillic, CJK, Arabic, etc.) in template
+        // variables. TCPDF core fonts (helvetica, times, courier) only support
+        // Windows-1252 and render non-Latin chars as "??????". DejaVu Sans is the
+        // only bundled Unicode font.
+        $needsUnicodeFont = false;
+        foreach ($variables as $value) {
+            if ($this->containsNonLatin((string) $value)) {
+                $needsUnicodeFont = true;
+                break;
+            }
+        }
+
+        $configuredFont = $this->getTemplateSetting('fontFamily', 'dejavusans');
+        $unicodeFonts = array('dejavusans');
+        $this->effectiveFont = ($needsUnicodeFont && !in_array($configuredFont, $unicodeFonts))
+            ? 'dejavusans'
+            : $configuredFont;
+
+        // Get base font size from settings
+        $baseFontSize = $this->getTemplateSetting('fontSize', 12);
+
+        // Header text
+        $headerText = $this->replaceVariables(
+            $this->resolveTemplateText('headerText', 'Certificate of Recognition'),
+            $variables
+        );
+
+        $bodyTemplate = $this->replaceVariables(
+            $this->resolveBodyTemplate(),
+            $variables
+        );
+
+        $footerText = $this->replaceVariables(
+            $this->resolveTemplateText('footerText', ''),
+            $variables
+        );
+
+        $layout = $this->getLayoutForCurrentType();
+
+        $pdf->SetFont($this->effectiveFont, 'B', round($baseFontSize * ($layout['header']['fontScale'] ?? 2.0)));
+        $this->renderLayoutBlock($pdf, $headerText, $layout['header']);
+
+        $pdf->SetFont($this->effectiveFont, '', round($baseFontSize * ($layout['body']['fontScale'] ?? 1.167)));
+        $this->renderLayoutBlock($pdf, $bodyTemplate, $layout['body'], true);
+
+        if ($footerText) {
+            $pdf->SetFont($this->effectiveFont, 'I', round($baseFontSize * ($layout['footer']['fontScale'] ?? 0.833)));
+            $this->renderLayoutBlock($pdf, $footerText, $layout['footer'], true);
+        }
+
+        // Certificate code
+        if ($this->certificate || $this->previewMode) {
+            $codeCfg = $layout['code'] ?? array();
+            if (!isset($codeCfg['visible']) || $codeCfg['visible']) {
+                $code = $this->previewMode ? 'PREVIEW12345' : $this->certificate->getCertificateCode();
+                $codeText = 'Certificate Code: ' . $code;
+                $pdf->SetFont($this->effectiveFont, '', round($baseFontSize * ($codeCfg['fontScale'] ?? 0.667)));
+                $this->renderLayoutBlock($pdf, $codeText, $codeCfg);
+            }
+        }
+    }
+
+    /**
+     * @return array<string,array<string,mixed>>
+     */
+    private function getLayoutForCurrentType() {
+        $map = array(
+            Certificate::TYPE_REVIEWER => 'layoutReviewer',
+            Certificate::TYPE_ACCEPTANCE => 'layoutAcceptance',
+            Certificate::TYPE_AUTHOR => 'layoutAuthor',
+            Certificate::TYPE_EDITOR => 'layoutEditor',
+        );
+        $key = $map[$this->certificateType] ?? 'layoutReviewer';
+        return CertificateLayout::parse($this->getTemplateSetting($key));
+    }
+
+    /**
+     * @param \TCPDF $pdf
+     * @param string $text
+     * @param array<string,mixed> $cfg
+     * @param bool $multiline
+     */
+    private function renderLayoutBlock($pdf, $text, $cfg, $multiline = false) {
+        if ($text === '' || $text === null) {
+            return;
+        }
+        $pageW = $pdf->getPageWidth();
+        $pageH = $pdf->getPageHeight();
+        $x = CertificateLayout::percentToUnits($pageW, $cfg['x'] ?? 10);
+        $y = CertificateLayout::percentToUnits($pageH, $cfg['y'] ?? 10);
+        $w = CertificateLayout::percentToUnits($pageW, $cfg['w'] ?? 80);
+        $align = CertificateLayout::normalizeAlign($cfg['align'] ?? 'C');
+        $pdf->SetXY($x, $y);
+        if ($multiline) {
+            $pdf->MultiCell($w, 0, $text, 0, $align, false, 1, $x, $y, true);
+        } else {
+            $pdf->Cell($w, 0, $text, 0, 0, $align);
+        }
+    }
+
+    /**
+     * Add QR code to PDF
+     * @param $pdf TCPDF
+     */
+    private function addQRCode($pdf) {
+        // Build verification URL manually to avoid component router context issues
+        $request = Application::get()->getRequest();
+        $contextPath = $this->context ? $this->context->getPath() : 'index';
+
+        // Determine verification code
+        if ($this->previewMode) {
+            $code = 'PREVIEW12345';
+        } else {
+            if (!$this->certificate) {
+                return;
+            }
+            $code = $this->certificate->getCertificateCode();
+        }
+
+        // Build full verification URL manually
+        // We can't use $request->url() here because it may be called from component router context
+        // which requires path to be null, but we need to specify the page/op
+        $baseUrl = $request->getBaseUrl();
+        $verificationUrl = $baseUrl . '/index.php/' . $contextPath . '/certificate/verify/' . $code;
+
+
+        // Position QR code in bottom right corner — dynamic for portrait/landscape
+        $pageWidth = $pdf->getPageWidth();
+        $pageHeight = $pdf->getPageHeight();
+        $qrSize = 30;
+        $margin = 10;
+
+        $qrX = $pageWidth - $qrSize - $margin;
+        $qrY = $pageHeight - $qrSize - $margin - 5; // 5mm extra for label below
+
+        $pdf->write2DBarcode(
+            $verificationUrl,
+            'QRCODE,H',
+            $qrX,
+            $qrY,
+            $qrSize,
+            $qrSize,
+            array(),
+            'N'
+        );
+
+        // Add verification URL text
+        // Use proportional font size for QR code label
+        $baseFontSize = $this->getTemplateSetting('fontSize', 12);
+        $qrLabelSize = round($baseFontSize * 0.5);     // 0.5x base (default: 6)
+
+        $labelY = $qrY + $qrSize + 2;
+        $pdf->SetXY($qrX - 10, $labelY);
+        $pdf->SetFont($this->effectiveFont ?: $pdf->getFontFamily(), '', $qrLabelSize);
+        $pdf->Cell(50, 3, 'Scan to verify', 0, 0, 'C');
+    }
+
+    /**
+     * Get template variables for replacement
+     * @return array
+     */
+    private function getTemplateVariables() {
+        $variables = array();
+
+        // If in preview mode, use sample data
+        if ($this->previewMode) {
+            $variables['reviewerName'] = 'Dr. Jane Smith';
+            $variables['reviewerFirstName'] = 'Jane';
+            $variables['reviewerLastName'] = 'Smith';
+            $variables['submissionTitle'] = 'Sample Article Title: A Study on Research Methods';
+            $variables['submissionId'] = '12345';
+            $variables['reviewDate'] = date('F j, Y');
+            $variables['reviewYear'] = date('Y');
+            $variables['certificateCode'] = 'PREVIEW12345';
+            $variables['certificateNumber'] = 'ACM-REV-' . date('Y') . '-000001';
+            $variables['dateIssued'] = date('F j, Y');
+
+            if ($this->context) {
+                $variables['journalName'] = $this->getContextName($this->context);
+                $variables['journalAcronym'] = $this->getContextAcronym($this->context);
+            } else {
+                $variables['journalName'] = 'Sample Journal Name';
+                $variables['journalAcronym'] = 'SJN';
+            }
+        } else {
+            // Use real data
+            // Reviewer information
+            if ($this->reviewer) {
+                // OJS 3.5 compatibility: Use helper methods with fallbacks
+                $variables['reviewerFirstName'] = $this->getReviewerGivenName($this->reviewer);
+                $variables['reviewerLastName'] = $this->getReviewerFamilyName($this->reviewer);
+
+                // OJS 3.3 locale fix: getFullName() may return empty when names are
+                // stored under a different locale (e.g., 'en' vs 'en_US'). Fall back
+                // to constructing the name from given+family, then to direct DB query.
+                $fullName = $this->reviewer->getFullName();
+                if (empty(trim($fullName))) {
+                    $fullName = trim($variables['reviewerFirstName'] . ' ' . $variables['reviewerLastName']);
+                }
+                if (empty(trim($fullName))) {
+                    $fullName = $this->getReviewerNameFromDB($this->reviewer->getId());
+                }
+                $variables['reviewerName'] = $fullName;
+
+                // Also fill in first/last from DB if they were empty
+                if (empty($variables['reviewerFirstName']) || empty($variables['reviewerLastName'])) {
+                    $dbNames = $this->getReviewerNamesFromDB($this->reviewer->getId());
+                    if (empty($variables['reviewerFirstName']) && !empty($dbNames['givenName'])) {
+                        $variables['reviewerFirstName'] = $dbNames['givenName'];
+                    }
+                    if (empty($variables['reviewerLastName']) && !empty($dbNames['familyName'])) {
+                        $variables['reviewerLastName'] = $dbNames['familyName'];
+                    }
+                    // Rebuild full name if it was empty and we got DB names
+                    if (empty(trim($variables['reviewerName']))) {
+                        $variables['reviewerName'] = trim($dbNames['givenName'] . ' ' . $dbNames['familyName']);
+                    }
+                }
+            }
+
+            // Submission information - OJS 3.5 compatibility
+            if ($this->submission) {
+                $variables['submissionTitle'] = $this->getSubmissionTitle($this->submission);
+                $variables['submissionId'] = $this->submission->getId();
+
+                // OJS 3.3 locale fallback for submission title
+                if (empty($variables['submissionTitle']) && $this->reviewAssignment) {
+                    $variables['submissionTitle'] = $this->getSubmissionTitleFromDB(
+                        $this->reviewAssignment->getSubmissionId()
+                    );
+                }
+                if (empty($variables['submissionTitle'])) {
+                    $variables['submissionTitle'] = $this->getSubmissionTitleFromDB(
+                        (int) $this->submission->getId()
+                    );
+                }
+
+                if ($this->certificateType === Certificate::TYPE_ACCEPTANCE
+                    || $this->certificateType === Certificate::TYPE_AUTHOR) {
+                    $variables['articleTitle'] = $variables['submissionTitle'];
+                    $authorData = $this->getAuthorsForSubmission((int) $this->submission->getId());
+                    $variables['authors'] = $authorData['authors'];
+                    $variables['authorName'] = $authorData['authorName'];
+                    $variables['correspondingAuthor'] = $authorData['correspondingAuthor'];
+                }
+
+                if ($this->certificateType === Certificate::TYPE_ACCEPTANCE) {
+                    $acceptanceDate = $this->acceptanceDate ?: ($this->certificate ? $this->certificate->getDateIssued() : null);
+                    if ($acceptanceDate) {
+                        $variables['acceptanceDate'] = date('F j, Y', strtotime($acceptanceDate));
+                    }
+                }
+
+                if ($this->certificateType === Certificate::TYPE_AUTHOR) {
+                    $publicationDate = $this->publicationDate ?: ($this->certificate ? $this->certificate->getDateIssued() : null);
+                    if ($publicationDate) {
+                        $variables['publicationDate'] = date('F j, Y', strtotime($publicationDate));
+                        $variables['publicationYear'] = date('Y', strtotime($publicationDate));
+                    }
+                }
+            }
+
+            // Context information
+            if ($this->context) {
+                $variables['journalName'] = $this->getContextName($this->context);
+                $variables['journalAcronym'] = $this->getContextAcronym($this->context);
+            }
+
+
+            // Review information
+            if ($this->reviewAssignment) {
+                $dateCompleted = $this->reviewAssignment->getDateCompleted();
+                if ($dateCompleted) {
+                    $variables['reviewDate'] = date('F j, Y', strtotime($dateCompleted));
+                    $variables['reviewYear'] = date('Y', strtotime($dateCompleted));
+                }
+            }
+
+            // Certificate information
+            if ($this->certificate) {
+                $variables['certificateCode'] = $this->certificate->getCertificateCode();
+                if ($this->certificate->getCertificateNumber()) {
+                    $variables['certificateNumber'] = $this->certificate->getCertificateNumber();
+                }
+                $variables['dateIssued'] = date('F j, Y', strtotime($this->certificate->getDateIssued()));
+            }
+        }
+
+        // Current date (always set)
+        $variables['currentDate'] = date('F j, Y');
+        $variables['currentYear'] = date('Y');
+
+        return $variables;
+    }
+
+    /**
+     * Replace variables in template text
+     * @param $text string
+     * @param $variables array
+     * @return string
+     */ 
+    private function replaceVariables($text, $variables) {
+        foreach ($variables as $key => $value) {
+            $text = str_replace('{{$' . $key . '}}', $value, $text);
+            $text = str_replace('{$' . $key . '}', $value, $text);
+        }
+        return $text;
+    }
+
+    /**
+     * Get template setting
+     * @param $key string
+     * @param $default mixed
+     * @return mixed
+     */
+    private function getTemplateSetting($key, $default = null) {
+        return isset($this->templateSettings[$key]) ? $this->templateSettings[$key] : $default;
+    }
+
+    /**
+     * Check if text contains non-Latin characters requiring a Unicode font.
+     * TCPDF core fonts (helvetica, times, courier) only support Windows-1252.
+     * @param string $text
+     * @return bool
+     */
+    private function containsNonLatin($text) {
+        if (empty($text)) {
+            return false;
+        }
+        return (bool) preg_match('/[^\x00-\x7F]/', $text);
+    }
+
+    /**
+     * Get default body template
+     * @return string
+     */
+    public static function getDefaultBodyTemplate() {
+        return 'This certificate is awarded to' . "\n\n" .
+               '{{$reviewerName}}' . "\n\n" .
+               'In recognition of their valuable contribution as a peer reviewer for' . "\n\n" .
+               '{{$journalName}}' . "\n\n" .
+               'Review completed on {{$reviewDate}}' . "\n\n" .
+               'Manuscript: {{$submissionTitle}}';
+    }
+
+    /**
+     * Default acceptance certificate body template.
+     * @return string
+     */
+    public static function getDefaultAcceptanceBodyTemplate() {
+        return 'This document certifies that the article titled "{{$articleTitle}}" by {{$authors}} has been accepted for publication in {{$journalName}}.' . "\n\n" .
+               'Acceptance date: {{$acceptanceDate}}';
+    }
+
+    /**
+     * Default author publication certificate body template.
+     * @return string
+     */
+    public static function getDefaultAuthorBodyTemplate() {
+        return 'This certificate confirms that the article titled "{{$articleTitle}}" by {{$authors}} has been published in {{$journalName}}.' . "\n\n" .
+               'Publication date: {{$publicationDate}}';
+    }
+
+    /**
+     * Default editorial certificate body template.
+     * @return string
+     */
+    public static function getDefaultEditorBodyTemplate() {
+        return 'This is to certify that {{$reviewerName}} has served as an editor for {{$journalName}}.' . "\n\n" .
+               'Date: {{$currentDate}}';
+    }
+
+    /**
+     * @param string $baseKey e.g. headerText, footerText
+     * @param string $default
+     * @return string
+     */
+    private function resolveTemplateText($baseKey, $default) {
+        if ($this->certificateType === Certificate::TYPE_ACCEPTANCE) {
+            $typedKeys = array(
+                'headerText' => 'acceptanceHeaderText',
+                'footerText' => 'acceptanceFooterText',
+            );
+            if (isset($typedKeys[$baseKey])) {
+                $typed = $this->getTemplateSetting($typedKeys[$baseKey]);
+                if ($typed) {
+                    return $typed;
+                }
+            }
+            if ($baseKey === 'headerText') {
+                return __('plugins.generic.academicCertificate.acceptance.defaultHeader');
+            }
+        }
+
+        if ($this->certificateType === Certificate::TYPE_AUTHOR) {
+            $typedKeys = array(
+                'headerText' => 'authorHeaderText',
+                'footerText' => 'authorFooterText',
+            );
+            if (isset($typedKeys[$baseKey])) {
+                $typed = $this->getTemplateSetting($typedKeys[$baseKey]);
+                if ($typed) {
+                    return $typed;
+                }
+            }
+            if ($baseKey === 'headerText') {
+                return __('plugins.generic.academicCertificate.author.defaultHeader');
+            }
+        }
+
+        if ($this->certificateType === Certificate::TYPE_EDITOR) {
+            $typedKeys = array(
+                'headerText' => 'editorHeaderText',
+                'footerText' => 'editorFooterText',
+            );
+            if (isset($typedKeys[$baseKey])) {
+                $typed = $this->getTemplateSetting($typedKeys[$baseKey]);
+                if ($typed) {
+                    return $typed;
+                }
+            }
+            if ($baseKey === 'headerText') {
+                return __('plugins.generic.academicCertificate.editor.defaultHeader');
+            }
+        }
+        $value = $this->getTemplateSetting($baseKey);
+        return $value !== null && $value !== '' ? $value : $default;
+    }
+
+    /**
+     * @return string
+     */
+    private function resolveBodyTemplate() {
+        if ($this->certificateType === Certificate::TYPE_ACCEPTANCE) {
+            $body = $this->getTemplateSetting('acceptanceBodyTemplate');
+            if ($body) {
+                return $body;
+            }
+            return self::getDefaultAcceptanceBodyTemplate();
+        }
+        if ($this->certificateType === Certificate::TYPE_AUTHOR) {
+            $body = $this->getTemplateSetting('authorBodyTemplate');
+            if ($body) {
+                return $body;
+            }
+            return self::getDefaultAuthorBodyTemplate();
+        }
+        if ($this->certificateType === Certificate::TYPE_EDITOR) {
+            $body = $this->getTemplateSetting('editorBodyTemplate');
+            if ($body) {
+                return $body;
+            }
+            return self::getDefaultEditorBodyTemplate();
+        }
+        return $this->getTemplateSetting('bodyTemplate', self::getDefaultBodyTemplate());
+    }
+
+    /**
+     * @param int $submissionId
+     * @return array{authors: string, authorName: string, correspondingAuthor: string}
+     */
+    private function getAuthorsForSubmission($submissionId) {
+        $result = array(
+            'authors' => '',
+            'authorName' => '',
+            'correspondingAuthor' => '',
+        );
+
+        $dao = CertificateDAO::getRegistered();
+        if (!$dao) {
+            return $result;
+        }
+
+        $locale = $this->getEffectiveLocale();
+        try {
+            $rows = $dao->retrieve(
+                'SELECT a.author_id, a.email, a.seq,
+                        (SELECT setting_value FROM author_settings
+                         WHERE author_id = a.author_id AND setting_name = ? AND setting_value != \'\'
+                         ORDER BY CASE WHEN locale = ? THEN 0 ELSE 1 END, locale LIMIT 1) AS given_name,
+                        (SELECT setting_value FROM author_settings
+                         WHERE author_id = a.author_id AND setting_name = ? AND setting_value != \'\'
+                         ORDER BY CASE WHEN locale = ? THEN 0 ELSE 1 END, locale LIMIT 1) AS family_name
+                 FROM authors a
+                 INNER JOIN publications p ON a.publication_id = p.publication_id
+                 INNER JOIN submissions s ON s.current_publication_id = p.publication_id
+                 WHERE s.submission_id = ?
+                 ORDER BY a.seq ASC',
+                array('givenName', $locale, 'familyName', $locale, (int) $submissionId)
+            );
+
+            $names = array();
+            foreach ($rows as $row) {
+                $row = (array) $row;
+                $name = trim(($row['given_name'] ?? '') . ' ' . ($row['family_name'] ?? ''));
+                if ($name === '' && !empty($row['email'])) {
+                    $name = $row['email'];
+                }
+                if ($name !== '') {
+                    $names[] = $name;
+                }
+            }
+
+            if (!empty($names)) {
+                $result['authors'] = implode(', ', $names);
+                $result['authorName'] = $names[0];
+                $result['correspondingAuthor'] = $names[0];
+            }
+        } catch (\Throwable $e) {
+            error_log('AcademicCertificate: getAuthorsForSubmission failed: ' . $e->getMessage());
+        }
+
+        return $result;
+    }
+
+    /**
+     * Get submission title with OJS version compatibility
+     * OJS 3.5 removed getLocalizedTitle() from Submission - must use Publication
+     * @param $submission Submission
+     * @return string
+     */
+    private function getSubmissionTitle($submission) {
+        if (!$submission) {
+            return '';
+        }
+
+        $locale = $this->getEffectiveLocale();
+        $title = '';
+
+        // OJS 3.5+: Use getCurrentPublication()->getLocalizedTitle()
+        if (method_exists($submission, 'getCurrentPublication')) {
+            $publication = $submission->getCurrentPublication();
+            if ($publication) {
+                // Try locale-specific title first via getLocalizedData
+                if (method_exists($publication, 'getLocalizedData')) {
+                    $title = $publication->getLocalizedData('title', $locale);
+                }
+                // Fallback to getLocalizedTitle (uses OJS internal locale)
+                if (empty($title) && method_exists($publication, 'getLocalizedTitle')) {
+                    $title = $publication->getLocalizedTitle();
+                } elseif (empty($title) && method_exists($publication, 'getLocalizedFullTitle')) {
+                    $title = $publication->getLocalizedFullTitle();
+                }
+            }
+        }
+
+        // OJS 3.3/3.4: Direct method on Submission
+        if (empty($title) && method_exists($submission, 'getLocalizedTitle')) {
+            $title = $submission->getLocalizedTitle();
+        }
+
+        // OJS 3.5+ supports HTML markup in titles — strip for PDF plain text
+        return strip_tags($title);
+    }
+
+    /**
+     * Call the first available method on an object (OJS version compatibility helper).
+     * @param $obj object
+     * @param $methodCalls array of [methodName, argsArray] pairs
+     * @return mixed
+     */
+    private function callFirstAvailable($obj, $methodCalls) {
+        if (!$obj) return '';
+        foreach ($methodCalls as list($method, $args)) {
+            if (method_exists($obj, $method)) {
+                return $obj->$method(...$args);
+            }
+        }
+        return '';
+    }
+
+    private function getReviewerGivenName($user) {
+        $locale = $this->getEffectiveLocale();
+        // Try locale-specific name first
+        if (method_exists($user, 'getGivenName')) {
+            $name = $user->getGivenName($locale);
+            if (!empty($name)) return $name;
+        }
+        return $this->callFirstAvailable($user, [
+            ['getLocalizedGivenName', []],
+            ['getGivenName', [null]],
+        ]);
+    }
+
+    private function getReviewerFamilyName($user) {
+        $locale = $this->getEffectiveLocale();
+        if (method_exists($user, 'getFamilyName')) {
+            $name = $user->getFamilyName($locale);
+            if (!empty($name)) return $name;
+        }
+        return $this->callFirstAvailable($user, [
+            ['getLocalizedFamilyName', []],
+            ['getFamilyName', [null]],
+        ]);
+    }
+
+    private function getContextName($context) {
+        $locale = $this->getEffectiveLocale();
+        // Try locale-specific context name first
+        if (method_exists($context, 'getName')) {
+            $name = $context->getName($locale);
+            if (!empty($name)) return $name;
+        }
+        return $this->callFirstAvailable($context, [
+            ['getLocalizedName', []],
+            ['getName', [null]],
+        ]);
+    }
+
+    private function getContextAcronym($context) {
+        if (!$context) return '';
+        if (method_exists($context, 'getLocalizedData')) {
+            $acronym = $context->getLocalizedData('acronym');
+            if ($acronym) return $acronym;
+        }
+        return method_exists($context, 'getAcronym') ? ($context->getAcronym(null) ?: '') : '';
+    }
+
+    /**
+     * Get reviewer full name directly from database, ignoring locale.
+     * Fallback for OJS 3.3 where locale mismatch ('en' vs 'en_US') can
+     * cause getFullName() to return empty.
+     * @param int $userId
+     * @return string
+     */
+    private function getReviewerNameFromDB($userId) {
+        $names = $this->getReviewerNamesFromDB($userId);
+        return trim($names['givenName'] . ' ' . $names['familyName']);
+    }
+
+    /**
+     * Get reviewer given/family name directly from database, any locale.
+     * @param int $userId
+     * @return array ['givenName' => string, 'familyName' => string]
+     */
+    private function getReviewerNamesFromDB($userId) {
+        $result = array('givenName' => '', 'familyName' => '');
+        try {
+            $certificateDao = CertificateDAO::getRegistered();
+            if (!$certificateDao) {
+                return $result;
+            }
+            $locale = $this->getEffectiveLocale();
+            $rows = $certificateDao->retrieve(
+                'SELECT setting_name, setting_value FROM user_settings ' .
+                'WHERE user_id = ? AND setting_name IN (?, ?) AND setting_value IS NOT NULL AND setting_value != ? ' .
+                'ORDER BY CASE WHEN locale = ? THEN 0 ELSE 1 END, locale LIMIT 2',
+                array((int) $userId, 'givenName', 'familyName', '', $locale)
+            );
+            foreach ($rows as $row) {
+                $row = (array) $row;
+                if ($row['setting_name'] === 'givenName' && empty($result['givenName'])) {
+                    $result['givenName'] = $row['setting_value'];
+                }
+                if ($row['setting_name'] === 'familyName' && empty($result['familyName'])) {
+                    $result['familyName'] = $row['setting_value'];
+                }
+            }
+        } catch (\Throwable $e) {
+            error_log('AcademicCertificate: DB name fallback failed: ' . $e->getMessage());
+        }
+        return $result;
+    }
+
+    /**
+     * Get submission title directly from database, ignoring locale.
+     * Fallback for OJS 3.3 where locale mismatch can cause empty titles.
+     * @param int $submissionId
+     * @return string
+     */
+    private function getSubmissionTitleFromDB($submissionId) {
+        try {
+            $certificateDao = CertificateDAO::getRegistered();
+            if (!$certificateDao) {
+                return '';
+            }
+            $locale = $this->getEffectiveLocale();
+            $rows = $certificateDao->retrieve(
+                'SELECT ps.setting_value FROM publication_settings ps ' .
+                'JOIN publications p ON p.publication_id = ps.publication_id ' .
+                'WHERE p.submission_id = ? AND ps.setting_name = ? ' .
+                'AND ps.setting_value IS NOT NULL AND ps.setting_value != ? ' .
+                'ORDER BY CASE WHEN ps.locale = ? THEN 0 ELSE 1 END, ps.locale LIMIT 1',
+                array((int) $submissionId, 'title', '', $locale)
+            );
+            foreach ($rows as $row) {
+                $row = (array) $row;
+                return strip_tags($row['setting_value']);
+            }
+        } catch (\Throwable $e) {
+            error_log('AcademicCertificate: DB title fallback failed: ' . $e->getMessage());
+        }
+        return '';
+    }
+}

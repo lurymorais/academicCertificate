@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/sk_SK/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Slovak
+  -->
+
+<locale name="sk_SK" full_name="Slovenčina">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Certifikát Recenzie</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Certifikát Odborného Posúdenia</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Váš Certifikát je Pripravený!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Ďakujeme za dokončenie tejto recenzie. Teraz si môžete stiahnuť svoj certifikát uznania.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">Váš certifikát bude automaticky vygenerovaný po kliknutí na tlačidlo sťahovania.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Stiahnuť Certifikát</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Nastavenia Certifikátu</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Nastavenia Šablóny Certifikátu</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Obrázok Pozadia</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Nahrajte obrázok pozadia pre certifikát (JPG alebo PNG, odporúčaná veľkosť: 2100x2970 pixelov pre A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Aktuálny obrázok pozadia</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Text Hlavičky</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Hlavný názov zobrazený v hornej časti certifikátu</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Text hlavičky je povinný</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Šablóna Tela Certifikátu</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Hlavný obsah certifikátu. Použite premenné šablóny na vloženie dynamického obsahu.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Šablóna tela certifikátu je povinná</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Text Päty</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Voliteľný text zobrazený v dolnej časti certifikátu</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Dostupné Premenné Šablóny</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Použite tieto premenné vo svojich šablónach na vloženie dynamického obsahu:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Predvolená šablóna</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Použiť predvolenú šablónu</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Nastavenia Vzhľadu</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Rodina Písma</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Veľkosť Písma</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Farba Textu (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Zadajte farbu textu pomocou hodnôt RGB (0-255 pre každú zložku)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Kritériá Oprávnenosti</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Minimálny Počet Dokončených Recenzií</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Minimálny počet dokončených recenzií potrebných pred získaním certifikátu</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Minimálny počet recenzií musí byť číslo väčšie alebo rovné 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Možnosti Overenia</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Zahrnúť QR kód pre overenie certifikátu</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Náhľad Certifikátu</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Neplatný typ obrázka. Prosím, nahrajte súbor JPG alebo PNG.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Nahrávanie súboru zlyhalo. Prosím, skúste to znova.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Táto recenzia ešte nebola dokončená. Certifikáty sú dostupné len pre dokončené recenzie.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Nebol poskytnutý kód certifikátu</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Neplatný kód certifikátu. Tento certifikát nie je možné overiť.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Neboli vybraní recenzenti pre hromadné generovanie certifikátov</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Prístup zamietnutý. Nemáte oprávnenie na stiahnutie tohto certifikátu.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Nie je k dispozícii kontext časopisu. Uistite sa, že pristupujete z platného časopisu.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">Prístup k databáze je momentálne nedostupný. Prosím, kontaktujte správcu systému.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Overenie Certifikátu</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Zadajte kód certifikátu na overenie jeho pravosti</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Kód Certifikátu</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Overiť Certifikát</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Platný Certifikát</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Neplatný Certifikát</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Zadaný kód certifikátu je neplatný alebo neexistuje v našom systéme.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Kód Certifikátu</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Meno Recenzenta</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Názov Časopisu</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Dátum Vydania</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Hromadné Generovanie Certifikátov</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Generujte certifikáty pre viacerých recenzentov naraz. Vyberte recenzentov zo zoznamu nižšie, ktorí dokončili recenzie, ale ešte nemajú certifikáty.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Vybrať Recenzentov</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">dokončené recenzie</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Nenašli sa žiadni oprávnení recenzenti. Všetci recenzenti majú certifikáty za svoje dokončené recenzie.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Podržte Ctrl (Windows/Linux) alebo Cmd (Mac) pre výber viacerých recenzentov</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Generovať Certifikáty</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Generujem certifikáty...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Prosím, vyberte aspoň jedného recenzenta</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">certifikát(y) úspešne vygenerovaný(é)</message>
+	<message key="plugins.generic.academicCertificate.batch.error">Pri generovaní certifikátov sa vyskytla chyba. Prosím, skúste to znova.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} certifikát(y) úspešne vygenerovaný(é)</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Štatistika Certifikátov</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Prehľad generovania a používania certifikátov vo vašom časopise</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Celkový Počet Vydaných Certifikátov</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Celkový Počet Stiahnutí</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Unikátni Recenzenti s Certifikátmi</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Celkový Počet Vydaných Certifikátov</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Celkový Počet Stiahnutí</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Priemerný Počet Stiahnutí na Certifikát</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Poznámka: Helvetica, Times New Roman a Courier podporujú iba latinské znaky. Ak váš časopis používa nelatinské znaky, modul automaticky použije písmo DejaVu Sans.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Moje certifikáty</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">Nižšie je zoznam všetkých vašich recenzentských certifikátov pre tento časopis.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Dátum vydania</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Názov príspevku</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Kód certifikátu</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Akcie</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Zatiaľ nemáte žiadne certifikáty. Certifikáty sa generujú po dokončení recenzie.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Zobraziť všetky moje certifikáty</message>
+</locale>

@@ -1,0 +1,731 @@
+<?php
+/**
+ * OJS Mock Loader
+ *
+ * Loads OJS core classes and creates necessary mocks for testing
+ * Handles version-specific differences between OJS 3.3, 3.4, and 3.5
+ */
+
+class OJSMockLoader
+{
+    /** @var string Current OJS version */
+    private static $version;
+
+    /** @var bool Whether mocks have been initialized */
+    private static $initialized = false;
+
+    /**
+     * Initialize OJS mocks for the specified version
+     *
+     * @param string $version OJS version (3.3, 3.4, or 3.5)
+     */
+    public static function initialize(string $version = '3.4'): void
+    {
+        if (self::$initialized) {
+            return;
+        }
+
+        self::$version = $version;
+
+        // Define OJS constants
+        self::defineConstants();
+
+        // Define OJS global functions
+        self::defineGlobalFunctions();
+
+        // Load base classes
+        self::loadBaseClasses();
+
+        // Load version-specific mocks
+        self::loadVersionSpecificMocks();
+
+        self::$initialized = true;
+    }
+
+    /**
+     * Define OJS constants required by the plugin
+     */
+    private static function defineConstants(): void
+    {
+        if (!defined('ASSOC_TYPE_REVIEW_ASSIGNMENT')) {
+            define('ASSOC_TYPE_REVIEW_ASSIGNMENT', 0x0000203);
+        }
+
+        if (!defined('REVIEW_ASSIGNMENT_STATUS_COMPLETE')) {
+            define('REVIEW_ASSIGNMENT_STATUS_COMPLETE', 7);
+        }
+
+        if (!defined('ROLE_ID_REVIEWER')) {
+            define('ROLE_ID_REVIEWER', 0x00001000);
+        }
+
+        if (!defined('ROLE_ID_MANAGER')) {
+            define('ROLE_ID_MANAGER', 0x00000010);
+        }
+
+        if (!defined('ROLE_ID_SITE_ADMIN')) {
+            define('ROLE_ID_SITE_ADMIN', 0x00000001);
+        }
+
+        if (!defined('HAS_REVIEW')) {
+            define('HAS_REVIEW', true);
+        }
+    }
+
+    /**
+     * Define OJS global functions
+     */
+    private static function defineGlobalFunctions(): void
+    {
+        // import() function - OJS uses this to load class files
+        if (!function_exists('import')) {
+            function import($classPath) {
+                // Mock implementation - in real OJS, this loads class files
+                // For testing, we rely on the autoloader in bootstrap.php
+                return true;
+            }
+        }
+
+        // __() function - OJS translation function
+        if (!function_exists('__')) {
+            function __($key, $params = [], $locale = null) {
+                // Mock translation - just return the key
+                return $key;
+            }
+        }
+    }
+
+    /**
+     * Load OJS base classes (or create mocks)
+     */
+    private static function loadBaseClasses(): void
+    {
+        // Create namespaced PKP classes for OJS 3.4+/3.5
+        if (!class_exists('PKP\core\Core')) {
+            eval('
+                namespace PKP\core;
+                class Core {
+                    public static function getCurrentDate() {
+                        return date("Y-m-d H:i:s");
+                    }
+
+                    public static function getBaseDir() {
+                        return BASE_SYS_DIR;
+                    }
+                }
+            ');
+        }
+
+        // Create namespaced DataObject for OJS 3.4+/3.5
+        if (!class_exists('PKP\core\DataObject')) {
+            eval('
+                namespace PKP\core;
+                class DataObject {
+                    private $_data = [];
+
+                    public function setData($key, $value) {
+                        $this->_data[$key] = $value;
+                    }
+
+                    public function getData($key) {
+                        return $this->_data[$key] ?? null;
+                    }
+
+                    public function setAllData($data) {
+                        $this->_data = $data;
+                    }
+
+                    public function getAllData() {
+                        return $this->_data;
+                    }
+                }
+            ');
+        }
+
+        // Create namespaced DAO for OJS 3.4+/3.5
+        if (!class_exists('PKP\db\DAO')) {
+            eval('
+                namespace PKP\db;
+                class DAO {
+                    protected function _getInsertId($tableName = null, $idField = null) {
+                        return rand(1, 999999);
+                    }
+
+                    public function retrieve($sql, $params = []) {
+                        return new \ArrayIterator([]);
+                    }
+                }
+            ');
+        }
+
+        // Create namespaced DAOResultFactory for OJS 3.4+/3.5
+        if (!class_exists('PKP\db\DAOResultFactory')) {
+            eval('
+                namespace PKP\db;
+                class DAOResultFactory extends \ArrayIterator {
+                    public function __construct($result, $dao, $method) {
+                        parent::__construct([]);
+                    }
+                }
+            ');
+        }
+
+        // Create namespaced DAORegistry for OJS 3.4+/3.5
+        if (!class_exists('PKP\db\DAORegistry')) {
+            eval('
+                namespace PKP\db;
+                class DAORegistry {
+                    private static $daos = [];
+
+                    public static function getDAO($name) {
+                        return self::$daos[$name] ?? null;
+                    }
+
+                    public static function registerDAO($name, $dao) {
+                        self::$daos[$name] = $dao;
+                    }
+                }
+            ');
+        }
+
+        // Create namespaced GenericPlugin for OJS 3.4+/3.5
+        if (!class_exists('PKP\plugins\GenericPlugin')) {
+            eval('
+                namespace PKP\plugins;
+                class GenericPlugin {
+                    private $_pluginSettings = [];
+                    private $_enabled = true;
+
+                    public function register($category, $path, $mainContextId = null) {
+                        return true;
+                    }
+
+                    public function getEnabled($contextId = null) {
+                        return $this->_enabled;
+                    }
+
+                    public function setEnabled($enabled) {
+                        $this->_enabled = $enabled;
+                    }
+
+                    public function getSetting($contextId, $name) {
+                        return $this->_pluginSettings[$contextId][$name] ?? null;
+                    }
+
+                    public function updateSetting($contextId, $name, $value) {
+                        $this->_pluginSettings[$contextId][$name] = $value;
+                    }
+
+                    public function getPluginPath() {
+                        return BASE_SYS_DIR;
+                    }
+
+                    public function getTemplatePath() {
+                        return BASE_SYS_DIR . "/templates/";
+                    }
+
+                    public function getTemplateResource($template) {
+                        return BASE_SYS_DIR . "/templates/" . $template;
+                    }
+
+                    public function getCanEnable() {
+                        return true;
+                    }
+
+                    public function getCanDisable() {
+                        return true;
+                    }
+                }
+            ');
+        }
+
+        // Create namespaced Hook for OJS 3.4+/3.5
+        if (!class_exists('PKP\plugins\Hook')) {
+            eval('
+                namespace PKP\plugins;
+                class Hook {
+                    private static $hooks = [];
+
+                    public static function register($hook, $callback, $priority = 0) {
+                        self::$hooks[$hook][] = $callback;
+                        return true;
+                    }
+
+                    public static function call($hook, $args = []) {
+                        if (isset(self::$hooks[$hook])) {
+                            foreach (self::$hooks[$hook] as $callback) {
+                                call_user_func_array($callback, $args);
+                            }
+                        }
+                    }
+                }
+            ');
+        }
+
+        // Create namespaced Form classes for OJS 3.4+/3.5
+        if (!class_exists('PKP\form\Form')) {
+            eval('
+                namespace PKP\form;
+                class Form {
+                    private $_data = [];
+                    protected $_template;
+                    protected $_checks = [];
+
+                    public function __construct($template = null) {
+                        $this->_template = $template;
+                    }
+
+                    public function setData($key, $value = null) {
+                        if (is_array($key)) {
+                            $this->_data = array_merge($this->_data, $key);
+                        } else {
+                            $this->_data[$key] = $value;
+                        }
+                    }
+
+                    public function getData($key = null) {
+                        if ($key === null) return $this->_data;
+                        return $this->_data[$key] ?? null;
+                    }
+
+                    public function readInputData() {}
+                    public function validate() { return true; }
+                    public function execute() { return true; }
+                    public function fetch($request, $template = null, $display = false) { return ""; }
+                    public function addCheck($check) { $this->_checks[] = $check; }
+                }
+            ');
+        }
+
+        // Form validators
+        if (!class_exists('PKP\form\validation\FormValidatorPost')) {
+            eval('
+                namespace PKP\form\validation;
+                class FormValidatorPost { public function __construct($form) {} }
+                class FormValidatorCSRF { public function __construct($form) {} }
+                class FormValidator { public function __construct($form, $field = "", $type = "", $msg = "") {} }
+                class FormValidatorCustom { public function __construct($form, $field = "", $type = "", $msg = "", $callback = null) {} }
+            ');
+        }
+
+        // Create namespaced Handler for OJS 3.4+/3.5
+        if (!class_exists('APP\handler\Handler')) {
+            eval('
+                namespace APP\handler;
+                class Handler {
+                    protected $_roleAssignments = [];
+
+                    public function __construct() {}
+
+                    public function addRoleAssignment($roles, $operations) {
+                        foreach ((array)$roles as $role) {
+                            $this->_roleAssignments[$role] = $operations;
+                        }
+                    }
+
+                    public function authorize($request, &$args, $roleAssignments) {
+                        return true;
+                    }
+
+                    public function addPolicy($policy) {}
+                }
+            ');
+        }
+
+        // Create namespaced Role and auth classes for OJS 3.4+/3.5
+        if (!class_exists('PKP\security\Role')) {
+            eval('
+                namespace PKP\security;
+                class Role {
+                    const ROLE_ID_REVIEWER = 0x00001000;
+                    const ROLE_ID_MANAGER = 0x00000010;
+                    const ROLE_ID_SITE_ADMIN = 0x00000001;
+                }
+            ');
+        }
+
+        if (!class_exists('PKP\security\authorization\ContextAccessPolicy')) {
+            eval('
+                namespace PKP\security\authorization;
+                class ContextAccessPolicy {
+                    public function __construct($request, $roleAssignments) {}
+                }
+            ');
+        }
+
+        if (!class_exists('PKP\core\JSONMessage')) {
+            eval('
+                namespace PKP\core;
+                class JSONMessage {
+                    public function __construct($success = true, $content = null) {}
+                    public function getString() { return "{}"; }
+                }
+            ');
+        }
+
+        // Create Core class (legacy - global namespace)
+        if (!class_exists('Core')) {
+            eval('
+                class Core {
+                    public static function getCurrentDate() {
+                        return date("Y-m-d H:i:s");
+                    }
+
+                    public static function getBaseDir() {
+                        return BASE_SYS_DIR;
+                    }
+                }
+            ');
+        }
+
+        // Create DataObject base class
+        if (!class_exists('DataObject')) {
+            eval('
+                class DataObject {
+                    private $_data = [];
+
+                    public function setData($key, $value) {
+                        $this->_data[$key] = $value;
+                    }
+
+                    public function getData($key) {
+                        return $this->_data[$key] ?? null;
+                    }
+
+                    public function setAllData($data) {
+                        $this->_data = $data;
+                    }
+
+                    public function getAllData() {
+                        return $this->_data;
+                    }
+                }
+            ');
+        }
+
+        // Create GenericPlugin base class
+        if (!class_exists('GenericPlugin')) {
+            eval('
+                class GenericPlugin {
+                    private $_pluginSettings = [];
+                    private $_enabled = true;
+
+                    public function register($category, $path, $mainContextId = null) {
+                        return true;
+                    }
+
+                    public function getEnabled($contextId = null) {
+                        return $this->_enabled;
+                    }
+
+                    public function setEnabled($enabled) {
+                        $this->_enabled = $enabled;
+                    }
+
+                    public function getSetting($contextId, $name) {
+                        return $this->_pluginSettings[$contextId][$name] ?? null;
+                    }
+
+                    public function updateSetting($contextId, $name, $value) {
+                        $this->_pluginSettings[$contextId][$name] = $value;
+                    }
+
+                    public function getPluginPath() {
+                        return BASE_SYS_DIR;
+                    }
+
+                    public function getTemplatePath() {
+                        return BASE_SYS_DIR . \'/templates/\';
+                    }
+
+                    public function getCanEnable() {
+                        return true;
+                    }
+
+                    public function getCanDisable() {
+                        return true;
+                    }
+
+                    public function import($classPath) {
+                        // Mock import - rely on autoloader
+                        return true;
+                    }
+                }
+            ');
+        }
+
+        // Create DAO base class
+        if (!class_exists('DAO')) {
+            eval('
+                class DAO {
+                    protected function _getInsertId($tableName = null, $idField = null) {
+                        return rand(1, 999999);
+                    }
+                }
+            ');
+        }
+
+        // Create Form base class
+        if (!class_exists('Form')) {
+            eval('
+                class Form {
+                    private $_data = [];
+                    protected $_template;
+
+                    public function __construct($template = null) {
+                        $this->_template = $template;
+                    }
+
+                    public function setData($key, $value) {
+                        $this->_data[$key] = $value;
+                    }
+
+                    public function getData($key) {
+                        return $this->_data[$key] ?? null;
+                    }
+
+                    public function readInputData() {}
+
+                    public function validate() {
+                        return true;
+                    }
+
+                    public function execute() {}
+                }
+            ');
+        }
+
+        // Create Handler base class
+        if (!class_exists('Handler')) {
+            eval('
+                class Handler {
+                    public function authorize($request, &$args, $roleAssignments) {
+                        return true;
+                    }
+                }
+            ');
+        }
+
+        // Create TemplateManager mock
+        if (!class_exists('TemplateManager')) {
+            eval('
+                class TemplateManager {
+                    private static $instance;
+                    private $templateVars = [];
+
+                    public static function getManager($request = null) {
+                        if (!self::$instance) {
+                            self::$instance = new self();
+                        }
+                        return self::$instance;
+                    }
+
+                    public function assign($key, $value) {
+                        $this->templateVars[$key] = $value;
+                    }
+
+                    public function fetch($template) {
+                        return "<html>Mock Template: $template</html>";
+                    }
+
+                    public function display($template) {
+                        echo $this->fetch($template);
+                    }
+                }
+            ');
+        }
+
+        // Create DAORegistry mock
+        if (!class_exists('DAORegistry')) {
+            eval('
+                class DAORegistry {
+                    private static $daos = [];
+
+                    public static function getDAO($name) {
+                        return self::$daos[$name] ?? null;
+                    }
+
+                    public static function registerDAO($name, $dao) {
+                        self::$daos[$name] = $dao;
+                    }
+                }
+            ');
+        }
+
+        // Create HookRegistry mock
+        if (!class_exists('HookRegistry')) {
+            eval('
+                class HookRegistry {
+                    private static $hooks = [];
+
+                    public static function register($hook, $callback, $priority = 0) {
+                        self::$hooks[$hook][] = $callback;
+                        return true;
+                    }
+
+                    public static function call($hook, $args = []) {
+                        if (isset(self::$hooks[$hook])) {
+                            foreach (self::$hooks[$hook] as $callback) {
+                                call_user_func_array($callback, $args);
+                            }
+                        }
+                    }
+                }
+            ');
+        }
+
+        // Create Config mock
+        if (!class_exists('Config')) {
+            eval('
+                class Config {
+                    public static function getVar($section, $key, $default = null) {
+                        if ($section === "database" && $key === "driver") {
+                            return "mysqli";
+                        }
+                        return $default;
+                    }
+                }
+            ');
+        }
+
+        // Create Application mock
+        if (!class_exists('Application')) {
+            eval('
+                class Application {
+                    public static function get() {
+                        return new self();
+                    }
+
+                    public function getRequest() {
+                        return new PKPRequest();
+                    }
+                }
+            ');
+        }
+
+        // Create PKPRequest mock
+        if (!class_exists('PKPRequest')) {
+            eval('
+                class PKPRequest {
+                    public function getContext() {
+                        return null;
+                    }
+
+                    public function getUser() {
+                        return null;
+                    }
+                }
+            ');
+        }
+
+        // Create JSONMessage mock
+        if (!class_exists('JSONMessage')) {
+            eval('
+                class JSONMessage {
+                    private $content;
+
+                    public function __construct($status = true, $content = null) {
+                        $this->content = $content;
+                    }
+
+                    public function getString() {
+                        return json_encode($this->content);
+                    }
+                }
+            ');
+        }
+    }
+
+    /**
+     * Load version-specific mocks based on OJS version
+     */
+    private static function loadVersionSpecificMocks(): void
+    {
+        $version = self::$version;
+
+        // OJS 3.4+ uses Repo facade pattern
+        if (version_compare($version, '3.4', '>=')) {
+            self::loadRepoFacade();
+        }
+
+        // OJS 3.3 uses traditional DAOs
+        if (version_compare($version, '3.3', '>=') && version_compare($version, '3.4', '<')) {
+            self::loadTraditionalDAOs();
+        }
+
+        // OJS 3.5 may have additional changes
+        if (version_compare($version, '3.5', '>=')) {
+            self::loadOJS35Specific();
+        }
+    }
+
+    /**
+     * Load OJS 3.4+ Repo facade pattern mocks
+     */
+    private static function loadRepoFacade(): void
+    {
+        if (!class_exists('APP\\facades\\Repo')) {
+            eval('
+                namespace APP\\facades {
+                    class Repo {
+                        public static function user() {
+                            return new \\UserRepository();
+                        }
+
+                        public static function submission() {
+                            return new \\SubmissionRepository();
+                        }
+                    }
+                }
+            ');
+        }
+
+        if (!class_exists('UserRepository')) {
+            eval('
+                class UserRepository {
+                    public function get($userId) {
+                        return null;
+                    }
+                }
+            ');
+        }
+
+        if (!class_exists('SubmissionRepository')) {
+            eval('
+                class SubmissionRepository {
+                    public function get($submissionId) {
+                        return null;
+                    }
+                }
+            ');
+        }
+    }
+
+    /**
+     * Load traditional DAO mocks for OJS 3.3
+     */
+    private static function loadTraditionalDAOs(): void
+    {
+        // In OJS 3.3, UserDAO and SubmissionDAO are used directly
+        // These would be registered via DAORegistry
+    }
+
+    /**
+     * Load OJS 3.5 specific mocks
+     */
+    private static function loadOJS35Specific(): void
+    {
+        // Placeholder for OJS 3.5 specific changes
+        // Can be updated when 3.5 is released
+    }
+
+    /**
+     * Get current OJS version
+     *
+     * @return string
+     */
+    public static function getVersion(): string
+    {
+        return self::$version;
+    }
+}

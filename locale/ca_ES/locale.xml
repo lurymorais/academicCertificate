@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/ca_ES/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Catalan
+  * NOTE: This translation uses formal Catalan appropriate for academic publishing.
+  * Catalan-specific characters: à, è, é, í, ï, ò, ó, ú, ü, ç, l·l
+  * Suitable for Catalonia, Valencia, Balearic Islands.
+  -->
+
+<locale name="ca_ES" full_name="Català (Catalunya)">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Certificat de Revisió</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Certificat de Revisió per Parells</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">El vostre certificat està llest!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Gràcies per completar aquesta revisió. Ara podeu descarregar el vostre certificat de reconeixement.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">El vostre certificat es generarà automàticament quan feu clic al botó de descàrrega.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Descarregar Certificat</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Configuració de Certificats</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Configuració de la Plantilla de Certificat</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Imatge de Fons</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Carregueu una imatge de fons per al certificat (JPG o PNG, mida recomanada: 2100x2970 píxels per A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Imatge de fons actual</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Text de Capçalera</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">El títol principal que es mostra a la part superior del certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">El text de capçalera és obligatori</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Plantilla del Cos del Certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">El contingut principal del certificat. Utilitzeu variables de plantilla per inserir contingut dinàmic.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">La plantilla del cos del certificat és obligatòria</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Text del Peu de Pàgina</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Text opcional que es mostra a la part inferior del certificat</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Variables de Plantilla Disponibles</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Utilitzeu aquestes variables a les vostres plantilles per inserir contingut dinàmic:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Plantilla per defecte</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Utilitzar plantilla per defecte</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Configuració d'Aparença</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Família de Tipus de Lletra</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Mida del Tipus de Lletra</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Color del Text (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Especifiqueu el color del text utilitzant valors RGB (0-255 per a cada component)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Criteris d'Elegibilitat</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Revisions Completades Mínimes</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">El nombre mínim de revisions completades requerides abans que un revisor pugui rebre un certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">El nombre mínim de revisions ha de ser un número més gran o igual a 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Opcions de Verificació</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Incloure codi QR per a la verificació del certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Previsualitzar Certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Tipus d'imatge no vàlid. Si us plau, carregueu un fitxer JPG o PNG.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">La càrrega del fitxer ha fallat. Si us plau, torneu-ho a provar.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Aquesta revisió encara no s'ha completat. Els certificats només estan disponibles per a revisions completades.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">No s'ha proporcionat cap codi de certificat</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Codi de certificat no vàlid. Aquest certificat no s'ha pogut verificar.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">No s'han seleccionat revisors per a la generació massiva de certificats</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Accés denegat. No teniu permís per descarregar aquest certificat.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">No hi ha cap context de revista disponible. Assegureu-vos que accediu des d'una revista vàlida.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">L'accés a la base de dades no està disponible actualment. Si us plau, contacteu amb l'administrador del sistema.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Verificar Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Introduïu un codi de certificat per verificar-ne l'autenticitat</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Codi del Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Verificar Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Certificat Vàlid</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Certificat No Vàlid</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">El codi de certificat que heu introduït no és vàlid o no existeix al nostre sistema.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Codi del Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Nom del Revisor</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Nom de la Revista</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Data d'Emissió</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Generació Massiva de Certificats</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Genereu certificats per a múltiples revisors alhora. Seleccioneu revisors de la llista a continuació que hagin completat revisions però que encara no tinguin certificats.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Seleccionar Revisors</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">revisions completades</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">No s'han trobat revisors elegibles. Tots els revisors tenen certificats per a les seves revisions completades.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Mantingueu premut Ctrl (Windows/Linux) o Cmd (Mac) per seleccionar múltiples revisors</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Generar Certificats</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Generant certificats...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Si us plau, seleccioneu almenys un revisor</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">certificat/s generat/s amb èxit</message>
+	<message key="plugins.generic.academicCertificate.batch.error">S'ha produït un error en generar els certificats. Si us plau, torneu-ho a provar.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} certificat/s generat/s amb èxit</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Estadístiques de Certificats</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Resum de la generació i ús de certificats a la vostra revista</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Total de Certificats Emesos</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Total de Descàrregues</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Revisors Únics amb Certificats</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Total de Certificats Emesos</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Total de Descàrregues</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Mitjana de Descàrregues per Certificat</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Nota: Helvetica, Times New Roman i Courier només admeten caràcters llatins. Si la vostra revista utilitza caràcters no llatins, el connector utilitzarà automàticament DejaVu Sans.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Els meus certificats</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">A continuació es mostra una llista de tots els vostres certificats de revisió per a aquesta revista.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Data d'emissió</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Títol de la tramesa</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Codi del certificat</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Accions</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Encara no teniu cap certificat. Els certificats es generen després de completar una revisió.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Veure tots els meus certificats</message>
+</locale>

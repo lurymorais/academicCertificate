@@ -1,0 +1,564 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "OJS Akademik Belge Yöneticisi"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Hakem, yazar ve editörler için PDF akademik belgeleri oluşturun ve yönetin — kabul, yayın ve editörlük belgeleri, herkese açık doğrulama ile."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Değerlendirme Sertifikası"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Hakem Değerlendirmesi Sertifikası"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Sertifikanız hazır!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Bu değerlendirmeyi tamamladığınız için teşekkür ederiz. Artık takdir sertifikanızı indirebilirsiniz."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "İndirme düğmesine tıkladığınızda sertifikanız otomatik olarak oluşturulacaktır."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Sertifikayı İndir"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Belge şablonlarını, belge türlerini ve uygunluk kurallarını yapılandırın."
+
+msgid "plugins.generic.academicCertificate.settings.landscapeA4Hint"
+msgstr "Belgeler yatay A4 formatındadır (297 × 210 mm). Baskı kalitesi için arka plan görsellerini 3508 × 2480 piksel (300 DPI) olarak yükleyin."
+
+msgid "plugins.generic.academicCertificate.settings.designerTitle"
+msgstr "Belge düzen tasarımcısı"
+
+msgid "plugins.generic.academicCertificate.settings.designerHint"
+msgstr "Ön izlemede Başlık, Gövde, Alt bilgi ve Kod alanlarını sürükleyerek metinleri arka plan üzerinde konumlandırın. Kaydettikten sonra PDF çıktısına yansır."
+
+msgid "plugins.generic.academicCertificate.settings.designerDimensions"
+msgstr "Yatay A4: {$width} × {$height} mm — önerilen arka plan {$widthPx} × {$heightPx} px (300 DPI)"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultBackground"
+msgstr "Varsayılan arka planı kullan"
+
+msgid "plugins.generic.academicCertificate.settings.certType.reviewer"
+msgstr "Hakemlik belgesi"
+
+msgid "plugins.generic.academicCertificate.settings.certType.acceptance"
+msgstr "Makale kabul belgesi"
+
+msgid "plugins.generic.academicCertificate.settings.certType.author"
+msgstr "Yazar sertifikası"
+
+msgid "plugins.generic.academicCertificate.settings.certType.editor"
+msgstr "Editörlük belgesi"
+
+msgid "plugins.generic.academicCertificate.settings.editorHeaderText"
+msgstr "Editörlük belgesi başlık metni"
+
+msgid "plugins.generic.academicCertificate.settings.editorHeaderTextDescription"
+msgstr "Editörlük belgelerinde görünen başlık. Boş bırakılırsa varsayılan kullanılır."
+
+msgid "plugins.generic.academicCertificate.settings.editorBodyTemplate"
+msgstr "Editörlük belgesi gövde şablonu"
+
+msgid "plugins.generic.academicCertificate.settings.editorBodyTemplateDescription"
+msgstr "Editörlük belgeleri için ana metin. Aşağıdaki şablon değişkenlerini kullanın."
+
+msgid "plugins.generic.academicCertificate.settings.editorFooterText"
+msgstr "Editörlük belgesi alt bilgi metni"
+
+msgid "plugins.generic.academicCertificate.settings.editorFooterTextDescription"
+msgstr "Editörlük belgeleri için isteğe bağlı alt bilgi."
+
+msgid "plugins.generic.academicCertificate.editor.defaultHeader"
+msgstr "Editörlük Hizmeti Belgesi"
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Sertifika Şablonu Ayarları"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Arka Plan Resmi"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Sertifika için bir arka plan resmi yükleyin (JPG veya PNG, önerilen boyut: A4 için 2100x2970 piksel)"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImages"
+msgstr "Arka Plan Resimleri"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDefault"
+msgstr "Varsayılan arka plan (tüm belge türleri)"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDefaultDescription"
+msgstr "Aşağıda türe özel resim yüklenmediyse tüm belgelerde kullanılır."
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Mevcut arka plan resmi"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Başlık Metni"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "Sertifikanın üst kısmında görüntülenen ana başlık"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Başlık metni gereklidir"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Sertifika Gövde Şablonu"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "Sertifikanın ana içeriği. Dinamik içerik eklemek için şablon değişkenlerini kullanın."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Sertifika gövde şablonu gereklidir"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Alt Bilgi Metni"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Sertifikanın alt kısmında görüntülenen isteğe bağlı metin"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Kullanılabilir Şablon Değişkenleri"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Dinamik içerik eklemek için şablonlarınızda bu değişkenleri kullanın:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Varsayılan şablon"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Varsayılan şablonu kullan"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Görünüm Ayarları"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Yazı Tipi Ailesi"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Yazı Tipi Boyutu"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Metin Rengi (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "RGB değerlerini kullanarak metin rengini belirtin (her bileşen için 0-255)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Uygunluk Kriterleri"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Minimum Tamamlanmış Değerlendirme"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Bir hakemin sertifika alabilmesi için gereken minimum tamamlanmış değerlendirme sayısı"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Minimum değerlendirme sayısı 1'den büyük veya eşit bir sayı olmalıdır"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Doğrulama Seçenekleri"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "Sertifika doğrulaması için QR kodu ekle"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Sertifikayı Önizle"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Geçersiz resim türü. Lütfen bir JPG veya PNG dosyası yükleyin."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Dosya yükleme başarısız oldu. Lütfen tekrar deneyin."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Not: Helvetica, Times New Roman ve Courier yalnızca Latin karakterlerini destekler. Derginiz Kiril, Arapça, Çince veya diğer Latin dışı karakterler kullanıyorsa, eklenti bu metin öğeleri için otomatik olarak DejaVu Sans kullanacaktır."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Bu değerlendirme henüz tamamlanmadı. Sertifikalar yalnızca tamamlanmış değerlendirmeler için kullanılabilir."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Sertifika kodu sağlanmadı"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Geçersiz sertifika kodu. Bu sertifika doğrulanamadı."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Toplu sertifika oluşturma için hakem seçilmedi"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Erişim reddedildi. Bu sertifikayı indirme yetkiniz yok."
+
+msgid "plugins.generic.academicCertificate.error.certificateRevoked"
+msgstr "Bu sertifika iptal edilmiştir ve artık geçerli değildir."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Dergi bağlamı mevcut değil. Lütfen geçerli bir dergiden eriştiğinizden emin olun."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Veritabanı erişimi şu anda kullanılamıyor. Lütfen sistem yöneticisiyle iletişime geçin."
+
+msgid "plugins.generic.academicCertificate.error.certificateTypeNotAvailable"
+msgstr "Bu belge türü için PDF indirme henüz kullanılamıyor."
+
+msgid "plugins.generic.academicCertificate.error.acceptanceDisabled"
+msgstr "Makale kabul belgeleri bu dergi için devre dışı."
+
+msgid "plugins.generic.academicCertificate.error.submissionNotAccepted"
+msgstr "Bu gönderi yayımlanmak üzere kabul edilmemiş."
+
+msgid "plugins.generic.academicCertificate.error.submissionNotPublished"
+msgstr "Bu makale henüz yayımlanmamış."
+
+msgid "plugins.generic.academicCertificate.error.authorDisabled"
+msgstr "Yazar sertifikaları bu dergi için devre dışı."
+
+msgid "plugins.generic.academicCertificate.error.invalidSubmissionId"
+msgstr "Geçerli bir gönderi kimliği girin."
+
+msgid "plugins.generic.academicCertificate.error.noAuthorForSubmission"
+msgstr "Bu gönderi için eşleşen bir yazar hesabı bulunamadı."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Sertifikayı Doğrula"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Özgünlüğünü doğrulamak için bir sertifika kodu girin"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Sertifika Kodu"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Sertifikayı Doğrula"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Geçerli Sertifika"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Geçersiz Sertifika"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "Girdiğiniz sertifika kodu geçersiz veya sistemimizde mevcut değil."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Sertifika Kodu"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Hakem Adı"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Dergi Adı"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Verilme Tarihi"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Toplu Sertifika Oluşturma"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Birden fazla hakem için aynı anda sertifika oluşturun. Değerlendirmeleri tamamlamış ancak henüz sertifikaları olmayan hakemleri aşağıdaki listeden seçin."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Hakemleri Seç"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "tamamlanmış değerlendirme"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Uygun hakem bulunamadı. Tüm hakemlerin tamamlanmış değerlendirmeleri için sertifikaları var."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Birden fazla hakem seçmek için Ctrl (Windows/Linux) veya Cmd (Mac) tuşunu basılı tutun"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Sertifikaları Oluştur"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Sertifikalar oluşturuluyor..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Lütfen en az bir hakem seçin"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "sertifika başarıyla oluşturuldu"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Sertifikalar oluşturulurken bir hata oluştu. Lütfen tekrar deneyin."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} sertifika başarıyla oluşturuldu"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Sertifika İstatistikleri"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Derginizdeki sertifika oluşturma ve kullanım genel bakışı"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Toplam Verilen Sertifika"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Toplam İndirme"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Sertifikalı Benzersiz Hakem"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Toplam Verilen Sertifika"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Toplam İndirme"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Sertifika Başına Ortalama İndirme"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Sertifika Ayarları"
+
+msgid "plugins.generic.academicCertificate.settings.reviewerBackgroundImage"
+msgstr "Hakemlik belgesi arka planı (isteğe bağlı)"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceBackgroundImage"
+msgstr "Makale kabul belgesi arka planı (isteğe bağlı)"
+
+msgid "plugins.generic.academicCertificate.settings.authorBackgroundImage"
+msgstr "Yazar sertifikası arka planı (isteğe bağlı)"
+
+msgid "plugins.generic.academicCertificate.settings.editorBackgroundImage"
+msgstr "Editörlük belgesi arka planı (isteğe bağlı)"
+
+msgid "plugins.generic.academicCertificate.settings.typeBackgroundImageDescription"
+msgstr "Yalnızca bu belge türü için isteğe bağlı özel arka plan. Boş bırakılırsa yukarıdaki varsayılan kullanılır."
+
+msgid "plugins.generic.academicCertificate.settings.certificateNumberPrefix"
+msgstr "Sertifika Numarası Öneki"
+
+msgid "plugins.generic.academicCertificate.settings.certificateNumberPrefixDescription"
+msgstr "Sertifika numaralarında kullanılan önek (ör. ACM-REV-2026-000001). Yalnızca harf ve rakam."
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Belgelerim"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Aşağıda bu dergi için tüm belgelerinizin listesi yer almaktadır (belge türüne göre)."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Düzenlenme tarihi"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Makale başlığı"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Doğrulama kodu"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateNumber"
+msgstr "Belge numarası"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateType"
+msgstr "Belge türü"
+
+msgid "plugins.generic.academicCertificate.myCertificates.journalName"
+msgstr "Dergi"
+
+msgid "plugins.generic.academicCertificate.myCertificates.status"
+msgstr "Durum"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "İşlemler"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "Bu dergi için henüz belgeniz bulunmuyor."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "Tüm belgelerimi görüntüle"
+
+msgid "plugins.generic.academicCertificate.myCertificates.filterType"
+msgstr "Türe göre filtrele"
+
+msgid "plugins.generic.academicCertificate.myCertificates.filterAll"
+msgstr "Tüm türler"
+
+msgid "plugins.generic.academicCertificate.myCertificates.verifyLink"
+msgstr "Doğrula"
+
+msgid "plugins.generic.academicCertificate.myCertificates.titleHidden"
+msgstr "Kör hakemlik gizliliği için gizlendi"
+
+msgid "plugins.generic.academicCertificate.myCertificates.pendingIssuance"
+msgstr "Belge düzenlendikten sonra kullanılabilir olacaktır"
+
+msgid "plugins.generic.academicCertificate.navigation.myCertificates"
+msgstr "Belgelerim"
+
+msgid "plugins.generic.academicCertificate.navigation.myCertificates.description"
+msgstr "Giriş yapmış kullanıcılar için Belgelerim sayfasına bağlantı (hakem, yazar ve editörlük belgeleri)."
+
+msgid "plugins.generic.academicCertificate.certificateType.reviewer"
+msgstr "Hakemlik Belgesi"
+
+msgid "plugins.generic.academicCertificate.certificateType.acceptance"
+msgstr "Makale Kabul Belgesi"
+
+msgid "plugins.generic.academicCertificate.certificateType.author"
+msgstr "Yazar Sertifikası"
+
+msgid "plugins.generic.academicCertificate.certificateType.editor"
+msgstr "Editörlük Katkı Belgesi"
+
+msgid "plugins.generic.academicCertificate.status.valid"
+msgstr "Geçerli"
+
+msgid "plugins.generic.academicCertificate.status.revoked"
+msgstr "İptal Edildi"
+
+msgid "plugins.generic.academicCertificate.status.pending"
+msgstr "Beklemede"
+
+msgid "plugins.generic.academicCertificate.settings.certificateTypes"
+msgstr "Belge Türleri"
+
+msgid "plugins.generic.academicCertificate.settings.enableReviewerCertificates"
+msgstr "Hakemlik belgelerini etkinleştir"
+
+msgid "plugins.generic.academicCertificate.settings.enableAcceptanceCertificates"
+msgstr "Makale kabul belgelerini etkinleştir"
+
+msgid "plugins.generic.academicCertificate.settings.enableAuthorCertificates"
+msgstr "Yazar sertifikalarını etkinleştir"
+
+msgid "plugins.generic.academicCertificate.settings.enableEditorCertificates"
+msgstr "Editörlük katkı belgelerini etkinleştir"
+
+msgid "plugins.generic.academicCertificate.settings.hideReviewerSubmissionTitle"
+msgstr "Hakemlik belgelerinde makale başlığını gizle (kör hakemlik gizliliği)"
+
+msgid "plugins.generic.academicCertificate.acceptance.defaultHeader"
+msgstr "Makale Kabul Belgesi"
+
+msgid "plugins.generic.academicCertificate.author.defaultHeader"
+msgstr "Yazar Sertifikası"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceTemplateSettings"
+msgstr "Makale Kabul Belgesi Şablonu"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceHeaderText"
+msgstr "Kabul belgesi başlık metni"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceHeaderTextDescription"
+msgstr "Makale kabul belgelerinde görünen başlık. Boş bırakılırsa varsayılan kullanılır."
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceBodyTemplate"
+msgstr "Kabul belgesi gövde şablonu"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceBodyTemplateDescription"
+msgstr "Kabul belgeleri için ana metin. Aşağıdaki değişkenleri kullanın."
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceFooterText"
+msgstr "Kabul belgesi alt bilgi metni"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceFooterTextDescription"
+msgstr "Kabul belgeleri için isteğe bağlı alt bilgi."
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceAvailableVariables"
+msgstr "Kabul şablonu değişkenleri"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceAvailableVariablesDescription"
+msgstr "Kabul belgesi şablonunda kullanılabilecek değişkenler:"
+
+msgid "plugins.generic.academicCertificate.settings.authorTemplateSettings"
+msgstr "Yazar Sertifikası Şablonu"
+
+msgid "plugins.generic.academicCertificate.settings.authorHeaderText"
+msgstr "Yazar sertifikası başlık metni"
+
+msgid "plugins.generic.academicCertificate.settings.authorHeaderTextDescription"
+msgstr "Yayın sonrası yazar sertifikalarında görünen başlık. Boş bırakılırsa varsayılan kullanılır."
+
+msgid "plugins.generic.academicCertificate.settings.authorBodyTemplate"
+msgstr "Yazar sertifikası gövde şablonu"
+
+msgid "plugins.generic.academicCertificate.settings.authorBodyTemplateDescription"
+msgstr "Makale yayımlandıktan sonra verilen yazar sertifikası metni. Aşağıdaki değişkenleri kullanın."
+
+msgid "plugins.generic.academicCertificate.settings.authorFooterText"
+msgstr "Yazar sertifikası alt bilgi metni"
+
+msgid "plugins.generic.academicCertificate.settings.authorFooterTextDescription"
+msgstr "Yazar sertifikaları için isteğe bağlı alt bilgi."
+
+msgid "plugins.generic.academicCertificate.settings.authorAvailableVariables"
+msgstr "Yazar sertifikası şablon değişkenleri"
+
+msgid "plugins.generic.academicCertificate.settings.authorAvailableVariablesDescription"
+msgstr "Yazar sertifikası şablonunda kullanılabilecek değişkenler:"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.title"
+msgstr "Manuel Makale Kabul Belgesi Düzenleme"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.description"
+msgstr "Otomatik algılama belge oluşturmadıysa bir gönderi için kabul belgesi kaydı oluşturun. Yazarlar PDF'i Belgelerim sayfasından indirebilir."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.submissionId"
+msgstr "Gönderi Kimliği"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.issue"
+msgstr "Belge düzenle"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.issuing"
+msgstr "Düzenleniyor..."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.success"
+msgstr "Kabul belgesi başarıyla düzenlendi."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.alreadyExists"
+msgstr "Bu gönderi için zaten bir kabul belgesi var."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.error"
+msgstr "Kabul belgesi düzenlenemedi."
+

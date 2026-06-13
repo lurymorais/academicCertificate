@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/ar_AR/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Arabic (RTL)
+  -->
+
+<locale name="ar_AR" full_name="العربية">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">شهادة تحكيم</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">شهادة مراجعة الأقران</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">شهادتك جاهزة!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">شكراً لإتمامك هذا التحكيم. يمكنك الآن تنزيل شهادة التقدير الخاصة بك.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">سيتم إنشاء شهادتك تلقائياً عند النقر على زر التنزيل.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">تنزيل الشهادة</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">إعدادات الشهادة</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">إعدادات قالب الشهادة</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">صورة الخلفية</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">رفع صورة خلفية للشهادة (JPG أو PNG، الحجم الموصى به: 2100×2970 بكسل لصفحة A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">صورة الخلفية الحالية</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">نص العنوان</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">العنوان الرئيسي المعروض في أعلى الشهادة</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">نص العنوان مطلوب</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">قالب محتوى الشهادة</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">المحتوى الرئيسي للشهادة. استخدم متغيرات القالب لإدراج محتوى ديناميكي.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">قالب محتوى الشهادة مطلوب</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">نص التذييل</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">نص اختياري يُعرض في أسفل الشهادة</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">متغيرات القالب المتاحة</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">استخدم هذه المتغيرات في قوالبك لإدراج محتوى ديناميكي:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">القالب الافتراضي</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">استخدام القالب الافتراضي</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">إعدادات المظهر</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">نوع الخط</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">حجم الخط</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">لون النص (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">حدد لون النص باستخدام قيم RGB (0-255 لكل مكون)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">معايير الأهلية</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">الحد الأدنى من التحكيمات المكتملة</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">الحد الأدنى من التحكيمات المكتملة المطلوبة قبل أن يتمكن المحكّم من الحصول على شهادة</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">يجب أن يكون الحد الأدنى للتحكيمات رقماً أكبر من أو يساوي 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">خيارات التحقق</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">تضمين رمز QR للتحقق من الشهادة</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">معاينة الشهادة</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">نوع الصورة غير صالح. يرجى رفع ملف JPG أو PNG.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">فشل رفع الملف. يرجى المحاولة مرة أخرى.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">لم يكتمل هذا التحكيم بعد. الشهادات متاحة فقط للتحكيمات المكتملة.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">لم يتم تقديم رمز الشهادة</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">رمز الشهادة غير صالح. تعذر التحقق من هذه الشهادة.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">لم يتم اختيار محكّمين لإنشاء الشهادات المجمعة</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">تم رفض الوصول. ليس لديك إذن لتنزيل هذه الشهادة.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">لا يتوفر سياق المجلة. يرجى التأكد من الوصول من مجلة صالحة.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">الوصول إلى قاعدة البيانات غير متاح حالياً. يرجى الاتصال بمسؤول النظام.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">التحقق من الشهادة</message>
+	<message key="plugins.generic.academicCertificate.verify.description">أدخل رمز الشهادة للتحقق من صحتها</message>
+	<message key="plugins.generic.academicCertificate.verify.code">رمز الشهادة</message>
+	<message key="plugins.generic.academicCertificate.verify.button">التحقق من الشهادة</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">الشهادة صالحة</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">الشهادة غير صالحة</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">رمز الشهادة الذي أدخلته غير صالح أو غير موجود في نظامنا.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">رمز الشهادة</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">اسم المحكّم</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">اسم المجلة</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">تاريخ الإصدار</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">إنشاء الشهادات المجمعة</message>
+	<message key="plugins.generic.academicCertificate.batch.description">إنشاء شهادات لعدة محكّمين دفعة واحدة. اختر المحكّمين من القائمة أدناه الذين أتموا تحكيماتهم ولكن ليس لديهم شهادات بعد.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">اختيار المحكّمين</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">تحكيمات مكتملة</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">لم يتم العثور على محكّمين مؤهلين. جميع المحكّمين لديهم شهادات لتحكيماتهم المكتملة.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">اضغط مع الاستمرار على Ctrl (ويندوز/لينكس) أو Cmd (ماك) لاختيار عدة محكّمين</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">إنشاء الشهادات</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">جارٍ إنشاء الشهادات...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">يرجى اختيار محكّم واحد على الأقل</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">تم إنشاء الشهادة (الشهادات) بنجاح</message>
+	<message key="plugins.generic.academicCertificate.batch.error">حدث خطأ أثناء إنشاء الشهادات. يرجى المحاولة مرة أخرى.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">تم إنشاء {$count} شهادة (شهادات) بنجاح</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">إحصائيات الشهادات</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">نظرة عامة على إنشاء واستخدام الشهادات في مجلتك</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">إجمالي الشهادات الصادرة</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">إجمالي التنزيلات</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">المحكّمون الفريدون الحاصلون على شهادات</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">إجمالي الشهادات الصادرة</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">إجمالي التنزيلات</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">متوسط التنزيلات لكل شهادة</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">ملاحظة: خطوط Helvetica وTimes New Roman وCourier تدعم الأحرف اللاتينية فقط. إذا كانت مجلتك تستخدم أحرفًا سيريلية أو عربية أو صينية أو أحرفًا غير لاتينية أخرى، فسيستخدم الملحق تلقائيًا خط DejaVu Sans لعناصر النص تلك.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">شهاداتي</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">فيما يلي قائمة بجميع شهادات المراجعة الخاصة بك لهذه المجلة.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">تاريخ الإصدار</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">عنوان المقال</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">رمز الشهادة</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">إجراءات</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">ليس لديك أي شهادات بعد. يتم إنشاء الشهادات بعد إتمام المراجعة.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">عرض جميع شهاداتي</message>
+</locale>

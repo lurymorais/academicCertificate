@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Turkish
+  * NOTE: This translation uses formal Turkish ("Siz") appropriate for academic publishing.
+  * Turkish-specific characters: ı, ğ, ü, ş, ö, ç, İ
+  -->
+
+<locale name="tr_TR" full_name="Türkçe (Türkiye)">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">OJS Akademik Belge Yöneticisi</message>
+	<message key="plugins.generic.academicCertificate.description">Hakem, yazar ve editörler için PDF akademik belgeleri oluşturun ve yönetin — kabul, yayın ve editörlük belgeleri, herkese açık doğrulama ile.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Değerlendirme Sertifikası</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Hakem Değerlendirmesi Sertifikası</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Sertifikanız hazır!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Bu değerlendirmeyi tamamladığınız için teşekkür ederiz. Artık takdir sertifikanızı indirebilirsiniz.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">İndirme düğmesine tıkladığınızda sertifikanız otomatik olarak oluşturulacaktır.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Sertifikayı İndir</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Sertifika Ayarları</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Belge şablonlarını, belge türlerini ve uygunluk kurallarını yapılandırın.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Sertifika Şablonu Ayarları</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Arka Plan Resmi</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Sertifika için bir arka plan resmi yükleyin (JPG veya PNG, önerilen boyut: A4 için 2100x2970 piksel)</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImages">Arka Plan Resimleri</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDefault">Varsayılan arka plan (tüm belge türleri)</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDefaultDescription">Aşağıda türe özel resim yüklenmediyse tüm belgelerde kullanılır.</message>
+	<message key="plugins.generic.academicCertificate.settings.reviewerBackgroundImage">Hakemlik belgesi arka planı (isteğe bağlı)</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceBackgroundImage">Makale kabul belgesi arka planı (isteğe bağlı)</message>
+	<message key="plugins.generic.academicCertificate.settings.authorBackgroundImage">Yazar sertifikası arka planı (isteğe bağlı)</message>
+	<message key="plugins.generic.academicCertificate.settings.editorBackgroundImage">Editörlük belgesi arka planı (isteğe bağlı)</message>
+	<message key="plugins.generic.academicCertificate.settings.typeBackgroundImageDescription">Yalnızca bu belge türü için isteğe bağlı özel arka plan. Boş bırakılırsa yukarıdaki varsayılan kullanılır.</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Mevcut arka plan resmi</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Başlık Metni</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Sertifikanın üst kısmında görüntülenen ana başlık</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Başlık metni gereklidir</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Sertifika Gövde Şablonu</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Sertifikanın ana içeriği. Dinamik içerik eklemek için şablon değişkenlerini kullanın.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Sertifika gövde şablonu gereklidir</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Alt Bilgi Metni</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Sertifikanın alt kısmında görüntülenen isteğe bağlı metin</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Kullanılabilir Şablon Değişkenleri</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Dinamik içerik eklemek için şablonlarınızda bu değişkenleri kullanın:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Varsayılan şablon</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Varsayılan şablonu kullan</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Görünüm Ayarları</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Yazı Tipi Ailesi</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Yazı Tipi Boyutu</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Metin Rengi (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">RGB değerlerini kullanarak metin rengini belirtin (her bileşen için 0-255)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Uygunluk Kriterleri</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Minimum Tamamlanmış Değerlendirme</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Bir hakemin sertifika alabilmesi için gereken minimum tamamlanmış değerlendirme sayısı</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Minimum değerlendirme sayısı 1'den büyük veya eşit bir sayı olmalıdır</message>
+	<message key="plugins.generic.academicCertificate.settings.certificateNumberPrefix">Sertifika Numarası Öneki</message>
+	<message key="plugins.generic.academicCertificate.settings.certificateNumberPrefixDescription">Sertifika numaralarında kullanılan önek (ör. ACM-REV-2026-000001). Yalnızca harf ve rakam.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Doğrulama Seçenekleri</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Sertifika doğrulaması için QR kodu ekle</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Sertifikayı Önizle</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Geçersiz resim türü. Lütfen bir JPG veya PNG dosyası yükleyin.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Dosya yükleme başarısız oldu. Lütfen tekrar deneyin.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Bu değerlendirme henüz tamamlanmadı. Sertifikalar yalnızca tamamlanmış değerlendirmeler için kullanılabilir.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Sertifika kodu sağlanmadı</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Geçersiz sertifika kodu. Bu sertifika doğrulanamadı.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Toplu sertifika oluşturma için hakem seçilmedi</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Erişim reddedildi. Bu sertifikayı indirme yetkiniz yok.</message>
+	<message key="plugins.generic.academicCertificate.error.certificateRevoked">Bu sertifika iptal edilmiştir ve artık geçerli değildir.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Dergi bağlamı mevcut değil. Lütfen geçerli bir dergiden eriştiğinizden emin olun.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">Veritabanı erişimi şu anda kullanılamıyor. Lütfen sistem yöneticisiyle iletişime geçin.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Sertifikayı Doğrula</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Özgünlüğünü doğrulamak için bir sertifika kodu girin</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Sertifika Kodu</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Sertifikayı Doğrula</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Geçerli Sertifika</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Geçersiz Sertifika</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Girdiğiniz sertifika kodu geçersiz veya sistemimizde mevcut değil.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Sertifika Kodu</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Hakem Adı</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Dergi Adı</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Verilme Tarihi</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Toplu Sertifika Oluşturma</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Birden fazla hakem için aynı anda sertifika oluşturun. Değerlendirmeleri tamamlamış ancak henüz sertifikaları olmayan hakemleri aşağıdaki listeden seçin.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Hakemleri Seç</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">tamamlanmış değerlendirme</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Uygun hakem bulunamadı. Tüm hakemlerin tamamlanmış değerlendirmeleri için sertifikaları var.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Birden fazla hakem seçmek için Ctrl (Windows/Linux) veya Cmd (Mac) tuşunu basılı tutun</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Sertifikaları Oluştur</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Sertifikalar oluşturuluyor...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Lütfen en az bir hakem seçin</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">sertifika başarıyla oluşturuldu</message>
+	<message key="plugins.generic.academicCertificate.batch.error">Sertifikalar oluşturulurken bir hata oluştu. Lütfen tekrar deneyin.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} sertifika başarıyla oluşturuldu</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Sertifika İstatistikleri</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Derginizdeki sertifika oluşturma ve kullanım genel bakışı</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Toplam Verilen Sertifika</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Toplam İndirme</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Sertifikalı Benzersiz Hakem</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Toplam Verilen Sertifika</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Toplam İndirme</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Sertifika Başına Ortalama İndirme</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Not: Helvetica, Times New Roman ve Courier yalnızca Latin karakterlerini destekler. Derginiz Kiril, Arapça, Çince veya diğer Latin dışı karakterler kullanıyorsa, eklenti bu metin öğeleri için otomatik olarak DejaVu Sans kullanacaktır.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Belgelerim</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">Aşağıda bu dergi için tüm belgelerinizin listesi yer almaktadır (belge türüne göre).</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Düzenlenme tarihi</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Makale başlığı</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Doğrulama kodu</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateNumber">Belge numarası</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateType">Belge türü</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.journalName">Dergi</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.status">Durum</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">İşlemler</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Bu dergi için henüz belgeniz bulunmuyor.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Tüm belgelerimi görüntüle</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.filterType">Türe göre filtrele</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.filterAll">Tüm türler</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.verifyLink">Doğrula</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.titleHidden">Kör hakemlik gizliliği için gizlendi</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.pendingIssuance">Belge düzenlendikten sonra kullanılabilir olacaktır</message>
+
+	<message key="plugins.generic.academicCertificate.navigation.myCertificates">Belgelerim</message>
+	<message key="plugins.generic.academicCertificate.navigation.myCertificates.description">Giriş yapmış kullanıcılar için Belgelerim sayfasına bağlantı (hakem, yazar ve editörlük belgeleri).</message>
+
+	<message key="plugins.generic.academicCertificate.certificateType.reviewer">Hakemlik Belgesi</message>
+	<message key="plugins.generic.academicCertificate.certificateType.acceptance">Makale Kabul Belgesi</message>
+	<message key="plugins.generic.academicCertificate.certificateType.author">Yazar Sertifikası</message>
+	<message key="plugins.generic.academicCertificate.certificateType.editor">Editörlük Katkı Belgesi</message>
+
+	<message key="plugins.generic.academicCertificate.status.valid">Geçerli</message>
+	<message key="plugins.generic.academicCertificate.status.revoked">İptal Edildi</message>
+	<message key="plugins.generic.academicCertificate.status.pending">Beklemede</message>
+
+	<message key="plugins.generic.academicCertificate.settings.certificateTypes">Belge Türleri</message>
+	<message key="plugins.generic.academicCertificate.settings.enableReviewerCertificates">Hakemlik belgelerini etkinleştir</message>
+	<message key="plugins.generic.academicCertificate.settings.enableAcceptanceCertificates">Makale kabul belgelerini etkinleştir</message>
+	<message key="plugins.generic.academicCertificate.settings.enableAuthorCertificates">Yazar sertifikalarını etkinleştir</message>
+	<message key="plugins.generic.academicCertificate.settings.enableEditorCertificates">Editörlük katkı belgelerini etkinleştir</message>
+	<message key="plugins.generic.academicCertificate.settings.hideReviewerSubmissionTitle">Hakemlik belgelerinde makale başlığını gizle (kör hakemlik gizliliği)</message>
+
+	<message key="plugins.generic.academicCertificate.error.certificateTypeNotAvailable">Bu belge türü için PDF indirme henüz kullanılamıyor.</message>
+	<message key="plugins.generic.academicCertificate.error.acceptanceDisabled">Makale kabul belgeleri bu dergi için devre dışı.</message>
+	<message key="plugins.generic.academicCertificate.error.submissionNotAccepted">Bu gönderi yayımlanmak üzere kabul edilmemiş.</message>
+	<message key="plugins.generic.academicCertificate.error.submissionNotPublished">Bu makale henüz yayımlanmamış.</message>
+	<message key="plugins.generic.academicCertificate.error.authorDisabled">Yazar sertifikaları bu dergi için devre dışı.</message>
+	<message key="plugins.generic.academicCertificate.error.invalidSubmissionId">Geçerli bir gönderi kimliği girin.</message>
+	<message key="plugins.generic.academicCertificate.error.noAuthorForSubmission">Bu gönderi için eşleşen bir yazar hesabı bulunamadı.</message>
+
+	<message key="plugins.generic.academicCertificate.acceptance.defaultHeader">Makale Kabul Belgesi</message>
+	<message key="plugins.generic.academicCertificate.author.defaultHeader">Yazar Sertifikası</message>
+
+	<message key="plugins.generic.academicCertificate.settings.acceptanceTemplateSettings">Makale Kabul Belgesi Şablonu</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceHeaderText">Kabul belgesi başlık metni</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceHeaderTextDescription">Makale kabul belgelerinde görünen başlık. Boş bırakılırsa varsayılan kullanılır.</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceBodyTemplate">Kabul belgesi gövde şablonu</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceBodyTemplateDescription">Kabul belgeleri için ana metin. Aşağıdaki değişkenleri kullanın.</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceFooterText">Kabul belgesi alt bilgi metni</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceFooterTextDescription">Kabul belgeleri için isteğe bağlı alt bilgi.</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceAvailableVariables">Kabul şablonu değişkenleri</message>
+	<message key="plugins.generic.academicCertificate.settings.acceptanceAvailableVariablesDescription">Kabul belgesi şablonunda kullanılabilecek değişkenler:</message>
+
+	<message key="plugins.generic.academicCertificate.settings.authorTemplateSettings">Yazar Sertifikası Şablonu</message>
+	<message key="plugins.generic.academicCertificate.settings.authorHeaderText">Yazar sertifikası başlık metni</message>
+	<message key="plugins.generic.academicCertificate.settings.authorHeaderTextDescription">Yayın sonrası yazar sertifikalarında görünen başlık. Boş bırakılırsa varsayılan kullanılır.</message>
+	<message key="plugins.generic.academicCertificate.settings.authorBodyTemplate">Yazar sertifikası gövde şablonu</message>
+	<message key="plugins.generic.academicCertificate.settings.authorBodyTemplateDescription">Makale yayımlandıktan sonra verilen yazar sertifikası metni. Aşağıdaki değişkenleri kullanın.</message>
+	<message key="plugins.generic.academicCertificate.settings.authorFooterText">Yazar sertifikası alt bilgi metni</message>
+	<message key="plugins.generic.academicCertificate.settings.authorFooterTextDescription">Yazar sertifikaları için isteğe bağlı alt bilgi.</message>
+	<message key="plugins.generic.academicCertificate.settings.authorAvailableVariables">Yazar sertifikası şablon değişkenleri</message>
+	<message key="plugins.generic.academicCertificate.settings.authorAvailableVariablesDescription">Yazar sertifikası şablonunda kullanılabilecek değişkenler:</message>
+
+	<message key="plugins.generic.academicCertificate.issueAcceptance.title">Manuel Makale Kabul Belgesi Düzenleme</message>
+	<message key="plugins.generic.academicCertificate.issueAcceptance.description">Otomatik algılama belge oluşturmadıysa bir gönderi için kabul belgesi kaydı oluşturun. Yazarlar PDF'i Belgelerim sayfasından indirebilir.</message>
+	<message key="plugins.generic.academicCertificate.issueAcceptance.submissionId">Gönderi Kimliği</message>
+	<message key="plugins.generic.academicCertificate.issueAcceptance.issue">Belge düzenle</message>
+	<message key="plugins.generic.academicCertificate.issueAcceptance.issuing">Düzenleniyor...</message>
+	<message key="plugins.generic.academicCertificate.issueAcceptance.success">Kabul belgesi başarıyla düzenlendi.</message>
+	<message key="plugins.generic.academicCertificate.issueAcceptance.alreadyExists">Bu gönderi için zaten bir kabul belgesi var.</message>
+	<message key="plugins.generic.academicCertificate.issueAcceptance.error">Kabul belgesi düzenlenemedi.</message>
+</locale>

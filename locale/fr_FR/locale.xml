@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/fr_FR/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - French
+  * NOTE: This translation uses formal French appropriate for academic publishing.
+  -->
+
+<locale name="fr_FR" full_name="Français (France)">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Certificat d'Évaluation</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Certificat d'Évaluation par les Pairs</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Votre certificat est prêt !</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Merci d'avoir complété cette évaluation. Vous pouvez maintenant télécharger votre certificat de reconnaissance.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">Votre certificat sera généré automatiquement lorsque vous cliquerez sur le bouton de téléchargement.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Télécharger le Certificat</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Paramètres des Certificats</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Paramètres du Modèle de Certificat</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Image de Fond</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Téléversez une image de fond pour le certificat (JPG ou PNG, taille recommandée : 2100x2970 pixels pour A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Image de fond actuelle</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Texte d'En-tête</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Le titre principal affiché en haut du certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Le texte d'en-tête est requis</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Modèle du Corps du Certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Le contenu principal du certificat. Utilisez les variables de modèle pour insérer du contenu dynamique.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Le modèle du corps du certificat est requis</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Texte du Pied de Page</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Texte optionnel affiché en bas du certificat</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Variables de Modèle Disponibles</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Utilisez ces variables dans vos modèles pour insérer du contenu dynamique :</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Modèle par défaut</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Utiliser le modèle par défaut</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Paramètres d'Apparence</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Famille de Police</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Taille de Police</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Couleur du Texte (RVB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Spécifiez la couleur du texte en utilisant les valeurs RVB (0-255 pour chaque composant)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Critères d'Éligibilité</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Évaluations Complétées Minimales</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Le nombre minimum d'évaluations complétées requis avant qu'un relecteur puisse recevoir un certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Le nombre minimum d'évaluations doit être un nombre supérieur ou égal à 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Options de Vérification</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Inclure un code QR pour la vérification du certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Aperçu du Certificat</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Type d'image invalide. Veuillez téléverser un fichier JPG ou PNG.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Échec du téléversement du fichier. Veuillez réessayer.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Cette évaluation n'est pas encore terminée. Les certificats ne sont disponibles que pour les évaluations complétées.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Aucun code de certificat fourni</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Code de certificat invalide. Ce certificat n'a pas pu être vérifié.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Aucun relecteur sélectionné pour la génération par lots de certificats</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Accès refusé. Vous n'avez pas la permission de télécharger ce certificat.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Aucun contexte de revue disponible. Assurez-vous d'accéder depuis une revue valide.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">L'accès à la base de données est actuellement indisponible. Veuillez contacter l'administrateur système.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Vérifier le Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Entrez un code de certificat pour vérifier son authenticité</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Code du Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Vérifier le Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Certificat Valide</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Certificat Invalide</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Le code de certificat que vous avez entré n'est pas valide ou n'existe pas dans notre système.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Code du Certificat</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Nom du Relecteur</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Nom de la Revue</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Date d'Émission</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Génération par Lots de Certificats</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Générez des certificats pour plusieurs relecteurs à la fois. Sélectionnez les relecteurs dans la liste ci-dessous qui ont complété des évaluations mais n'ont pas encore de certificats.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Sélectionner les Relecteurs</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">évaluations complétées</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Aucun relecteur éligible trouvé. Tous les relecteurs ont des certificats pour leurs évaluations complétées.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Maintenez Ctrl (Windows/Linux) ou Cmd (Mac) pour sélectionner plusieurs relecteurs</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Générer les Certificats</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Génération des certificats...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Veuillez sélectionner au moins un relecteur</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">certificat(s) généré(s) avec succès</message>
+	<message key="plugins.generic.academicCertificate.batch.error">Une erreur s'est produite lors de la génération des certificats. Veuillez réessayer.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} certificat(s) généré(s) avec succès</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Statistiques des Certificats</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Aperçu de la génération et de l'utilisation des certificats dans votre revue</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Total de Certificats Émis</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Total de Téléchargements</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Relecteurs Uniques avec Certificats</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Total de Certificats Émis</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Total de Téléchargements</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Moyenne de Téléchargements par Certificat</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Remarque : Helvetica, Times New Roman et Courier ne prennent en charge que les caractères latins. Si votre revue utilise des caractères cyrilliques, arabes, chinois ou autres caractères non latins, le plugin utilisera automatiquement DejaVu Sans pour ces éléments de texte.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Mes certificats</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">Voici la liste de tous vos certificats de révision pour cette revue.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Date d émission</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Titre de la soumission</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Code du certificat</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Actions</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Vous n'avez pas encore de certificats. Les certificats sont générés après avoir terminé une révision.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Voir tous mes certificats</message>
+</locale>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/academicCertificate/locale/hr_HR/locale.xml
+  *
+  * Copyright (c) 2024
+  * Distributed under the GNU GPL v3.
+  *
+  * Localization strings - Croatian
+  * NOTE: This translation uses formal Croatian appropriate for academic publishing.
+  * Croatian-specific characters: č, ć, đ, š, ž
+  -->
+
+<locale name="hr_HR" full_name="Hrvatski (Hrvatska)">
+	<!-- Plugin metadata -->
+	<message key="plugins.generic.academicCertificate.displayName">Academic Certificate Manager for OJS</message>
+	<message key="plugins.generic.academicCertificate.description">Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification.</message>
+
+	<!-- Certificate titles -->
+	<message key="plugins.generic.academicCertificate.certificateTitle">Certifikat o Recenziji</message>
+	<message key="plugins.generic.academicCertificate.certificateSubject">Certifikat o Stručnoj Recenziji</message>
+
+	<!-- Dashboard messages -->
+	<message key="plugins.generic.academicCertificate.certificateAvailable">Vaš certifikat je spreman!</message>
+	<message key="plugins.generic.academicCertificate.certificateAvailableDescription">Hvala što ste dovršili ovu recenziju. Sada možete preuzeti svoj certifikat za priznanje.</message>
+	<message key="plugins.generic.academicCertificate.certificateWillBeGenerated">Vaš certifikat bit će automatski generiran kada kliknete na gumb za preuzimanje.</message>
+	<message key="plugins.generic.academicCertificate.downloadCertificate">Preuzmi Certifikat</message>
+
+	<!-- Settings form -->
+	<message key="plugins.generic.academicCertificate.settings">Postavke Certifikata</message>
+	<message key="plugins.generic.academicCertificate.settings.description">Configure certificate templates, document types, and eligibility rules.</message>
+	<message key="plugins.generic.academicCertificate.settings.templateSettings">Postavke Predloška Certifikata</message>
+
+	<!-- Background Image -->
+	<message key="plugins.generic.academicCertificate.settings.backgroundImage">Pozadinska Slika</message>
+	<message key="plugins.generic.academicCertificate.settings.backgroundImageDescription">Prenesite pozadinsku sliku za certifikat (JPG ili PNG, preporučena veličina: 2100x2970 piksela za A4)</message>
+	<message key="plugins.generic.academicCertificate.settings.currentImage">Trenutna pozadinska slika</message>
+
+	<!-- Header Text -->
+	<message key="plugins.generic.academicCertificate.settings.headerText">Tekst Zaglavlja</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextDescription">Glavni naslov prikazan na vrhu certifikata</message>
+	<message key="plugins.generic.academicCertificate.settings.headerTextRequired">Tekst zaglavlja je obavezan</message>
+
+	<!-- Body Template -->
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplate">Predložak Tijela Certifikata</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateDescription">Glavni sadržaj certifikata. Koristite varijable predloška za umetanje dinamičkog sadržaja.</message>
+	<message key="plugins.generic.academicCertificate.settings.bodyTemplateRequired">Predložak tijela certifikata je obavezan</message>
+
+	<!-- Footer Text -->
+	<message key="plugins.generic.academicCertificate.settings.footerText">Tekst Podnožja</message>
+	<message key="plugins.generic.academicCertificate.settings.footerTextDescription">Opcionalni tekst prikazan na dnu certifikata</message>
+
+	<!-- Available Variables -->
+	<message key="plugins.generic.academicCertificate.settings.availableVariables">Dostupne Varijable Predloška</message>
+	<message key="plugins.generic.academicCertificate.settings.availableVariablesDescription">Koristite ove varijable u svojim predlošcima za umetanje dinamičkog sadržaja:</message>
+	<message key="plugins.generic.academicCertificate.settings.defaultTemplate">Zadani predložak</message>
+	<message key="plugins.generic.academicCertificate.settings.useDefaultTemplate">Koristi zadani predložak</message>
+
+	<!-- Appearance settings -->
+	<message key="plugins.generic.academicCertificate.settings.appearance">Postavke Izgleda</message>
+	<message key="plugins.generic.academicCertificate.settings.fontFamily">Obitelj Fontova</message>
+	<message key="plugins.generic.academicCertificate.settings.font.helvetica">Helvetica</message>
+	<message key="plugins.generic.academicCertificate.settings.font.times">Times New Roman</message>
+	<message key="plugins.generic.academicCertificate.settings.font.courier">Courier</message>
+	<message key="plugins.generic.academicCertificate.settings.font.dejavusans">DejaVu Sans</message>
+	<message key="plugins.generic.academicCertificate.settings.fontSize">Veličina Fonta</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientation">Page Orientation</message>
+	<message key="plugins.generic.academicCertificate.settings.pageOrientationDescription">Choose portrait (vertical) or landscape (horizontal) layout for the certificate</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.portrait">Portrait (Vertical)</message>
+	<message key="plugins.generic.academicCertificate.settings.orientation.landscape">Landscape (Horizontal)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColor">Boja Teksta (RGB)</message>
+	<message key="plugins.generic.academicCertificate.settings.textColorDescription">Odredite boju teksta koristeći RGB vrijednosti (0-255 za svaku komponentu)</message>
+
+	<!-- Eligibility settings -->
+	<message key="plugins.generic.academicCertificate.settings.eligibility">Kriteriji Prihvatljivosti</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviews">Minimalan Broj Završenih Recenzija</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsDescription">Minimalan broj završenih recenzija potreban prije nego recenzent može primiti certifikat</message>
+	<message key="plugins.generic.academicCertificate.settings.minimumReviewsInvalid">Minimalan broj recenzija mora biti broj veći ili jednak 1</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.settings.verification">Opcije Provjere</message>
+	<message key="plugins.generic.academicCertificate.settings.includeQRCode">Uključi QR kod za provjeru certifikata</message>
+	<message key="plugins.generic.academicCertificate.settings.previewCertificate">Pregled Certifikata</message>
+	<message key="plugins.generic.academicCertificate.settings.invalidImageType">Nevažeća vrsta slike. Molimo prenesite JPG ili PNG datoteku.</message>
+	<message key="plugins.generic.academicCertificate.settings.uploadFailed">Prijenos datoteke nije uspio. Molimo pokušajte ponovno.</message>
+
+	<!-- Error messages -->
+	<message key="plugins.generic.academicCertificate.error.reviewNotCompleted">Ova recenzija još nije završena. Certifikati su dostupni samo za završene recenzije.</message>
+	<message key="plugins.generic.academicCertificate.error.noCertificateCode">Nije dostavljen kod certifikata</message>
+	<message key="plugins.generic.academicCertificate.error.invalidCertificate">Nevažeći kod certifikata. Ovaj certifikat nije mogao biti provjeren.</message>
+	<message key="plugins.generic.academicCertificate.error.noReviewersSelected">Nisu odabrani recenzenti za skupno generiranje certifikata</message>
+	<message key="plugins.generic.academicCertificate.error.accessDenied">Pristup odbijen. Nemate dopuštenje za preuzimanje ovog certifikata.</message>
+	<message key="plugins.generic.academicCertificate.error.noContext">Nema dostupnog konteksta časopisa. Molimo osigurajte da pristupate iz važećeg časopisa.</message>
+	<message key="plugins.generic.academicCertificate.error.daoNotAvailable">Pristup bazi podataka trenutno nije dostupan. Molimo kontaktirajte administratora sustava.</message>
+
+	<!-- Verification -->
+	<message key="plugins.generic.academicCertificate.verify.title">Provjeri Certifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.description">Unesite kod certifikata za provjeru autentičnosti</message>
+	<message key="plugins.generic.academicCertificate.verify.code">Kod Certifikata</message>
+	<message key="plugins.generic.academicCertificate.verify.button">Provjeri Certifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.valid">Važeći Certifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.invalid">Nevažeći Certifikat</message>
+	<message key="plugins.generic.academicCertificate.verify.invalidDescription">Kod certifikata koji ste unijeli nije važeći ili ne postoji u našem sustavu.</message>
+	<message key="plugins.generic.academicCertificate.verify.certificateCode">Kod Certifikata</message>
+	<message key="plugins.generic.academicCertificate.verify.reviewerName">Ime Recenzenta</message>
+	<message key="plugins.generic.academicCertificate.verify.journalName">Naziv Časopisa</message>
+	<message key="plugins.generic.academicCertificate.verify.dateIssued">Datum Izdavanja</message>
+
+	<!-- Batch generation -->
+	<message key="plugins.generic.academicCertificate.batch.title">Skupno Generiranje Certifikata</message>
+	<message key="plugins.generic.academicCertificate.batch.description">Generirajte certifikate za više recenzenata odjednom. Odaberite recenzente s donje liste koji su završili recenzije, ali još nemaju certifikate.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectReviewers">Odaberi Recenzente</message>
+	<message key="plugins.generic.academicCertificate.batch.completedReviews">završenih recenzija</message>
+	<message key="plugins.generic.academicCertificate.batch.noEligibleReviewers">Nisu pronađeni prihvatljivi recenzenti. Svi recenzenti imaju certifikate za svoje završene recenzije.</message>
+	<message key="plugins.generic.academicCertificate.batch.selectMultipleHint">Držite Ctrl (Windows/Linux) ili Cmd (Mac) za odabir više recenzenata</message>
+	<message key="plugins.generic.academicCertificate.batch.generate">Generiraj Certifikate</message>
+	<message key="plugins.generic.academicCertificate.batch.generating">Generiranje certifikata...</message>
+	<message key="plugins.generic.academicCertificate.batch.noSelection">Molimo odaberite barem jednog recenzenta</message>
+	<message key="plugins.generic.academicCertificate.batch.certificatesGenerated">certifikat/certifikata uspješno generirano</message>
+	<message key="plugins.generic.academicCertificate.batch.error">Došlo je do pogreške pri generiranju certifikata. Molimo pokušajte ponovno.</message>
+	<message key="plugins.generic.academicCertificate.batch.generated">{$count} certifikat/certifikata uspješno generirano</message>
+
+	<!-- Statistics -->
+	<message key="plugins.generic.academicCertificate.statistics.title">Statistika Certifikata</message>
+	<message key="plugins.generic.academicCertificate.statistics.description">Pregled generiranja i korištenja certifikata u vašem časopisu</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalCertificates">Ukupno Izdanih Certifikata</message>
+	<message key="plugins.generic.academicCertificate.statistics.totalDownloads">Ukupno Preuzimanja</message>
+	<message key="plugins.generic.academicCertificate.statistics.uniqueReviewers">Jedinstvenih Recenzenata s Certifikatima</message>
+	<message key="plugins.generic.academicCertificate.stats.totalIssued">Ukupno Izdanih Certifikata</message>
+	<message key="plugins.generic.academicCertificate.stats.totalDownloads">Ukupno Preuzimanja</message>
+	<message key="plugins.generic.academicCertificate.stats.averageDownloads">Prosječan Broj Preuzimanja po Certifikatu</message>
+
+	<!-- Font warning -->
+	<message key="plugins.generic.academicCertificate.settings.fontUnicodeWarning">Napomena: Helvetica, Times New Roman i Courier podržavaju samo latinične znakove. Ako vaš časopis koristi nelatinične znakove, dodatak će automatski koristiti font DejaVu Sans.</message>
+
+	<!-- My Certificates page -->
+	<message key="plugins.generic.academicCertificate.myCertificates.title">Moji certifikati</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.description">U nastavku je popis svih vaših recenzentskih certifikata za ovaj časopis.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.dateIssued">Datum izdavanja</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.submissionTitle">Naslov rada</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.certificateCode">Kôd certifikata</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.actions">Radnje</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.noCertificates">Još nemate certifikate. Certifikati se generiraju nakon dovršetka recenzije.</message>
+	<message key="plugins.generic.academicCertificate.myCertificates.viewAll">Pogledajte sve moje certifikate</message>
+</locale>

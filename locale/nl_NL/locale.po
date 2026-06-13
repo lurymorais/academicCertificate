@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: academicCertificate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-03 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Plugin metadata
+msgid "plugins.generic.academicCertificate.displayName"
+msgstr "Academic Certificate Manager for OJS"
+
+msgid "plugins.generic.academicCertificate.description"
+msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+
+# Certificate titles
+msgid "plugins.generic.academicCertificate.certificateTitle"
+msgstr "Beoordelingscertificaat"
+
+msgid "plugins.generic.academicCertificate.certificateSubject"
+msgstr "Certificaat van Peer Review"
+
+# Dashboard messages
+msgid "plugins.generic.academicCertificate.certificateAvailable"
+msgstr "Uw certificaat is klaar!"
+
+msgid "plugins.generic.academicCertificate.certificateAvailableDescription"
+msgstr "Bedankt voor het voltooien van deze beoordeling. U kunt nu uw certificaat van erkenning downloaden."
+
+msgid "plugins.generic.academicCertificate.certificateWillBeGenerated"
+msgstr "Uw certificaat wordt automatisch gegenereerd wanneer u op de downloadknop klikt."
+
+msgid "plugins.generic.academicCertificate.downloadCertificate"
+msgstr "Certificaat Downloaden"
+
+# Settings form
+msgid "plugins.generic.academicCertificate.settings.description"
+msgstr "Configure certificate templates, document types, and eligibility rules."
+
+msgid "plugins.generic.academicCertificate.settings.templateSettings"
+msgstr "Certificaatsjablooninstellingen"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImage"
+msgstr "Achtergrondafbeelding"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
+msgstr "Upload een achtergrondafbeelding voor het certificaat (JPG of PNG, aanbevolen grootte: 2100x2970 pixels voor A4)"
+
+msgid "plugins.generic.academicCertificate.settings.currentImage"
+msgstr "Huidige achtergrondafbeelding"
+
+msgid "plugins.generic.academicCertificate.settings.headerText"
+msgstr "Koptekst"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextDescription"
+msgstr "De hoofdtitel bovenaan het certificaat"
+
+msgid "plugins.generic.academicCertificate.settings.headerTextRequired"
+msgstr "Koptekst is verplicht"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplate"
+msgstr "Certificaat Hoofdtekstsjabloon"
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateDescription"
+msgstr "De hoofdinhoud van het certificaat. Gebruik sjabloonvariabelen om dynamische inhoud in te voegen."
+
+msgid "plugins.generic.academicCertificate.settings.bodyTemplateRequired"
+msgstr "Hoofdtekstsjabloon is verplicht"
+
+msgid "plugins.generic.academicCertificate.settings.footerText"
+msgstr "Voettekst"
+
+msgid "plugins.generic.academicCertificate.settings.footerTextDescription"
+msgstr "Optionele tekst onderaan het certificaat"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariables"
+msgstr "Beschikbare Sjabloonvariabelen"
+
+msgid "plugins.generic.academicCertificate.settings.availableVariablesDescription"
+msgstr "Gebruik deze variabelen in uw sjablonen om dynamische inhoud in te voegen:"
+
+msgid "plugins.generic.academicCertificate.settings.defaultTemplate"
+msgstr "Standaardsjabloon"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultTemplate"
+msgstr "Standaardsjabloon gebruiken"
+
+msgid "plugins.generic.academicCertificate.settings.appearance"
+msgstr "Weergave-instellingen"
+
+msgid "plugins.generic.academicCertificate.settings.fontFamily"
+msgstr "Lettertypefamilie"
+
+msgid "plugins.generic.academicCertificate.settings.font.helvetica"
+msgstr "Helvetica"
+
+msgid "plugins.generic.academicCertificate.settings.font.times"
+msgstr "Times New Roman"
+
+msgid "plugins.generic.academicCertificate.settings.font.courier"
+msgstr "Courier"
+
+msgid "plugins.generic.academicCertificate.settings.font.dejavusans"
+msgstr "DejaVu Sans"
+
+msgid "plugins.generic.academicCertificate.settings.fontSize"
+msgstr "Lettergrootte"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientation"
+msgstr "Page Orientation"
+
+msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
+msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
+msgstr "Portrait (Vertical)"
+
+msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
+msgstr "Landscape (Horizontal)"
+
+msgid "plugins.generic.academicCertificate.settings.textColor"
+msgstr "Tekstkleur (RGB)"
+
+msgid "plugins.generic.academicCertificate.settings.textColorDescription"
+msgstr "Specificeer de tekstkleur met RGB-waarden (0-255 voor elk component)"
+
+msgid "plugins.generic.academicCertificate.settings.eligibility"
+msgstr "Geschiktheidscriteria"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviews"
+msgstr "Minimaal Voltooide Beoordelingen"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsDescription"
+msgstr "Het minimale aantal voltooide beoordelingen voordat een recensent een certificaat kan ontvangen"
+
+msgid "plugins.generic.academicCertificate.settings.minimumReviewsInvalid"
+msgstr "Het minimale aantal beoordelingen moet een getal groter dan of gelijk aan 1 zijn"
+
+msgid "plugins.generic.academicCertificate.settings.verification"
+msgstr "Verificatie-opties"
+
+msgid "plugins.generic.academicCertificate.settings.includeQRCode"
+msgstr "QR-code voor certificaatverificatie opnemen"
+
+msgid "plugins.generic.academicCertificate.settings.previewCertificate"
+msgstr "Certificaat Voorvertonen"
+
+msgid "plugins.generic.academicCertificate.settings.invalidImageType"
+msgstr "Ongeldig afbeeldingstype. Upload een JPG- of PNG-bestand."
+
+msgid "plugins.generic.academicCertificate.settings.uploadFailed"
+msgstr "Bestandsupload mislukt. Probeer het opnieuw."
+
+msgid "plugins.generic.academicCertificate.settings.fontUnicodeWarning"
+msgstr "Note: Helvetica, Times New Roman, and Courier support Latin characters only. If your journal uses Cyrillic, Arabic, Chinese, or other non-Latin characters, the plugin will automatically use DejaVu Sans for those text elements."
+
+# Error messages
+msgid "plugins.generic.academicCertificate.error.reviewNotCompleted"
+msgstr "Deze beoordeling is nog niet voltooid. Certificaten zijn alleen beschikbaar voor voltooide beoordelingen."
+
+msgid "plugins.generic.academicCertificate.error.noCertificateCode"
+msgstr "Geen certificaatcode opgegeven"
+
+msgid "plugins.generic.academicCertificate.error.invalidCertificate"
+msgstr "Ongeldige certificaatcode. Dit certificaat kon niet worden geverifieerd."
+
+msgid "plugins.generic.academicCertificate.error.noReviewersSelected"
+msgstr "Geen recensenten geselecteerd voor batch certificaatgeneratie"
+
+msgid "plugins.generic.academicCertificate.error.accessDenied"
+msgstr "Toegang geweigerd. U heeft geen toestemming om dit certificaat te downloaden."
+
+msgid "plugins.generic.academicCertificate.error.noContext"
+msgstr "Geen tijdschriftcontext beschikbaar. Zorg ervoor dat u toegang heeft vanuit een geldig tijdschrift."
+
+msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
+msgstr "Databasetoegang is momenteel niet beschikbaar. Neem contact op met de systeembeheerder."
+
+# Verification
+msgid "plugins.generic.academicCertificate.verify.title"
+msgstr "Certificaat Verifiëren"
+
+msgid "plugins.generic.academicCertificate.verify.description"
+msgstr "Voer een certificaatcode in om de authenticiteit te verifiëren"
+
+msgid "plugins.generic.academicCertificate.verify.code"
+msgstr "Certificaatcode"
+
+msgid "plugins.generic.academicCertificate.verify.button"
+msgstr "Certificaat Verifiëren"
+
+msgid "plugins.generic.academicCertificate.verify.valid"
+msgstr "Geldig Certificaat"
+
+msgid "plugins.generic.academicCertificate.verify.invalid"
+msgstr "Ongeldig Certificaat"
+
+msgid "plugins.generic.academicCertificate.verify.invalidDescription"
+msgstr "De certificaatcode die u heeft ingevoerd is ongeldig of bestaat niet in ons systeem."
+
+msgid "plugins.generic.academicCertificate.verify.certificateCode"
+msgstr "Certificaatcode"
+
+msgid "plugins.generic.academicCertificate.verify.reviewerName"
+msgstr "Naam Recensent"
+
+msgid "plugins.generic.academicCertificate.verify.journalName"
+msgstr "Tijdschriftnaam"
+
+msgid "plugins.generic.academicCertificate.verify.dateIssued"
+msgstr "Uitgiftedatum"
+
+# Batch generation
+msgid "plugins.generic.academicCertificate.batch.title"
+msgstr "Batch Certificaatgeneratie"
+
+msgid "plugins.generic.academicCertificate.batch.description"
+msgstr "Genereer certificaten voor meerdere recensenten tegelijk. Selecteer recensenten uit de onderstaande lijst die beoordelingen hebben voltooid maar nog geen certificaten hebben."
+
+msgid "plugins.generic.academicCertificate.batch.selectReviewers"
+msgstr "Recensenten Selecteren"
+
+msgid "plugins.generic.academicCertificate.batch.completedReviews"
+msgstr "voltooide beoordelingen"
+
+msgid "plugins.generic.academicCertificate.batch.noEligibleReviewers"
+msgstr "Geen geschikte recensenten gevonden. Alle recensenten hebben certificaten voor hun voltooide beoordelingen."
+
+msgid "plugins.generic.academicCertificate.batch.selectMultipleHint"
+msgstr "Houd Ctrl (Windows/Linux) of Cmd (Mac) ingedrukt om meerdere recensenten te selecteren"
+
+msgid "plugins.generic.academicCertificate.batch.generate"
+msgstr "Certificaten Genereren"
+
+msgid "plugins.generic.academicCertificate.batch.generating"
+msgstr "Certificaten genereren..."
+
+msgid "plugins.generic.academicCertificate.batch.noSelection"
+msgstr "Selecteer ten minste één recensent"
+
+msgid "plugins.generic.academicCertificate.batch.certificatesGenerated"
+msgstr "certificaat/certificaten succesvol gegenereerd"
+
+msgid "plugins.generic.academicCertificate.batch.error"
+msgstr "Er is een fout opgetreden bij het genereren van certificaten. Probeer het opnieuw."
+
+msgid "plugins.generic.academicCertificate.batch.generated"
+msgstr "{$count} certificaat/certificaten succesvol gegenereerd"
+
+# Statistics
+msgid "plugins.generic.academicCertificate.statistics.title"
+msgstr "Certificaatstatistieken"
+
+msgid "plugins.generic.academicCertificate.statistics.description"
+msgstr "Overzicht van certificaatgeneratie en -gebruik in uw tijdschrift"
+
+msgid "plugins.generic.academicCertificate.statistics.totalCertificates"
+msgstr "Totaal Uitgegeven Certificaten"
+
+msgid "plugins.generic.academicCertificate.statistics.totalDownloads"
+msgstr "Totaal Downloads"
+
+msgid "plugins.generic.academicCertificate.statistics.uniqueReviewers"
+msgstr "Unieke Recensenten met Certificaten"
+
+msgid "plugins.generic.academicCertificate.stats.totalIssued"
+msgstr "Totaal Uitgegeven Certificaten"
+
+msgid "plugins.generic.academicCertificate.stats.totalDownloads"
+msgstr "Totaal Downloads"
+
+msgid "plugins.generic.academicCertificate.stats.averageDownloads"
+msgstr "Gemiddelde Downloads per Certificaat"
+
+msgid "plugins.generic.academicCertificate.settings"
+msgstr "Certificaatinstellingen"
+
+msgid "plugins.generic.academicCertificate.myCertificates.title"
+msgstr "Mijn certificaten"
+
+msgid "plugins.generic.academicCertificate.myCertificates.description"
+msgstr "Below is a list of all your reviewer certificates for this journal."
+
+msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
+msgstr "Date Issued"
+
+msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
+msgstr "Submission Title"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
+msgstr "Certificate Code"
+
+msgid "plugins.generic.academicCertificate.myCertificates.actions"
+msgstr "Actions"
+
+msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
+msgstr "You don't have any certificates yet. Certificates are generated after you complete a review."
+
+msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
+msgstr "View All My Certificates"
+

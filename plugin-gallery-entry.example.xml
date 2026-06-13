@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example entry for pkp/plugin-gallery plugins.xml
+  Replace VERSION, MD5 hashes, and GitHub org/repo with your values.
+  See PLUGIN_GALLERY.md for full instructions.
+-->
+<plugin category="generic" product="academicCertificate">
+    <name locale="en">Academic Certificate Manager for OJS</name>
+    <name locale="tr_TR">OJS Akademik Belge Yöneticisi</name>
+    <summary locale="en">Generate PDF certificates for reviewers, authors, and editors. Includes My Certificates page, acceptance and publication certificates, and public verification.</summary>
+    <summary locale="tr_TR">Hakem, yazar ve editörler için PDF belgeleri. Belgelerim sayfası, kabul ve yayın belgeleri, doğrulama.</summary>
+    <description locale="en"><![CDATA[
+<p>Academic Certificate Manager extends OJS with role-aware certificates: reviewer, article acceptance, author publication, and editorial contribution.</p>
+<p><strong>Publisher:</strong> Holistence Publication — <a href="https://holistence.com/">holistence.com</a></p>
+<p><strong>Developers:</strong> Cumali Yaşar, Mehmet Sahin</p>
+    ]]></description>
+    <maintainer>
+        <name>Cumali Yaşar</name>
+        <institution>Holistence Publication</institution>
+        <email>contact@holistence.com</email>
+    </maintainer>
+    <homepage>https://holistence.com/</homepage>
+    <installation>
+        <release date="2026-06-11" version="1.8.0.0" md5="REPLACE_MD5_OJS_33">
+            <package>https://github.com/holistence/academic-certificate-ojs/releases/download/v1.8.0-3.3/academicCertificate-1.8.0-3_3.tar.gz</package>
+            <compatibility>
+                <application version="~3.3.0.0">ojs2</application>
+            </compatibility>
+        </release>
+        <release date="2026-06-11" version="1.8.0.0" md5="REPLACE_MD5_OJS_34">
+            <package>https://github.com/holistence/academic-certificate-ojs/releases/download/v1.8.0-3.4/academicCertificate-1.8.0-3_4.tar.gz</package>
+            <compatibility>
+                <application version="~3.4.0.0">ojs2</application>
+            </compatibility>
+        </release>
+        <release date="2026-06-11" version="1.8.0.0" md5="REPLACE_MD5_OJS_35">
+            <package>https://github.com/holistence/academic-certificate-ojs/releases/download/v1.8.0-3.5/academicCertificate-1.8.0-3_5.tar.gz</package>
+            <compatibility>
+                <application version="~3.5.0.0">ojs2</application>
+            </compatibility>
+        </release>
+    </installation>
+</plugin>
