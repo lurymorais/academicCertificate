@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: academicCertificate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 00:00+0000\n"
-"PO-Revision-Date: 2025-12-08 00:00+0000\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2026-06-14 00:00+0000\n"
+"Last-Translator: Lury Morais\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -13,10 +13,10 @@ msgstr ""
 
 # Plugin metadata
 msgid "plugins.generic.academicCertificate.displayName"
-msgstr "Academic Certificate Manager for OJS"
+msgstr "Gerenciador de Certificados Acadêmicos para OJS"
 
 msgid "plugins.generic.academicCertificate.description"
-msgstr "Generate and manage PDF academic certificates for reviewers, authors, and editors — acceptance, publication, and editorial documents with public verification."
+msgstr "Gere e gerencie certificados acadêmicos em PDF para avaliadores, autores e editores — documentos de aprovação, publicação e editoriais com verificação pública."
 
 # Certificate titles
 msgid "plugins.generic.academicCertificate.certificateTitle"
@@ -40,7 +40,55 @@ msgstr "Baixar Certificado"
 
 # Settings form
 msgid "plugins.generic.academicCertificate.settings.description"
-msgstr "Configure certificate templates, document types, and eligibility rules."
+msgstr "Configure modelos de certificado, tipos de documento e regras de elegibilidade."
+
+msgid "plugins.generic.academicCertificate.settings.landscapeA4Hint"
+msgstr "Os certificados usam A4 paisagem (297 × 210 mm). Envie imagens de fundo com 3508 × 2480 px (300 DPI) para a melhor qualidade de impressão."
+
+msgid "plugins.generic.academicCertificate.settings.designerTitle"
+msgstr "Designer de layout do certificado"
+
+msgid "plugins.generic.academicCertificate.settings.designerHint"
+msgstr "Arraste os blocos Cabeçalho, Corpo, Rodapé e Código na pré-visualização para posicionar o texto no fundo. As alterações serão aplicadas à saída do PDF após salvar."
+
+msgid "plugins.generic.academicCertificate.settings.designerDimensions"
+msgstr "A4 paisagem: {$width} × {$height} mm — fundo recomendado {$widthPx} × {$heightPx} px (300 DPI)"
+
+msgid "plugins.generic.academicCertificate.settings.useDefaultBackground"
+msgstr "Usar imagem de fundo padrão"
+
+msgid "plugins.generic.academicCertificate.settings.certType.reviewer"
+msgstr "Certificado de avaliador"
+
+msgid "plugins.generic.academicCertificate.settings.certType.acceptance"
+msgstr "Certificado de aprovação"
+
+msgid "plugins.generic.academicCertificate.settings.certType.author"
+msgstr "Certificado de autor"
+
+msgid "plugins.generic.academicCertificate.settings.certType.editor"
+msgstr "Certificado editorial"
+
+msgid "plugins.generic.academicCertificate.settings.editorHeaderText"
+msgstr "Cabeçalho do certificado editorial"
+
+msgid "plugins.generic.academicCertificate.settings.editorHeaderTextDescription"
+msgstr "Título exibido nos certificados editoriais. Deixe em branco para usar o padrão."
+
+msgid "plugins.generic.academicCertificate.settings.editorBodyTemplate"
+msgstr "Corpo do certificado editorial"
+
+msgid "plugins.generic.academicCertificate.settings.editorBodyTemplateDescription"
+msgstr "Texto principal para certificados de serviço editorial. Use as variáveis de modelo abaixo."
+
+msgid "plugins.generic.academicCertificate.settings.editorFooterText"
+msgstr "Rodapé do certificado editorial"
+
+msgid "plugins.generic.academicCertificate.settings.editorFooterTextDescription"
+msgstr "Rodapé opcional para certificados editoriais."
+
+msgid "plugins.generic.academicCertificate.editor.defaultHeader"
+msgstr "Certificado de Serviço Editorial"
 
 msgid "plugins.generic.academicCertificate.settings.templateSettings"
 msgstr "Configurações do Modelo de Certificado"
@@ -49,7 +97,16 @@ msgid "plugins.generic.academicCertificate.settings.backgroundImage"
 msgstr "Imagem de Fundo"
 
 msgid "plugins.generic.academicCertificate.settings.backgroundImageDescription"
-msgstr "Envie uma imagem de fundo para o certificado (JPG ou PNG, tamanho recomendado: 2100x2970 pixels para A4)"
+msgstr "Envie uma imagem de fundo para o certificado (JPG ou PNG, tamanho recomendado: 2100x2970 pixels para A4 retrato, 2970x2100 para paisagem)"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImages"
+msgstr "Imagens de Fundo"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDefault"
+msgstr "Fundo padrão (todos os tipos de certificado)"
+
+msgid "plugins.generic.academicCertificate.settings.backgroundImageDefaultDescription"
+msgstr "Usado para cada tipo de certificado, a menos que uma imagem específica seja enviada abaixo."
 
 msgid "plugins.generic.academicCertificate.settings.currentImage"
 msgstr "Imagem de fundo atual"
@@ -112,16 +169,16 @@ msgid "plugins.generic.academicCertificate.settings.fontSize"
 msgstr "Tamanho da Fonte"
 
 msgid "plugins.generic.academicCertificate.settings.pageOrientation"
-msgstr "Page Orientation"
+msgstr "Orientação da Página"
 
 msgid "plugins.generic.academicCertificate.settings.pageOrientationDescription"
-msgstr "Choose portrait (vertical) or landscape (horizontal) layout for the certificate"
+msgstr "Escolha o modo retrato (vertical) ou paisagem (horizontal) para o certificado"
 
 msgid "plugins.generic.academicCertificate.settings.orientation.portrait"
-msgstr "Portrait (Vertical)"
+msgstr "Modo retrato (Vertical)"
 
 msgid "plugins.generic.academicCertificate.settings.orientation.landscape"
-msgstr "Landscape (Horizontal)"
+msgstr "Modo paisagem (Horizontal)"
 
 msgid "plugins.generic.academicCertificate.settings.textColor"
 msgstr "Cor do Texto (RGB)"
@@ -175,11 +232,29 @@ msgstr "Nenhum avaliador selecionado para geração em lote de certificados"
 msgid "plugins.generic.academicCertificate.error.accessDenied"
 msgstr "Acesso negado. Você não tem permissão para baixar este certificado."
 
-msgid "plugins.generic.academicCertificate.error.noContext"
-msgstr "Nenhum contexto de revista disponível. Certifique-se de estar acessando de uma revista válida."
+msgid "plugins.generic.academicCertificate.error.certificateRevoked"
+msgstr "Este certificado foi revogado e não é mais válido."
 
-msgid "plugins.generic.academicCertificate.error.daoNotAvailable"
-msgstr "O acesso ao banco de dados está indisponível no momento. Por favor, contate o administrador do sistema."
+msgid "plugins.generic.academicCertificate.error.certificateTypeNotAvailable"
+msgstr "O download do PDF para este tipo de certificado ainda não está disponível."
+
+msgid "plugins.generic.academicCertificate.error.acceptanceDisabled"
+msgstr "Os certificados de aprovação de artigo estão desabilitados para esta revista."
+
+msgid "plugins.generic.academicCertificate.error.submissionNotAccepted"
+msgstr "Esta submissão não foi aceita para publicação."
+
+msgid "plugins.generic.academicCertificate.error.submissionNotPublished"
+msgstr "Este artigo ainda não foi publicado."
+
+msgid "plugins.generic.academicCertificate.error.authorDisabled"
+msgstr "Os certificados de publicação para autores estão desabilitados para esta revista."
+
+msgid "plugins.generic.academicCertificate.error.invalidSubmissionId"
+msgstr "Por favor, insira um ID de submissão válido."
+
+msgid "plugins.generic.academicCertificate.error.noAuthorForSubmission"
+msgstr "Nenhuma conta de autor pôde ser encontrada para esta submissão."
 
 # Verification
 msgid "plugins.generic.academicCertificate.verify.title"
@@ -280,27 +355,203 @@ msgstr "Média de Downloads por Certificado"
 msgid "plugins.generic.academicCertificate.settings"
 msgstr "Configurações de Certificados"
 
+msgid "plugins.generic.academicCertificate.settings.reviewerBackgroundImage"
+msgstr "Fundo do certificado de avaliador (opcional)"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceBackgroundImage"
+msgstr "Fundo do certificado de aprovação de artigo (opcional)"
+
+msgid "plugins.generic.academicCertificate.settings.authorBackgroundImage"
+msgstr "Fundo do certificado de autor (opcional)"
+
+msgid "plugins.generic.academicCertificate.settings.editorBackgroundImage"
+msgstr "Fundo do certificado de contribuição editorial (opcional)"
+
+msgid "plugins.generic.academicCertificate.settings.typeBackgroundImageDescription"
+msgstr "Substituição opcional apenas para este tipo de certificado. Deixe vazio para usar o fundo padrão acima."
+
+msgid "plugins.generic.academicCertificate.settings.certificateNumberPrefix"
+msgstr "Prefixo do Número do Certificado"
+
+msgid "plugins.generic.academicCertificate.settings.certificateNumberPrefixDescription"
+msgstr "Prefixo usado nos números do certificado (ex: ACM-REV-2026-000001). Apenas letras e números."
+
 msgid "plugins.generic.academicCertificate.myCertificates.title"
-msgstr "Meus certificados"
+msgstr "Meus Certificados"
 
 msgid "plugins.generic.academicCertificate.myCertificates.description"
-msgstr "Abaixo está uma lista de todos os seus certificados de revisão para esta revista."
+msgstr "Abaixo está uma lista de todos os seus certificados para esta revista, agrupados por tipo de certificado."
 
 msgid "plugins.generic.academicCertificate.myCertificates.dateIssued"
-msgstr "Data de emissão"
+msgstr "Data de Emissão"
 
 msgid "plugins.generic.academicCertificate.myCertificates.submissionTitle"
-msgstr "Título da submissão"
+msgstr "Título da Submissão"
 
 msgid "plugins.generic.academicCertificate.myCertificates.certificateCode"
-msgstr "Código do certificado"
+msgstr "Código de Verificação"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateNumber"
+msgstr "Número do Certificado"
+
+msgid "plugins.generic.academicCertificate.myCertificates.certificateType"
+msgstr "Tipo de Certificado"
+
+msgid "plugins.generic.academicCertificate.myCertificates.journalName"
+msgstr "Revista"
+
+msgid "plugins.generic.academicCertificate.myCertificates.status"
+msgstr "Status"
 
 msgid "plugins.generic.academicCertificate.myCertificates.actions"
 msgstr "Ações"
 
 msgid "plugins.generic.academicCertificate.myCertificates.noCertificates"
-msgstr "Você ainda não tem certificados. Os certificados são gerados após a conclusão de uma revisão."
+msgstr "Você ainda não tem certificados para esta revista."
 
 msgid "plugins.generic.academicCertificate.myCertificates.viewAll"
-msgstr "Ver todos os meus certificados"
+msgstr "Ver Todos os Meus Certificados"
 
+msgid "plugins.generic.academicCertificate.myCertificates.filterType"
+msgstr "Filtrar por tipo"
+
+msgid "plugins.generic.academicCertificate.myCertificates.filterAll"
+msgstr "Todos os tipos"
+
+msgid "plugins.generic.academicCertificate.myCertificates.verifyLink"
+msgstr "Verificar"
+
+msgid "plugins.generic.academicCertificate.myCertificates.titleHidden"
+msgstr "Oculto para avaliação cega"
+
+msgid "plugins.generic.academicCertificate.myCertificates.pendingIssuance"
+msgstr "Certificado estará disponível após a emissão"
+
+msgid "plugins.generic.academicCertificate.navigation.myCertificates"
+msgstr "Meus Certificados"
+
+msgid "plugins.generic.academicCertificate.navigation.myCertificates.description"
+msgstr "Link para a página Meus Certificados para usuários logados (certificados de avaliador, autor e editorial)."
+
+msgid "plugins.generic.academicCertificate.certificateType.reviewer"
+msgstr "Certificado de Avaliador"
+
+msgid "plugins.generic.academicCertificate.certificateType.acceptance"
+msgstr "Certificado de Aprovação de Artigo"
+
+msgid "plugins.generic.academicCertificate.certificateType.author"
+msgstr "Certificado de Autor"
+
+msgid "plugins.generic.academicCertificate.certificateType.editor"
+msgstr "Certificado de Contribuição Editorial"
+
+msgid "plugins.generic.academicCertificate.status.valid"
+msgstr "Válido"
+
+msgid "plugins.generic.academicCertificate.status.revoked"
+msgstr "Revogado"
+
+msgid "plugins.generic.academicCertificate.status.pending"
+msgstr "Pendente"
+
+msgid "plugins.generic.academicCertificate.settings.certificateTypes"
+msgstr "Tipos de Certificado"
+
+msgid "plugins.generic.academicCertificate.settings.enableReviewerCertificates"
+msgstr "Habilitar certificados para avaliadores"
+
+msgid "plugins.generic.academicCertificate.settings.enableAcceptanceCertificates"
+msgstr "Habilitar certificados de aprovação de artigo"
+
+msgid "plugins.generic.academicCertificate.settings.enableAuthorCertificates"
+msgstr "Habilitar certificados de publicação para autores"
+
+msgid "plugins.generic.academicCertificate.settings.enableEditorCertificates"
+msgstr "Habilitar certificados de contribuição editorial"
+
+msgid "plugins.generic.academicCertificate.settings.hideReviewerSubmissionTitle"
+msgstr "Ocultar título da submissão nos certificados de avaliador (privacidade da avaliação cega)"
+
+msgid "plugins.generic.academicCertificate.acceptance.defaultHeader"
+msgstr "Certificado de Aprovação de Artigo"
+
+msgid "plugins.generic.academicCertificate.author.defaultHeader"
+msgstr "Certificado de Autor"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceTemplateSettings"
+msgstr "Modelo do Certificado de Aprovação de Artigo"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceHeaderText"
+msgstr "Texto do cabeçalho de aprovação"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceHeaderTextDescription"
+msgstr "Cabeçalho exibido nos certificados de aprovação de artigo. Deixe em branco para usar o padrão."
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceBodyTemplate"
+msgstr "Modelo do corpo de aprovação"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceBodyTemplateDescription"
+msgstr "Texto principal para certificados de aprovação. Use as variáveis listadas abaixo."
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceFooterText"
+msgstr "Texto do rodapé de aprovação"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceFooterTextDescription"
+msgstr "Rodapé opcional para certificados de aprovação."
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceAvailableVariables"
+msgstr "Variáveis do modelo de aprovação"
+
+msgid "plugins.generic.academicCertificate.settings.acceptanceAvailableVariablesDescription"
+msgstr "Estas variáveis podem ser usadas no modelo do certificado de aprovação:"
+
+msgid "plugins.generic.academicCertificate.settings.authorTemplateSettings"
+msgstr "Modelo do Certificado de Autor"
+
+msgid "plugins.generic.academicCertificate.settings.authorHeaderText"
+msgstr "Texto do cabeçalho do certificado de autor"
+
+msgid "plugins.generic.academicCertificate.settings.authorHeaderTextDescription"
+msgstr "Cabeçalho exibido nos certificados de publicação de autor. Deixe em branco para usar o padrão."
+
+msgid "plugins.generic.academicCertificate.settings.authorBodyTemplate"
+msgstr "Modelo do corpo do certificado de autor"
+
+msgid "plugins.generic.academicCertificate.settings.authorBodyTemplateDescription"
+msgstr "Texto principal para certificados de autor emitidos após a publicação. Use as variáveis listadas abaixo."
+
+msgid "plugins.generic.academicCertificate.settings.authorFooterText"
+msgstr "Texto do rodapé do certificado de autor"
+
+msgid "plugins.generic.academicCertificate.settings.authorFooterTextDescription"
+msgstr "Rodapé opcional para certificados de publicação de autor."
+
+msgid "plugins.generic.academicCertificate.settings.authorAvailableVariables"
+msgstr "Variáveis do modelo do certificado de autor"
+
+msgid "plugins.generic.academicCertificate.settings.authorAvailableVariablesDescription"
+msgstr "Estas variáveis podem ser usadas no modelo do certificado de autor:"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.title"
+msgstr "Emissão Manual de Certificado de Aprovação"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.description"
+msgstr "Crie um registro de certificado de aprovação para uma submissão quando a detecção automática não emitiu um. Os autores poderão então baixar o PDF em Meus Certificados."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.submissionId"
+msgstr "ID da Submissão"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.issue"
+msgstr "Emitir certificado"
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.issuing"
+msgstr "Emitindo..."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.success"
+msgstr "Certificado de aprovação emitido com sucesso."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.alreadyExists"
+msgstr "Já existe um certificado de aprovação para esta submissão."
+
+msgid "plugins.generic.academicCertificate.issueAcceptance.error"
+msgstr "Falha ao emitir o certificado de aprovação."
